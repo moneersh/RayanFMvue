@@ -6,7 +6,7 @@
         
         <div class="prose prose-lg mx-auto">
           <p class="text-xl text-center mb-8">
-            {{ $t('hero.description') }}
+            {{ $t('hero.aboutText') }}
           </p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -36,11 +36,15 @@
         </div>
       </div>
     </div>
+
+    <!-- Staff Team Section -->
+    <StaffTeam />
   </AppShell>
 </template>
 
 <script setup lang="ts">
 import AppShell from '@/layouts/AppShell.vue'
+import StaffTeam from '@/components/about/StaffTeam.vue'
 import { useSeo } from '@/composables/useSeo'
 
 useSeo({

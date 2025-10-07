@@ -24,11 +24,18 @@
   },
   "programs": {
     "title": "Our Programs",
-    "subtitle": "A variety of religious and cultural programs",
+    "subtitle": "A variety of cultural and social programs",
     "viewAll": "View All Programs",
     "host": "Hosted by",
     "schedule": "Schedule",
-    "episodes": "Episodes"
+    "episodes": "Episodes",
+    "featured": "Featured Programs",
+    "comingSoon": "Programs Coming Soon",
+    "morningShows": "Morning Shows",
+    "culturalShows": "Cultural Shows",
+    "interactive": "Interactive Programs",
+    "heritage": "Heritage Programs",
+    "details": "View Details"
   },
   "news": {
     "title": "Latest News",
@@ -48,7 +55,23 @@
   },
   "testimonials": {
     "title": "Listener Testimonials",
-    "subtitle": "What our listeners say about Rayan Radio"
+    "subtitle": "What our listeners say about Rayan Radio",
+    "ratings": "Ratings",
+    "ahmad": {
+      "name": "Ahmad",
+      "location": "Damascus",
+      "text": "Rayan Radio's podcast is a main source for me in enhancing my knowledge of Syrian folk heritage. I am grateful for the valuable and diverse content provided by the podcast, which helped me gain a deep understanding of my country's history and culture."
+    },
+    "lina": {
+      "name": "Lina",
+      "location": "Damascus",
+      "text": "Thanks to the podcast, I found myself close to my country's heritage and cultural landmarks. The podcast is an excellent companion in the journey of exploring Syrian history and heritage, and I highly recommend it to anyone interested in culture and heritage."
+    },
+    "shadi": {
+      "name": "Shadi",
+      "location": "As-Suwayda",
+      "text": "I cannot thank the Rayan Radio team enough for the wonderful efforts they make in providing high-quality and diverse content. The podcast has added a lot to my knowledge of my country's heritage and traditional Syrian lifestyle."
+    }
   },
   "newsletter": {
     "title": "Subscribe to Our Newsletter",
@@ -75,7 +98,12 @@
     "stop": "Stop",
     "volume": "Volume",
     "live": "Live",
-    "offline": "Offline"
+    "offline": "Offline",
+    "playing": "Playing",
+    "loading": "Loading",
+    "error": "Playback Error",
+    "currentShow": "Current Show",
+    "liveStream": "Live Stream"
   },
   "common": {
     "loading": "Loading...",
@@ -88,6 +116,78 @@
     "language": "Language",
     "arabic": "العربية",
     "english": "English"
+  },
+  "about": {
+    "title": "About Radio",
+    "ourVision": "Our Vision",
+    "ourMission": "Our Mission", 
+    "ourValues": "Our Values",
+    "visionText": "To be the leading voice in spreading Islamic values and meaningful culture through radio",
+    "missionText": "To provide distinguished radio content that combines authenticity and modernity, serving the Muslim community",
+    "values": {
+      "honesty": "Honesty and Integrity",
+      "quality": "Quality and Excellence",
+      "innovation": "Innovation and Development"
+    },
+    "meetOurTeam": "Meet Our Distinguished Team",
+    "teamIntro": "The distinguished team at Rayan Radio is pleased to welcome you with love and hospitality. We are an enthusiastic team committed to our mission of providing high-quality content to our valued audience. The team at Rayan Radio includes a group of professionals and specialists in their fields, and we work in cooperation and harmony to achieve our goals and vision. We believe in the importance of teamwork, exchanging ideas and cooperation, and we strive to build a positive and motivating work environment that contributes to achieving success and excellence."
+  },
+  "programNames": {
+    "sabahakMaRama": "Your Morning with Rama",
+    "sameenaSotak": "We Heard Your Voice", 
+    "anaqeedNabatiya": "Nabati Clusters",
+    "nabahem": "Nabahem",
+    "dahabAteeq": "Ancient Gold",
+    "nafidaAlaQanon": "Window on Law",
+    "morningShow": "Morning Show",
+    "lightOfGuidance": "Light of Guidance"
+  },
+  "pages": {
+    "home": {
+      "metaTitle": "Home - Rayan Radio",
+      "metaDescription": "Rayan Radio - The Most Popular Syrian Radio in the Southern Region"
+    },
+    "about": {
+      "metaTitle": "About Radio - Rayan Radio",
+      "metaDescription": "Learn about Rayan Radio - our vision, mission, and distinguished team"
+    },
+    "programs": {
+      "metaTitle": "Programs - Rayan Radio", 
+      "metaDescription": "Browse the diverse range of programs at Rayan Radio"
+    },
+    "news": {
+      "metaTitle": "News - Rayan Radio",
+      "metaDescription": "Latest news and updates from Rayan Radio"
+    },
+    "contact": {
+      "metaTitle": "Contact Us - Rayan Radio",
+      "metaDescription": "Get in touch with Rayan Radio team - contact information and address"
+    },
+    "howToListen": {
+      "title": "How to Listen to Radio",
+      "online": "Online",
+      "onlineDesc": "You can listen directly from our website",
+      "mobileApp": "Mobile App",
+      "mobileAppDesc": "Download our free mobile app for smartphones",
+      "radioFreq": "Radio Frequency",
+      "radioFreqDesc": "Tune your radio to 95.5 FM"
+    },
+    "editorialStandards": {
+      "title": "Editorial Standards",
+      "honesty": "Honesty and Integrity",
+      "honestyDesc": "We are committed to reporting facts as they are without distortion or deception",
+      "objectivity": "Objectivity",
+      "objectivityDesc": "We strive to present different viewpoints fairly and balanced",
+      "privacy": "Respect for Privacy",
+      "privacyDesc": "We respect individuals' privacy and personal rights",
+      "socialResponsibility": "Social Responsibility",
+      "socialResponsibilityDesc": "We contribute to building a better society through our meaningful content"
+    },
+    "placeholders": {
+      "inDevelopment": "This page is under development",
+      "comingSoon": "Coming Soon",
+      "backHome": "Back to Home"
+    }
   },
   "footer": {
     "about": "Rayan Radio is an Islamic radio station aimed at spreading Islamic values and meaningful culture",
