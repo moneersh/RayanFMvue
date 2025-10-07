@@ -3,9 +3,8 @@
     "home": "Home",
     "about": "About Radio",
     "programs": "Programs", 
-    "news": "Events and Latest News",
-    "events": "Events",
-    "blog": "Blog and News",
+
+
     "contact": "Contact Us",
     "howToListen": "How to Listen to Radio",
     "editorialStandards": "Editorial Standards",
@@ -37,22 +36,7 @@
     "heritage": "Heritage Programs",
     "details": "View Details"
   },
-  "news": {
-    "title": "Latest News",
-    "subtitle": "Stay updated with the latest news",
-    "readMore": "Read More",
-    "publishedOn": "Published on",
-    "by": "By"
-  },
-  "events": {
-    "title": "Events",
-    "subtitle": "Join our events and conferences",
-    "viewDetails": "View Details",
-    "register": "Register Now",
-    "date": "Date",
-    "location": "Location",
-    "online": "Online"
-  },
+
   "testimonials": {
     "title": "Listener Testimonials",
     "subtitle": "What our listeners say about Rayan Radio",
@@ -155,10 +139,7 @@
       "metaTitle": "Programs - Rayan Radio", 
       "metaDescription": "Browse the diverse range of programs at Rayan Radio"
     },
-    "news": {
-      "metaTitle": "News - Rayan Radio",
-      "metaDescription": "Latest news and updates from Rayan Radio"
-    },
+
     "contact": {
       "metaTitle": "Contact Us - Rayan Radio",
       "metaDescription": "Get in touch with Rayan Radio team - contact information and address"

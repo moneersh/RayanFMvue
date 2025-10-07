@@ -69,29 +69,7 @@
       </div>
     </section>
 
-    <!-- Latest News -->
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">{{ $t('news.title') }}</h2>
-          <p class="text-lg opacity-80">{{ $t('news.subtitle') }}</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <PostCard 
-            v-for="post in latestNews" 
-            :key="post.id" 
-            :post="post" 
-          />
-        </div>
-        
-        <div class="text-center">
-          <router-link to="/news" class="btn btn-primary">
-            عرض جميع الأخبار
-          </router-link>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Testimonials -->
     <section class="py-16 bg-base-200">
@@ -120,7 +98,7 @@
 import { computed, onMounted } from 'vue'
 import AppShell from '@/layouts/AppShell.vue'
 import ProgramCard from '@/components/cards/ProgramCard.vue'
-import PostCard from '@/components/cards/PostCard.vue'
+
 import Testimonials from '@/components/sections/Testimonials.vue'
 import NewsletterSignup from '@/components/sections/NewsletterSignup.vue'
 import { useProgramsStore } from '@/store/useProgramsStore'
@@ -138,21 +116,7 @@ useSeo({
 
 const featuredPrograms = computed(() => programsStore.featuredPrograms)
 
-// Mock latest news data
-const latestNews = computed(() => [
-  {
-    id: '1',
-    title: 'خبر هام من إذاعة الריּان',
-    excerpt: 'نص مختصر للخبر الأول...',
-    slug: 'important-news',
-    publishedAt: new Date(),
-    category: 'news' as const,
-    tags: ['أخبار'],
-    author: 'فريق التحرير',
-    content: '',
-    image: '/images/news/news-1.jpg'
-  }
-])
+
 
 const playLive = () => {
   playerStore.playLiveStream()

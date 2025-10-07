@@ -29,37 +29,7 @@ export interface Episode {
   image?: string
 }
 
-export interface Post {
-  id: string
-  title: string
-  titleEn?: string
-  content: string
-  contentEn?: string
-  slug: string
-  excerpt: string
-  excerptEn?: string
-  image?: string
-  publishedAt: Date
-  category: 'news' | 'blog'
-  tags: string[]
-  author: string
-}
 
-export interface Event {
-  id: string
-  title: string
-  titleEn?: string
-  description: string
-  descriptionEn?: string
-  slug: string
-  startDate: Date
-  endDate?: Date
-  location: string
-  locationEn?: string
-  image?: string
-  isOnline: boolean
-  registrationUrl?: string
-}
 
 export interface Testimonial {
   id: string

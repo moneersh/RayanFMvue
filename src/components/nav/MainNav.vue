@@ -15,21 +15,8 @@
         {{ $t('nav.programs') }}
       </router-link>
     </li>
-    <li>
-      <router-link to="/news" class="hover:bg-primary-focus">
-        {{ $t('nav.news') }}
-      </router-link>
-    </li>
-    <li>
-      <router-link to="/events" class="hover:bg-primary-focus">
-        {{ $t('nav.events') }}
-      </router-link>
-    </li>
-    <li>
-      <router-link to="/blog" class="hover:bg-primary-focus">
-        {{ $t('nav.blog') }}
-      </router-link>
-    </li>
+
+
     <li>
       <router-link to="/how-to-listen" class="hover:bg-primary-focus">
         {{ $t('nav.howToListen') }}

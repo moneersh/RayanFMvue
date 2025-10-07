@@ -25,39 +25,8 @@ const router = createRouter({
       component: () => import('@/pages/Programs/ProgramDetail.vue'),
       props: true
     },
-    {
-      path: '/news',
-      name: 'news',
-      component: () => import('@/pages/News/NewsList.vue')
-    },
-    {
-      path: '/news/:slug',
-      name: 'news-detail',
-      component: () => import('@/pages/News/NewsDetail.vue'),
-      props: true
-    },
-    {
-      path: '/events',
-      name: 'events',
-      component: () => import('@/pages/Events/EventsList.vue')
-    },
-    {
-      path: '/events/:slug',
-      name: 'event-detail',
-      component: () => import('@/pages/Events/EventDetail.vue'),
-      props: true
-    },
-    {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('@/pages/Blog/BlogList.vue')
-    },
-    {
-      path: '/blog/:slug',
-      name: 'blog-post',
-      component: () => import('@/pages/Blog/BlogPost.vue'),
-      props: true
-    },
+
+
     {
       path: '/contact',
       name: 'contact',
