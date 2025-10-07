@@ -1,0 +1,195 @@
+{
+  "teamInfo": {
+    "titleAr": "قابل فريق العمل المميز",
+    "titleEn": "Meet Our Distinguished Team",
+    "descriptionAr": "يسر فريق العمل المميز في إذاعة الريان أن يرحب بكم بكل حب وترحاب. نحن فريق متحمس وملتزم بمهمتنا في تقديم محتوى ذو جودة عالية لجمهورنا الكريم. يضم فريق العمل في إذاعة الريان مجموعة من المحترفين والمتخصصين في مجالاتهم، ونعمل بتعاون وتناغم لتحقيق أهدافنا ورؤيتنا. نحن نؤمن بأهمية العمل الجماعي وتبادل الأفكار والتعاون، ونسعى لبناء بيئة عمل إيجابية ومحفزة تساهم في تحقيق النجاح والتميز.",
+    "descriptionEn": "The distinguished team at Rayan Radio is pleased to welcome you with all love and appreciation. We are an enthusiastic team committed to our mission of providing high-quality content to our dear audience. The team at Rayan Radio includes a group of professionals and specialists in their fields, and we work in cooperation and harmony to achieve our goals and vision. We believe in the importance of teamwork, exchanging ideas and cooperation, and we strive to build a positive and encouraging work environment that contributes to achieving success and excellence."
+  },
+  "members": [
+    {
+      "id": "1",
+      "nameAr": "راما عبد الكريم",
+      "nameEn": "Rama Abdul Kareem",
+      "positionAr": "منتجة ومقدمة برامج",
+      "positionEn": "Program Producer & Host",
+      "image": "images/staff/rama1.webp",
+      "speciality": "morning-shows",
+      "experience": "5+ years",
+      "programs": ["صباحك مع راما"],
+      "bio": {
+        "ar": "منتجة ومقدمة برامج متميزة في إذاعة الريان، تتميز بصوتها العذب وحضورها المميز في البرامج الصباحية",
+        "en": "Distinguished program producer and host at Rayan Radio, known for her sweet voice and exceptional presence in morning shows"
+      }
+    },
+    {
+      "id": "2", 
+      "nameAr": "مازن أبو حمدان",
+      "nameEn": "Mazen Abu Hamdan",
+      "positionAr": "مدير تقني",
+      "positionEn": "Technical Manager",
+      "image": "images/staff/mazen1.webp",
+      "speciality": "technical-management",
+      "experience": "10+ years",
+      "bio": {
+        "ar": "مدير تقني محترف يشرف على جميع الأنظمة التقنية في الإذاعة ويضمن جودة البث",
+        "en": "Professional technical manager overseeing all technical systems at the radio station and ensuring broadcast quality"
+      }
+    },
+    {
+      "id": "3",
+      "nameAr": "رواد حسون", 
+      "nameEn": "Rawad Hasoun",
+      "positionAr": "منتج ومخرج برامج",
+      "positionEn": "Program Producer & Director",
+      "image": "images/staff/rawad.webp",
+      "speciality": "program-production",
+      "experience": "8+ years",
+      "bio": {
+        "ar": "منتج ومخرج برامج خبير في إنتاج وإخراج البرامج الإذاعية المتنوعة",
+        "en": "Expert program producer and director specializing in diverse radio program production"
+      }
+    },
+    {
+      "id": "4",
+      "nameAr": "صفاء جودية",
+      "nameEn": "Safaa Joudieh", 
+      "positionAr": "مسؤولة الشؤون القانونية",
+      "positionEn": "Legal Affairs Officer",
+      "image": "images/staff/safaa1.webp",
+      "speciality": "legal-affairs",
+      "experience": "12+ years",
+      "programs": ["نافذة على القانون"],
+      "bio": {
+        "ar": "مسؤولة الشؤون القانونية ومقدمة برنامج نافذة على القانون، تقدم الاستشارات القانونية للمستمعين",
+        "en": "Legal Affairs Officer and host of 'Window on Law' program, providing legal consultations to listeners"
+      }
+    },
+    {
+      "id": "5",
+      "nameAr": "منار مرشد",
+      "nameEn": "Manar Murshid",
+      "positionAr": "منتجة ومقدمة برامج",
+      "positionEn": "Program Producer & Host", 
+      "image": "images/staff/MANAR1.webp",
+      "speciality": "cultural-programs",
+      "experience": "6+ years",
+      "programs": ["نباهم"],
+      "bio": {
+        "ar": "منتجة ومقدمة برامج ثقافية واجتماعية، تتميز بقدرتها على مناقشة القضايا المعاصرة",
+        "en": "Cultural and social program producer and host, distinguished by her ability to discuss contemporary issues"
+      }
+    },
+    {
+      "id": "6",
+      "nameAr": "مرح الشاهين",
+      "nameEn": "Marah Al-Shaheen",
+      "positionAr": "معلقة ومقدمة برامج",
+      "positionEn": "Commentator & Program Host",
+      "image": "images/staff/marah.webp",
+      "speciality": "commentary",
+      "experience": "4+ years",
+      "bio": {
+        "ar": "معلقة ومقدمة برامج محترفة تتميز بأسلوبها المميز في التعليق والتقديم",
+        "en": "Professional commentator and program host distinguished by her unique style in commentary and presentation"
+      }
+    },
+    {
+      "id": "7",
+      "nameAr": "شيرين العقباني",
+      "nameEn": "Shireen Al-Aqbani",
+      "positionAr": "معلقة ومقدمة برامج",
+      "positionEn": "Commentator & Program Host",
+      "image": "images/staff/shireen1.webp",
+      "speciality": "hosting",
+      "experience": "5+ years",
+      "bio": {
+        "ar": "معلقة ومقدمة برامج موهوبة تجمع بين الخبرة والأسلوب المتميز في التقديم",
+        "en": "Talented commentator and program host combining experience with distinctive presentation style"
+      }
+    },
+    {
+      "id": "8",
+      "nameAr": "هبة دوارة",
+      "nameEn": "Heba Dawara",
+      "positionAr": "مديرة وسائل التواصل الاجتماعي",
+      "positionEn": "Social Media Manager",
+      "image": "images/staff/HEBA1.webp",
+      "speciality": "social-media",
+      "experience": "3+ years",
+      "bio": {
+        "ar": "مديرة وسائل التواصل الاجتماعي المسؤولة عن إدارة المحتوى الرقمي والتفاعل مع الجمهور",
+        "en": "Social Media Manager responsible for digital content management and audience engagement"
+      }
+    },
+    {
+      "id": "9",
+      "nameAr": "أكرم أبو الفضل",
+      "nameEn": "Akram Abu Al-Fadl",
+      "positionAr": "المدير المالي",
+      "positionEn": "Financial Manager",
+      "image": "images/staff/AKRAM1.webp",
+      "speciality": "financial-management",
+      "experience": "15+ years",
+      "bio": {
+        "ar": "المدير المالي المسؤول عن إدارة الشؤون المالية والإدارية في الإذاعة",
+        "en": "Financial Manager responsible for managing financial and administrative affairs at the radio station"
+      }
+    },
+    {
+      "id": "10",
+      "nameAr": "عصام العوار",
+      "nameEn": "Issam Al-Aawar",
+      "positionAr": "منتج برامج",
+      "positionEn": "Program Producer",
+      "image": "images/staff/ISSAM1.webp",
+      "speciality": "program-production",
+      "experience": "7+ years",
+      "bio": {
+        "ar": "منتج برامج محترف متخصص في إنتاج البرامج الإذاعية المتنوعة",
+        "en": "Professional program producer specializing in diverse radio program production"
+      }
+    },
+    {
+      "id": "11",
+      "nameAr": "نوراس أبو حسون",
+      "nameEn": "Nawras Abu Hasoun",
+      "positionAr": "دي جي",
+      "positionEn": "DJ",
+      "image": "images/staff/NAWRAS1.webp",
+      "speciality": "music",
+      "experience": "4+ years",
+      "bio": {
+        "ar": "دي جي محترف متخصص في تقديم الموسيقى والأغاني المتنوعة",
+        "en": "Professional DJ specializing in presenting diverse music and songs"
+      }
+    }
+  ],
+  "departments": [
+    {
+      "nameAr": "قسم الإنتاج والتقديم",
+      "nameEn": "Production & Hosting Department",
+      "memberIds": ["1", "3", "5", "6", "7", "10"]
+    },
+    {
+      "nameAr": "قسم الإدارة والتشغيل",
+      "nameEn": "Management & Operations Department", 
+      "memberIds": ["2", "8", "9"]
+    },
+    {
+      "nameAr": "قسم الشؤون القانونية",
+      "nameEn": "Legal Affairs Department",
+      "memberIds": ["4"]
+    },
+    {
+      "nameAr": "قسم الموسيقى والترفيه",
+      "nameEn": "Music & Entertainment Department",
+      "memberIds": ["11"]
+    }
+  ],
+  "metadata": {
+    "totalMembers": 11,
+    "departments": 4,
+    "lastUpdated": "2025-10-07",
+    "version": "1.0.0"
+  }
+}

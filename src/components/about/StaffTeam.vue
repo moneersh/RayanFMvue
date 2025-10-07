@@ -2,13 +2,19 @@
   <div class="py-16 bg-base-100">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold mb-6">{{ $t('about.meetOurTeam') }}</h2>
+        <h2 class="text-3xl font-bold mb-6">{{ teamTitle || $t('about.meetOurTeam') }}</h2>
         <p class="text-lg max-w-4xl mx-auto leading-relaxed">
-          {{ $t('about.teamIntro') }}
+          {{ teamDescription || $t('about.teamIntro') }}
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <!-- Loading State -->
+      <div v-if="loading" class="flex justify-center items-center py-16">
+        <div class="loading loading-spinner loading-lg text-primary"></div>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         <div 
           v-for="member in teamMembers" 
           :key="member.name"
@@ -49,72 +55,99 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { getImagePath } from '@/utils/assets'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-interface TeamMember {
-  name: string
-  position: string
+const { locale } = useI18n()
+
+// Staff data types
+interface StaffMember {
+  id: string
+  nameAr: string
+  nameEn: string
+  positionAr: string
+  positionEn: string
   image: string
+  speciality: string
+  experience: string
+  programs?: string[]
+  bio: {
+    ar: string
+    en: string
+  }
 }
 
-const teamMembers = computed<TeamMember[]>(() => [
-  {
-    name: 'Rama Abdul Kareem',
-    position: 'Program Producer & Host',
-    image: getImagePath('images/staff/rama1.webp')
-  },
-  {
-    name: 'Mazen Abu Hamdan',
-    position: 'Technical Manager',
-    image: getImagePath('images/staff/mazen1.webp')
-  },
-  {
-    name: 'Rawad Hasoun',
-    position: 'Program Producer & Director',
-    image: getImagePath('images/staff/rawad.webp')
-  },
-  {
-    name: 'Safaa Joudieh',
-    position: 'Legal Affairs Officer',
-    image: getImagePath('images/staff/safaa1.webp')
-  },
-  {
-    name: 'Manar Murshid',
-    position: 'Program Producer & Host',
-    image: getImagePath('images/staff/MANAR1.webp')
-  },
-  {
-    name: 'Marah Al-Shaheen',
-    position: 'Commentator & Program Host',
-    image: getImagePath('images/staff/marah.webp')
-  },
-  {
-    name: 'Shireen Al-Aqbani',
-    position: 'Commentator & Program Host',
-    image: getImagePath('images/staff/shireen1.webp')
-  },
-  {
-    name: 'Heba Dawara',
-    position: 'Social Media Manager',
-    image: getImagePath('images/staff/HEBA1.webp')
-  },
-  {
-    name: 'Akram Abu Al-Fadl',
-    position: 'Financial Manager',
-    image: getImagePath('images/staff/AKRAM1.webp')
-  },
-  {
-    name: 'Issam Al-Aawar',
-    position: 'Program Producer',
-    image: getImagePath('images/staff/ISSAM1.webp')
-  },
-  {
-    name: 'Nawras Abu Hasoun',
-    position: 'DJ',
-    image: getImagePath('images/staff/NAWRAS1.webp')
+interface StaffData {
+  teamInfo: {
+    titleAr: string
+    titleEn: string
+    descriptionAr: string
+    descriptionEn: string
   }
-])
+  members: StaffMember[]
+}
+
+const staffData = ref<StaffData | null>(null)
+const loading = ref(true)
+
+// Helper function for image paths
+const getImagePath = (imagePath: string): string => {
+  const baseUrl = '/RayanFMvue/'
+  const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath
+  return `${baseUrl}${cleanPath}`
+}
+
+// Computed properties for localized content
+const teamTitle = computed(() => {
+  return staffData.value 
+    ? (locale.value === 'ar' ? staffData.value.teamInfo.titleAr : staffData.value.teamInfo.titleEn)
+    : ''
+})
+
+const teamDescription = computed(() => {
+  return staffData.value 
+    ? (locale.value === 'ar' ? staffData.value.teamInfo.descriptionAr : staffData.value.teamInfo.descriptionEn)
+    : ''
+})
+
+const teamMembers = computed(() => {
+  if (!staffData.value) return []
+  
+  return staffData.value.members.map((member: StaffMember) => ({
+    name: locale.value === 'ar' ? member.nameAr : member.nameEn,
+    position: locale.value === 'ar' ? member.positionAr : member.positionEn,
+    image: getImagePath(member.image),
+    bio: locale.value === 'ar' ? member.bio.ar : member.bio.en,
+    experience: member.experience,
+    programs: member.programs || []
+  }))
+})
+
+// Load staff data from JSON
+onMounted(async () => {
+  try {
+    const response = await fetch('/RayanFMvue/data/staff.json')
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    const data = await response.json()
+    staffData.value = data
+  } catch (error) {
+    console.error('Failed to load staff data:', error)
+    // Fallback to empty data
+    staffData.value = {
+      teamInfo: {
+        titleAr: 'فريق العمل',
+        titleEn: 'Our Team',
+        descriptionAr: 'فريق عمل متميز',
+        descriptionEn: 'Distinguished team'
+      },
+      members: []
+    }
+  } finally {
+    loading.value = false
+  }
+})
 
 const getInitials = (name: string): string => {
   return name
@@ -127,7 +160,7 @@ const getInitials = (name: string): string => {
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement
   // Fallback to initials if image fails to load
-  const member = teamMembers.value.find(m => target.alt === m.name)
+  const member = teamMembers.value.find((m: any) => target.alt === m.name)
   if (member && target.parentElement) {
     target.parentElement.innerHTML = `
       <div class="w-full h-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold">
