@@ -33,11 +33,6 @@ const router = createRouter({
       component: () => import('@/pages/Contact.vue')
     },
     {
-      path: '/how-to-listen',
-      name: 'how-to-listen',
-      component: () => import('@/pages/HowToListen.vue')
-    },
-    {
       path: '/editorial-standards',
       name: 'editorial-standards', 
       component: () => import('@/pages/EditorialStandards.vue')

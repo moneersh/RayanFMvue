@@ -2,11 +2,8 @@
   "nav": {
     "home": "Home",
     "about": "About Radio",
-    "programs": "Programs", 
-
-
+    "programs": "Programs",
     "contact": "Contact Us",
-    "howToListen": "How to Listen to Radio",
     "editorialStandards": "Editorial Standards",
     "podcast": "Podcast"
   },
@@ -155,15 +152,6 @@
     "contact": {
       "metaTitle": "Contact Us - Rayan Radio",
       "metaDescription": "Get in touch with Rayan Radio team - contact information and address"
-    },
-    "howToListen": {
-      "title": "How to Listen to Radio",
-      "online": "Online",
-      "onlineDesc": "You can listen directly from our website",
-      "mobileApp": "Mobile App",
-      "mobileAppDesc": "Download our free mobile app for smartphones",
-      "radioFreq": "Radio Frequency",
-      "radioFreqDesc": "Tune your radio to 95.5 FM"
     },
     "editorialStandards": {
       "title": "Editorial Standards",

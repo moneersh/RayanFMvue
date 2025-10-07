@@ -15,13 +15,6 @@
         {{ $t('nav.programs') }}
       </router-link>
     </li>
-
-
-    <li>
-      <router-link to="/how-to-listen" class="hover:bg-primary-focus">
-        {{ $t('nav.howToListen') }}
-      </router-link>
-    </li>
     <li>
       <router-link to="/contact" class="hover:bg-primary-focus">
         {{ $t('nav.contact') }}

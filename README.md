@@ -77,7 +77,6 @@ npm run deploy
 - **Events** (`/events`) - Events and conferences
 - **Blog** (`/blog`) - Blog articles
 - **Podcast** (`/podcast`) - Podcast episodes
-- **How to Listen** (`/how-to-listen`) - Ways to listen to the radio
 - **Editorial Standards** (`/editorial-standards`) - Content guidelines
 - **Contact** (`/contact`) - Contact information
 
