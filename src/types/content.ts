@@ -42,10 +42,9 @@ export interface SiteSettings {
   favicon: string
   socialMedia: {
     facebook?: string
-    twitter?: string
     instagram?: string
     youtube?: string
-    telegram?: string
+    whatsapp?: string
   }
   contact: {
     email: string

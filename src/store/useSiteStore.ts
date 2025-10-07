@@ -20,8 +20,9 @@ export const useSiteStore = defineStore('site', {
       favicon: '/favicon.ico',
       socialMedia: {
         facebook: 'https://www.facebook.com/RayanFMRadio',
-        telegram: 'https://t.me/rayanradio',
-        youtube: 'https://www.youtube.com/@RayanFMRadio'
+        youtube: 'https://www.youtube.com/@RayanFMRadio',
+        instagram: 'https://www.instagram.com/rayanfm.90.2/',
+        whatsapp: 'https://wa.me/971507811815'
       },
       contact: {
         email: 'info@rayanradio.com',

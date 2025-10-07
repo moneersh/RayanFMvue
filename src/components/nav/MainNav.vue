@@ -35,4 +35,20 @@ defineProps<Props>()
 .router-link-active {
   @apply bg-primary-focus;
 }
+
+/* Arabic text improvements */
+[dir="rtl"] .menu a {
+  letter-spacing: 0.025em;
+  word-spacing: 0.1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .menu-horizontal > li + li {
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .menu-vertical > li + li {
+  margin-top: 0.25rem;
+}
 </style>
