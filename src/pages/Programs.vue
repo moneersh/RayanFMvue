@@ -12,172 +12,94 @@
       </div>
     </section>
 
-    <!-- Programs Grid -->
-    <section class="py-16">
+    <!-- Featured Programs -->
+    <section class="py-16 bg-base-200">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <!-- Morning Show -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="text-6xl mb-4">🌅</div>
-                <h3 class="text-2xl font-bold">{{ locale === 'ar' ? 'صباح الخير' : 'Good Morning' }}</h3>
-              </div>
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-3 text-gray-800">
-                {{ locale === 'ar' ? 'برنامج الصباح' : 'Morning Show' }}
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ locale === 'ar' ? 'ابدأ يومك مع أجمل الأغاني والأخبار' : 'Start your day with beautiful music and news' }}
-              </p>
-              <div class="flex items-center text-sm text-gray-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                {{ locale === 'ar' ? '6:00 - 10:00 صباحاً' : '6:00 - 10:00 AM' }}
-              </div>
-            </div>
-          </div>
-
-          <!-- Music Hour -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="text-6xl mb-4">🎵</div>
-                <h3 class="text-2xl font-bold">{{ locale === 'ar' ? 'ساعة الموسيقى' : 'Music Hour' }}</h3>
-              </div>
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-3 text-gray-800">
-                {{ locale === 'ar' ? 'أجمل الأغاني' : 'Best Music' }}
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ locale === 'ar' ? 'مجموعة من أروع الأغاني العربية والعالمية' : 'Collection of amazing Arabic and international songs' }}
-              </p>
-              <div class="flex items-center text-sm text-gray-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                {{ locale === 'ar' ? '2:00 - 4:00 مساءً' : '2:00 - 4:00 PM' }}
-              </div>
-            </div>
-          </div>
-
-          <!-- Evening Talk -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="text-6xl mb-4">🎙️</div>
-                <h3 class="text-2xl font-bold">{{ locale === 'ar' ? 'حديث المساء' : 'Evening Talk' }}</h3>
-              </div>
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-3 text-gray-800">
-                {{ locale === 'ar' ? 'لقاءات وحوارات' : 'Interviews & Discussions' }}
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ locale === 'ar' ? 'لقاءات شيقة مع الضيوف وحوارات مفتوحة' : 'Exciting interviews with guests and open discussions' }}
-              </p>
-              <div class="flex items-center text-sm text-gray-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                {{ locale === 'ar' ? '7:00 - 9:00 مساءً' : '7:00 - 9:00 PM' }}
-              </div>
-            </div>
-          </div>
-
-          <!-- News -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="text-6xl mb-4">📰</div>
-                <h3 class="text-2xl font-bold">{{ locale === 'ar' ? 'الأخبار' : 'News' }}</h3>
-              </div>
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-3 text-gray-800">
-                {{ locale === 'ar' ? 'آخر الأخبار' : 'Latest News' }}
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ locale === 'ar' ? 'تابع آخر الأخبار المحلية والعالمية' : 'Follow the latest local and international news' }}
-              </p>
-              <div class="flex items-center text-sm text-gray-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                {{ locale === 'ar' ? 'كل ساعة' : 'Every Hour' }}
-              </div>
-            </div>
-          </div>
-
-          <!-- Sports -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="text-6xl mb-4">⚽</div>
-                <h3 class="text-2xl font-bold">{{ locale === 'ar' ? 'الرياضة' : 'Sports' }}</h3>
-              </div>
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-3 text-gray-800">
-                {{ locale === 'ar' ? 'الأخبار الرياضية' : 'Sports News' }}
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ locale === 'ar' ? 'تغطية شاملة للأحداث الرياضية' : 'Comprehensive coverage of sports events' }}
-              </p>
-              <div class="flex items-center text-sm text-gray-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                {{ locale === 'ar' ? '4:00 - 6:00 مساءً' : '4:00 - 6:00 PM' }}
-              </div>
-            </div>
-          </div>
-
-          <!-- Night Show -->
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="text-6xl mb-4">🌙</div>
-                <h3 class="text-2xl font-bold">{{ locale === 'ar' ? 'سهرة الليل' : 'Night Show' }}</h3>
-              </div>
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-semibold mb-3 text-gray-800">
-                {{ locale === 'ar' ? 'أمسية ممتعة' : 'Enjoyable Evening' }}
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ locale === 'ar' ? 'برنامج ليلي مع أجمل الأغاني الهادئة' : 'Night program with beautiful calm music' }}
-              </p>
-              <div class="flex items-center text-sm text-gray-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                {{ locale === 'ar' ? '10:00 مساءً - 2:00 صباحاً' : '10:00 PM - 2:00 AM' }}
-              </div>
-            </div>
-          </div>
-
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">{{ $t('programs.title') }}</h2>
+          <p class="text-lg opacity-80">{{ $t('programs.subtitle') }}</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <ProgramCard 
+            v-for="program in featuredPrograms" 
+            :key="program.id" 
+            :program="program" 
+            class="transform hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8">
-          {{ locale === 'ar' ? 'استمع الآن' : 'Listen Now' }}
-        </h2>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            🎧 {{ locale === 'ar' ? 'البث المباشر' : 'Live Stream' }}
+    <!-- Enhanced Call to Action -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/10 relative overflow-hidden">
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-10 left-10 w-32 h-32 bg-primary rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-24 h-24 bg-secondary rounded-full blur-xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-accent rounded-full blur-2xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            {{ locale === 'ar' ? 'استمع الآن' : 'Listen Now' }}
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            {{ locale === 'ar' ? 'انضم إلينا واستمع إلى أفضل البرامج مباشرة من إذاعة الريان' : 'Join us and listen to the best programs live from Rayan Radio' }}
+          </p>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <!-- Enhanced Live Stream Button -->
+          <button 
+            @click="playLive" 
+            class="group relative bg-gradient-to-r from-primary via-primary-focus to-secondary text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-2xl transform hover:-translate-y-2 overflow-hidden"
+          >
+            <!-- Animated background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <!-- Live indicator -->
+            <div class="absolute top-2 right-2 flex items-center">
+              <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse mr-2"></div>
+              <span class="text-xs font-medium">{{ locale === 'ar' ? 'مباشر' : 'LIVE' }}</span>
+            </div>
+            
+            <!-- Button content -->
+            <div class="relative flex items-center justify-center">
+              <div class="text-3xl mr-3 group-hover:animate-bounce">🎧</div>
+              <div>
+                <div class="text-xl font-bold">{{ locale === 'ar' ? 'البث المباشر' : 'Live Stream' }}</div>
+                <div class="text-sm opacity-90">{{ locale === 'ar' ? 'اضغط للاستماع' : 'Click to Listen' }}</div>
+              </div>
+            </div>
+            
+            <!-- Ripple effect -->
+            <div class="absolute inset-0 rounded-2xl opacity-30 group-hover:animate-ping bg-white"></div>
           </button>
-          <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
-            📱 {{ locale === 'ar' ? 'تحميل التطبيق' : 'Download App' }}
+          
+          <!-- Download App Button -->
+          <button class="group bg-white hover:bg-gray-50 text-gray-800 px-10 py-6 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-gray-200 hover:border-primary/30">
+            <div class="flex items-center justify-center">
+              <div class="text-2xl mr-3 group-hover:animate-bounce">📱</div>
+              <div>
+                <div class="font-bold">{{ locale === 'ar' ? 'تحميل التطبيق' : 'Download App' }}</div>
+                <div class="text-sm text-gray-600">{{ locale === 'ar' ? 'قريباً' : 'Coming Soon' }}</div>
+              </div>
+            </div>
           </button>
+        </div>
+        
+        <!-- Live Status Indicator -->
+        <div class="flex justify-center items-center space-x-6" :class="{ 'space-x-reverse': locale === 'ar' }">
+          <div class="flex items-center bg-green-100 text-green-800 px-6 py-3 rounded-full">
+            <div class="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse" :class="{ 'ml-2 mr-0': locale === 'ar' }"></div>
+            <span class="font-semibold">{{ locale === 'ar' ? 'الإذاعة متصلة' : 'Radio Online' }}</span>
+          </div>
+          <div class="text-gray-600">
+            <span class="font-medium">{{ locale === 'ar' ? 'المستمعون الآن:' : 'Listeners Now:' }}</span>
+            <span class="font-bold text-primary ml-2">1,247+</span>
+          </div>
         </div>
       </div>
     </section>
@@ -185,16 +107,43 @@
 </template>
 
 <script setup lang="ts">
+import { computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import ProgramCard from '@/components/cards/ProgramCard.vue'
+import { useProgramsStore } from '@/store/useProgramsStore'
+import { usePlayerStore } from '@/store/usePlayerStore'
+import { useSeo } from '@/composables/useSeo'
 
 // Try to use i18n if available, fallback gracefully
 let locale: any
+let t: any
 try {
-  const { locale: i18nLocale } = useI18n()
+  const { locale: i18nLocale, t: i18nT } = useI18n()
   locale = i18nLocale
+  t = i18nT
 } catch (e) {
   locale = { value: 'en' }
+  t = (key: string) => key
 }
+
+const programsStore = useProgramsStore()
+const playerStore = usePlayerStore()
+
+const featuredPrograms = computed(() => programsStore.featuredPrograms)
+
+const playLive = () => {
+  playerStore.playLiveStream()
+}
+
+// SEO
+useSeo({
+  title: t('pages.programs.metaTitle'),
+  description: t('pages.programs.metaDescription')
+})
+
+onMounted(() => {
+  programsStore.fetchPrograms()
+})
 
 console.log('Programs page loaded successfully!')
 </script>
