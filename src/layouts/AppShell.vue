@@ -5,7 +5,7 @@
       <div class="container mx-auto">
         <div class="navbar-start">
           <router-link to="/" class="btn btn-ghost text-xl">
-            <img :src="siteStore.settings.logo" alt="Logo" class="w-8 h-8 mr-2">
+            <img :src="siteStore.settings.logo" alt="Logo" class="w-36 h-36 mr-6">
             {{ siteStore.siteName }}
           </router-link>
         </div>

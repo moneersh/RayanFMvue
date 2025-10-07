@@ -11,11 +11,11 @@ interface SiteState {
 export const useSiteStore = defineStore('site', {
   state: (): SiteState => ({
     settings: {
-      siteName: 'إذاعة الريان',
-      siteNameEn: 'Rayan Radio',
+      siteName: '',
+      siteNameEn: '',
       description: 'الإذاعة السورية الأكثر انتشاراً في المنطقة الجنوبية',
       descriptionEn: 'The Most Popular Syrian Radio in the Southern Region',
-      logo: '/logos/rayan-logo.svg',
+      logo: '/logo.webp',
       favicon: '/favicon.ico',
       socialMedia: {
         facebook: 'https://facebook.com/rayanradio',
