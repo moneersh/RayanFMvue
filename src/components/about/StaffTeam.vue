@@ -8,31 +8,39 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         <div 
           v-for="member in teamMembers" 
           :key="member.name"
-          class="group card bg-base-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-95 hover:bg-base-300 cursor-pointer"
+          class="group card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden"
         >
-          <div class="card-body text-center p-6 relative overflow-hidden">
-            <div class="avatar mb-6 relative">
-              <div class="w-24 h-24 rounded-full overflow-hidden mx-auto ring-2 ring-primary ring-offset-base-100 ring-offset-2 group-hover:ring-4 group-hover:ring-accent transition-all duration-500 group-hover:w-32 group-hover:h-32">
-                <img 
-                  :src="member.image" 
-                  :alt="member.name"
-                  class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
-                  @error="handleImageError"
-                />
-              </div>
-              <!-- Hover overlay effect -->
-              <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
+          <!-- Large Image Section -->
+          <figure class="relative h-72 sm:h-80 lg:h-96 overflow-hidden">
+            <img 
+              :src="member.image" 
+              :alt="member.name"
+              class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110"
+              @error="handleImageError"
+              loading="lazy"
+            />
+            <!-- Gradient overlay for better text readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <!-- Hover text overlay -->
+            <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 drop-shadow-lg">{{ member.name }}</h3>
+              <p class="text-sm opacity-90 drop-shadow-md">{{ member.position }}</p>
             </div>
-            <div class="transform transition-all duration-500 group-hover:translate-y-2">
-              <h3 class="card-title text-lg justify-center mb-2 group-hover:text-primary transition-colors duration-300">{{ member.name }}</h3>
-              <p class="text-sm opacity-70 group-hover:opacity-90 transition-opacity duration-300">{{ member.position }}</p>
+          </figure>
+          
+          <!-- Card Content -->
+          <div class="card-body p-6 text-center">
+            <h3 class="card-title text-lg justify-center mb-2 group-hover:text-primary transition-colors duration-300">{{ member.name }}</h3>
+            <p class="text-sm opacity-70 group-hover:opacity-90 transition-opacity duration-300">{{ member.position }}</p>
+            
+            <!-- Decorative elements -->
+            <div class="flex justify-center mt-4">
+              <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
             </div>
-            <!-- Decorative background effect -->
-            <div class="absolute -inset-2 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
           </div>
         </div>
       </div>
