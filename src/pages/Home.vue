@@ -53,18 +53,13 @@
           <p class="text-lg opacity-80">{{ $t('programs.subtitle') }}</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <ProgramCard 
             v-for="program in featuredPrograms" 
             :key="program.id" 
             :program="program" 
+            class="transform hover:scale-105 transition-transform duration-300"
           />
-        </div>
-        
-        <div class="text-center">
-          <router-link to="/programs" class="btn btn-primary">
-            {{ $t('programs.viewAll') }}
-          </router-link>
         </div>
       </div>
     </section>

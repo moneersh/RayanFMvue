@@ -1,0 +1,8 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#2d5a27"/>
+  <rect x="20" y="20" width="360" height="260" fill="none" stroke="#d4af37" stroke-width="2"/>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">إذاعة الريان</text>
+  <text x="200" y="170" font-family="Arial, sans-serif" font-size="16" fill="#d4af37" text-anchor="middle">Rayan Radio</text>
+  <circle cx="200" cy="80" r="25" fill="#d4af37"/>
+  <text x="200" y="88" font-family="Arial, sans-serif" font-size="20" fill="#2d5a27" text-anchor="middle">🎙️</text>
+</svg>

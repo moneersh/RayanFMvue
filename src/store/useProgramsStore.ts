@@ -31,42 +31,14 @@ export const useProgramsStore = defineStore('programs', {
       this.loading = true
       this.error = null
       try {
-        // Mock data - replace with actual API call
-        this.programs = [
-          {
-            id: '1',
-            title: 'البرنامج الصباحي',
-            titleEn: 'Morning Show',
-            description: 'برنامج صباحي يومي يقدم آخر الأخبار والفقرات المتنوعة',
-            descriptionEn: 'Daily morning show with news and diverse segments',
-            slug: 'morning-show',
-            host: 'محمد أحمد',
-            hostEn: 'Mohammed Ahmed',
-            schedule: 'يومياً من 6:00 إلى 9:00 صباحاً',
-            scheduleEn: 'Daily from 6:00 to 9:00 AM',
-            image: '/images/programs/morning-show.jpg',
-            isActive: true,
-            category: 'news'
-          },
-          {
-            id: '2',
-            title: 'نور الهداية',
-            titleEn: 'Light of Guidance',
-            description: 'برنامج ديني يقدم تفسير القرآن والأحاديث النبوية',
-            descriptionEn: 'Religious program featuring Quran interpretation and Prophetic traditions',
-            slug: 'light-of-guidance',
-            host: 'الشيخ عبد الله',
-            hostEn: 'Sheikh Abdullah',
-            schedule: 'يومياً من 5:00 إلى 6:00 مساءً',
-            scheduleEn: 'Daily from 5:00 to 6:00 PM',
-            image: '/images/programs/guidance.jpg',
-            isActive: true,
-            category: 'religious'
-          }
-        ]
+        // Import programs data from JSON file
+        const programsData = await import('@/content/programs/programs.json')
+        this.programs = programsData.default || programsData
       } catch (error) {
         this.error = 'خطأ في تحميل البرامج'
         console.error('Error fetching programs:', error)
+        // Fallback to empty array if import fails
+        this.programs = []
       } finally {
         this.loading = false
       }
