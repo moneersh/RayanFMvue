@@ -1,27 +1,28 @@
 <template>
-  <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-    <figure class="w-full h-64 overflow-hidden">
+  <div class="card bg-white border border-rayan-gray shadow-xl hover:shadow-2xl hover:border-rayan-orange/50 transition-all duration-300 overflow-hidden group">
+    <figure class="w-full h-64 overflow-hidden relative">
       <img 
         :src="getImagePath(program.image)" 
         :alt="localizedTitle" 
-        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         @error="handleImageError"
         loading="lazy"
       >
+      <div class="absolute inset-0 bg-gradient-to-t from-rayan-purple/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </figure>
     <div class="card-body p-6">
-      <h2 class="card-title text-xl font-bold mb-3">{{ localizedTitle }}</h2>
+      <h2 class="card-title text-xl font-bold mb-3 text-rayan-purple group-hover:text-rayan-orange transition-colors duration-300">{{ localizedTitle }}</h2>
       <div class="space-y-2 mb-4">
-        <p class="text-sm opacity-70 flex items-center">
-          <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+        <p class="text-sm text-rayan-dark/70 flex items-center">
+          <span class="w-2 h-2 bg-rayan-orange rounded-full mr-2"></span>
           {{ $t('programs.host') }}: {{ localizedHost }}
         </p>
-        <p class="text-sm opacity-70 flex items-center">
-          <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
+        <p class="text-sm text-rayan-dark/70 flex items-center">
+          <span class="w-2 h-2 bg-rayan-purple rounded-full mr-2"></span>
           {{ $t('programs.schedule') }}: {{ localizedSchedule }}
         </p>
       </div>
-      <p class="text-sm leading-relaxed">{{ localizedDescription }}</p>
+      <p class="text-sm leading-relaxed text-rayan-dark/80">{{ localizedDescription }}</p>
     </div>
   </div>
 </template>

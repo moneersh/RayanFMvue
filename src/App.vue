@@ -13,13 +13,16 @@ onMounted(() => {
   // Initialize language and RTL settings
   setLanguage('ar')
   
-  // Initialize site theme
-  siteStore.setTheme('light')
+  // Initialize site theme to use Rayan FM theme
+  siteStore.setTheme('rayanfm')
+  
+  // Set DaisyUI theme attribute
+  document.documentElement.setAttribute('data-theme', 'rayanfm')
 })
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="bg-gradient-to-br from-rayan-light via-white to-rayan-gray">
     <AppHeader />
     <main class="min-h-screen">
       <RouterView />

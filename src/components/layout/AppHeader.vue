@@ -1,23 +1,42 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200/50 shadow-lg" :class="{ 'rtl-header': locale === 'ar' }">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-rayan-light/95 backdrop-blur-lg border-b border-rayan-gray/50 shadow-lg" :class="{ 'rtl-header': locale === 'ar' }">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
+      <div class="flex items-center justify-between h-20 lg:h-24">
         
         <!-- Logo Section -->
         <div class="flex-shrink-0 flex items-center">
-          <router-link to="/" class="flex items-center space-x-3 group" :class="{ 'space-x-reverse': locale === 'ar' }">
-            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-6 h-6 lg:w-8 lg:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
+          <router-link to="/" class="flex items-center space-x-4 group" :class="{ 'space-x-reverse': locale === 'ar' }">
+            <!-- Rayan FM Logo -->
+            <div class="relative w-16 h-16 lg:w-20 lg:h-20 group-hover:scale-105 transition-transform duration-300">
+              <!-- Logo Image with Brand Styling -->
+              <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg ring-2 ring-rayan-orange/30 group-hover:ring-rayan-orange/50 transition-all duration-300">
+                <img 
+                  src="/RayanFMvue/logo.webp" 
+                  alt="Rayan FM Logo"
+                  class="w-full h-full object-cover"
+                  @error="handleLogoError"
+                  v-if="!logoError"
+                >
+                <!-- Fallback with same styling if logo fails to load -->
+                <div v-if="logoError" class="absolute inset-0 rounded-full bg-gradient-to-br from-rayan-purple to-rayan-purple/80 shadow-lg flex items-center justify-center">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 bg-rayan-orange rounded-lg flex items-center justify-center shadow-inner">
+                    <span class="text-white font-black text-lg lg:text-xl">R</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Sound waves animation -->
+              <div class="absolute inset-0 rounded-full border-2 border-rayan-orange/30 animate-ping"></div>
             </div>
-            <div class="hidden sm:block">
-              <h1 class="text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            
+            <!-- Brand Text -->
+            <div class="flex flex-col">
+              <h1 class="text-2xl lg:text-3xl font-black bg-gradient-to-r from-rayan-orange to-rayan-purple bg-clip-text text-transparent leading-tight">
                 {{ locale === 'ar' ? 'راديو الريان' : 'Rayan FM' }}
               </h1>
-              <p class="text-xs lg:text-sm text-gray-600 -mt-1">
-                {{ locale === 'ar' ? 'إذاعة الريان' : 'Radio Station' }}
-              </p>
+              <div class="flex items-center space-x-2 -mt-1" :class="{ 'space-x-reverse': locale === 'ar' }">
+                <span class="text-sm lg:text-base font-bold text-rayan-purple">FM 90.2 MHz</span>
+                <div class="w-2 h-2 bg-rayan-orange rounded-full animate-pulse"></div>
+              </div>
             </div>
           </router-link>
         </div>
@@ -28,11 +47,11 @@
             v-for="item in navItems" 
             :key="item.path"
             :to="item.path"
-            class="relative group px-3 py-2 text-gray-700 hover:text-primary font-medium transition-colors duration-300"
-            active-class="text-primary"
+            class="relative group px-3 py-2 text-rayan-purple hover:text-rayan-orange font-semibold transition-colors duration-300"
+            active-class="text-rayan-orange"
           >
             {{ locale === 'ar' ? item.nameAr : item.nameEn }}
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rayan-orange to-rayan-purple group-hover:w-full transition-all duration-300"></span>
           </router-link>
         </nav>
 
@@ -40,18 +59,18 @@
         <div class="flex items-center space-x-4" :class="{ 'space-x-reverse': locale === 'ar' }">
           
           <!-- Live Status Badge -->
-          <div class="hidden sm:flex items-center bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-medium">
-            <div class="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse" :class="{ 'ml-2 mr-0': locale === 'ar' }"></div>
+          <div class="hidden sm:flex items-center bg-rayan-orange/10 text-rayan-orange px-4 py-2 rounded-full text-sm font-bold border border-rayan-orange/20">
+            <div class="w-2 h-2 bg-rayan-orange rounded-full mr-2 animate-pulse" :class="{ 'ml-2 mr-0': locale === 'ar' }"></div>
             {{ locale === 'ar' ? 'مباشر' : 'LIVE' }}
           </div>
 
           <!-- Language Toggle -->
           <button 
             @click="toggleLanguage"
-            class="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors duration-300 group"
+            class="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-rayan-gray hover:bg-rayan-orange/10 transition-colors duration-300 group"
             :title="locale === 'ar' ? 'English' : 'العربية'"
           >
-            <span class="text-sm font-bold text-gray-700 group-hover:text-primary transition-colors duration-300">
+            <span class="text-sm font-bold text-rayan-purple group-hover:text-rayan-orange transition-colors duration-300">
               {{ locale === 'ar' ? 'EN' : 'ع' }}
             </span>
           </button>
@@ -59,8 +78,8 @@
           <!-- Mobile Menu Button -->
           <button 
             @click="toggleMobileMenu"
-            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors duration-300 group"
-            :class="{ 'bg-primary text-white': isMobileMenuOpen }"
+            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-rayan-gray hover:bg-rayan-orange/10 transition-colors duration-300 group"
+            :class="{ 'bg-rayan-orange text-white': isMobileMenuOpen }"
           >
             <svg class="w-6 h-6 transition-transform duration-300" :class="{ 'rotate-90': isMobileMenuOpen }" fill="currentColor" viewBox="0 0 24 24">
               <path v-if="!isMobileMenuOpen" d="M3 12h18m-9-9v18"/>
@@ -79,7 +98,7 @@
         leave-from-class="opacity-100 transform translate-y-0"
         leave-to-class="opacity-0 transform -translate-y-4"
       >
-        <div v-if="isMobileMenuOpen" class="lg:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-lg">
+        <div v-if="isMobileMenuOpen" class="lg:hidden border-t border-rayan-gray/50 bg-rayan-light/95 backdrop-blur-lg">
           <div class="px-4 py-6 space-y-4">
             
             <!-- Mobile Navigation Links -->
@@ -89,30 +108,30 @@
                 :key="item.path"
                 :to="item.path"
                 @click="closeMobileMenu"
-                class="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-xl transition-all duration-300 group"
-                active-class="text-primary bg-primary/5"
+                class="flex items-center justify-between w-full px-4 py-3 text-rayan-purple hover:text-rayan-orange hover:bg-rayan-orange/5 rounded-xl transition-all duration-300 group"
+                active-class="text-rayan-orange bg-rayan-orange/10"
               >
                 <span class="font-medium">{{ locale === 'ar' ? item.nameAr : item.nameEn }}</span>
-                <svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors duration-300" :class="{ 'rotate-180': locale === 'ar' }" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-5 h-5 text-rayan-gray group-hover:text-rayan-orange transition-colors duration-300" :class="{ 'rotate-180': locale === 'ar' }" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
               </router-link>
             </div>
 
             <!-- Mobile Actions -->
-            <div class="pt-4 border-t border-gray-200">
+            <div class="pt-4 border-t border-rayan-gray">
               <div class="flex items-center justify-between">
                 
                 <!-- Mobile Live Status -->
-                <div class="flex items-center bg-red-50 text-red-600 px-4 py-2 rounded-xl text-sm font-medium">
-                  <div class="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse" :class="{ 'ml-2 mr-0': locale === 'ar' }"></div>
+                <div class="flex items-center bg-rayan-orange/10 text-rayan-orange px-4 py-2 rounded-xl text-sm font-bold border border-rayan-orange/20">
+                  <div class="w-2 h-2 bg-rayan-orange rounded-full mr-2 animate-pulse" :class="{ 'ml-2 mr-0': locale === 'ar' }"></div>
                   {{ locale === 'ar' ? 'البث المباشر' : 'LIVE NOW' }}
                 </div>
 
                 <!-- Mobile Language Toggle -->
                 <button 
                   @click="toggleLanguage"
-                  class="flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-colors duration-300"
+                  class="flex items-center justify-center px-4 py-2 rounded-xl bg-rayan-purple text-white font-semibold hover:bg-rayan-purple/90 transition-colors duration-300"
                 >
                   {{ locale === 'ar' ? 'English' : 'العربية' }}
                 </button>
@@ -125,7 +144,7 @@
   </header>
 
   <!-- Header Spacer -->
-  <div class="h-16 lg:h-20"></div>
+  <div class="h-20 lg:h-24"></div>
 </template>
 
 <script setup lang="ts">
@@ -150,6 +169,12 @@ try {
 
 // Mobile menu state
 const isMobileMenuOpen = ref(false)
+const logoError = ref(false)
+
+// Logo error handling
+const handleLogoError = () => {
+  logoError.value = true
+}
 
 // Navigation items
 const navItems = [

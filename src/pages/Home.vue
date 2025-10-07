@@ -1,23 +1,23 @@
 <template>
   <!-- Hero Section -->
-  <section class="hero min-h-screen bg-gradient-to-r from-primary to-secondary">
-    <div class="hero-content text-center text-primary-content">
+  <section class="hero min-h-screen bg-gradient-to-br from-rayan-purple via-rayan-dark to-rayan-purple">
+    <div class="hero-content text-center text-white">
       <div class="max-w-4xl">
-        <h1 class="mb-5 text-5xl font-bold">{{ $t('hero.title') }}</h1>
-        <p class="mb-5 text-xl">{{ $t('hero.subtitle') }}</p>
-        <p class="mb-8 text-lg">{{ $t('hero.description') }}</p>
+        <h1 class="mb-5 text-6xl font-black bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">{{ $t('hero.title') }}</h1>
+        <p class="mb-5 text-2xl font-semibold text-rayan-light">{{ $t('hero.subtitle') }}</p>
+        <p class="mb-8 text-lg text-rayan-gray">{{ $t('hero.description') }}</p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
           <!-- Enhanced Live Stream Button -->
           <button 
             @click="playLive" 
-            class="group relative bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-2xl transform hover:-translate-y-2 overflow-hidden"
+            class="group relative bg-gradient-to-r from-rayan-orange via-rayan-orange to-rayan-purple text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-2xl transform hover:-translate-y-2 overflow-hidden"
           >
             <!-- Animated background -->
-            <div class="absolute inset-0 bg-gradient-to-r from-accent via-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-rayan-purple via-rayan-orange to-rayan-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <!-- Live indicator -->
             <div class="absolute top-2 right-2 flex items-center">
-              <div class="w-3 h-3 bg-red-300 rounded-full animate-pulse mr-2"></div>
+              <div class="w-3 h-3 bg-rayan-orange rounded-full animate-pulse mr-2"></div>
               <span class="text-xs font-medium">{{ $t('hero.title') === 'إذاعة الريان' ? 'مباشر' : 'LIVE' }}</span>
             </div>
             
