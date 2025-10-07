@@ -8,6 +8,7 @@ import { unheadVueComposablesImports } from '@unhead/vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/RayanFMvue/',
   plugins: [
     vue(),
     AutoImport({ 

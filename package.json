@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@unhead/vue": "^1.1.29",
@@ -28,6 +29,7 @@
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.14",
     "daisyui": "^3.2.1",
+    "gh-pages": "^6.3.0",
     "jsdom": "^22.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.24",
