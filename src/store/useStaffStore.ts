@@ -81,9 +81,8 @@ export const useStaffStore = defineStore('staff', {
         }
         const data = await response.json()
         this.staffData = data
-      } catch (error) {
+      } catch {
         this.error = 'فشل في تحميل بيانات فريق العمل'
-        console.error('Error fetching staff data:', error)
         // Fallback to empty data
         this.staffData = {
           teamInfo: {

@@ -2,6 +2,7 @@
   "name": "vfull",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -9,7 +10,9 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "eslint src --ext .js,.ts --fix",
+    "lint:check": "eslint src --ext .js,.ts"
   },
   "dependencies": {
     "@unhead/vue": "^1.1.29",
@@ -22,20 +25,26 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.37.0",
     "@tsconfig/node18": "^2.0.1",
     "@types/jsdom": "^21.1.1",
     "@types/node": "^18.16.17",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/test-utils": "^2.3.2",
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.14",
     "daisyui": "^3.2.1",
+    "eslint": "^9.37.0",
+    "eslint-plugin-vue": "^10.5.0",
     "gh-pages": "^6.3.0",
     "jsdom": "^22.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
     "typescript": "~5.0.4",
+    "typescript-eslint": "^8.46.0",
     "unplugin-auto-import": "^0.16.4",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.3.9",

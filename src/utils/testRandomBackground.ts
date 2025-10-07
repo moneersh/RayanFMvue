@@ -5,23 +5,24 @@ import { useRandomBackground } from '@/composables/useRandomBackground'
 
 // Test the random background functionality
 export function testRandomBackground() {
-  console.log('Testing Random Background Functionality...')
-  
   const { getRandomBackground, backgroundImages } = useRandomBackground()
   
-  console.log('Available background images:', backgroundImages)
-  
   // Test getting 5 random backgrounds
-  console.log('Testing 5 random picks:')
+  const results = []
   for (let i = 0; i < 5; i++) {
     const randomBg = getRandomBackground()
-    console.log(`Pick ${i + 1}: ${randomBg}`)
+    results.push(`Pick ${i + 1}: ${randomBg}`)
   }
   
-  return true
+  return {
+    success: true,
+    backgroundImages,
+    testResults: results
+  }
 }
 
 // For testing in console
 if (typeof window !== 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (window as any).testRandomBackground = testRandomBackground
 }

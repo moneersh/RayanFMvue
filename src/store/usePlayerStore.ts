@@ -61,17 +61,16 @@ export const usePlayerStore = defineStore('player', {
           }
         })
         
-        this.audioElement.addEventListener('error', (e) => {
-          console.error('Audio player error:', e)
+        this.audioElement.addEventListener('error', () => {
           this.isPlaying = false
         })
         
         this.audioElement.addEventListener('loadstart', () => {
-          console.log('Loading stream...')
+          // Stream loading started
         })
         
         this.audioElement.addEventListener('canplay', () => {
-          console.log('Stream ready to play')
+          // Stream ready to play
         })
       }
     },
@@ -90,8 +89,7 @@ export const usePlayerStore = defineStore('player', {
         }
         try {
           await this.audioElement.play()
-        } catch (error) {
-          console.error('Error playing live stream:', error)
+        } catch {
           // Try to handle CORS or other streaming issues
           throw new Error('Unable to play live stream. Please check your internet connection.')
         }
@@ -109,8 +107,8 @@ export const usePlayerStore = defineStore('player', {
         }
         try {
           await this.audioElement.play()
-        } catch (error) {
-          console.error('Error playing episode:', error)
+        } catch {
+          // Error playing episode - fail silently
         }
       }
     },

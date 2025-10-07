@@ -477,6 +477,7 @@
 </template>
 
 <script setup lang="ts">
+// Make sure the file exists at the specified path, or update the path below if needed
 import StatisticsSection from '@/components/about/StatisticsSection.vue'
 import { useSeo } from '@/composables/useSeo'
 import { useI18n } from 'vue-i18n'

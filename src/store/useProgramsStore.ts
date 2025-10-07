@@ -39,9 +39,8 @@ export const useProgramsStore = defineStore('programs', {
         }
         const programsData = await response.json()
         this.programs = Array.isArray(programsData) ? programsData : []
-      } catch (error) {
+      } catch {
         this.error = 'خطأ في تحميل البرامج'
-        console.error('Error fetching programs:', error)
         // Fallback to empty array if fetch fails
         this.programs = []
       } finally {
@@ -61,9 +60,8 @@ export const useProgramsStore = defineStore('programs', {
         } else {
           throw new Error('Program not found')
         }
-      } catch (error) {
+      } catch {
         this.error = 'خطأ في تحميل تفاصيل البرنامج'
-        console.error('Error fetching program details:', error)
       } finally {
         this.loading = false
       }
@@ -87,8 +85,8 @@ export const useProgramsStore = defineStore('programs', {
             image: getImagePath('images/episodes/episode-1.jpg')
           }
         ]
-      } catch (error) {
-        console.error('Error fetching episodes:', error)
+      } catch {
+        // Error fetching episodes - fail silently
       }
     }
   }
