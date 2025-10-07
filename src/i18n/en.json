@@ -185,7 +185,6 @@
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "rights": "© 2025 Rayan Radio - All Rights Reserved",
-    "poweredBy": "Powered by"
+    "rights": "© {year} Rayan Radio - All Rights Reserved"
   }
 }
