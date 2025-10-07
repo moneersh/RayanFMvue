@@ -61,58 +61,58 @@ interface TeamMember {
 
 const teamMembers = computed<TeamMember[]>(() => [
   {
-    name: 'راما عبد الكريم',
-    position: 'معدة ومقدمة برامج',
+    name: 'Rama Abdul Kareem',
+    position: 'Program Producer & Host',
     image: '/images/staff/rama1.webp'
   },
   {
-    name: 'مازن أبوحمدان',
-    position: 'إدارة هندسية',
+    name: 'Mazen Abu Hamdan',
+    position: 'Technical Manager',
     image: '/images/staff/mazen1.webp'
   },
   {
-    name: 'رواد حسون',
-    position: 'معد ومدير برامج',
+    name: 'Rawad Hasoun',
+    position: 'Program Producer & Director',
     image: '/images/staff/rawad.webp'
   },
   {
-    name: 'صفاء جودية',
-    position: 'مسؤولة الشؤون القانونية',
+    name: 'Safaa Joudieh',
+    position: 'Legal Affairs Officer',
     image: '/images/staff/safaa1.webp'
   },
   {
-    name: 'منار مرشد',
-    position: 'معد ومقدم برامج',
+    name: 'Manar Murshid',
+    position: 'Program Producer & Host',
     image: '/images/staff/MANAR1.webp'
   },
   {
-    name: 'مرح الشاهين',
-    position: 'معلقة ومقدمة برامج',
+    name: 'Marah Al-Shaheen',
+    position: 'Commentator & Program Host',
     image: '/images/staff/marah.webp'
   },
   {
-    name: 'شيرين العقباني',
-    position: 'معلقة ومقدمة برامج',
+    name: 'Shireen Al-Aqbani',
+    position: 'Commentator & Program Host',
     image: '/images/staff/shireen1.webp'
   },
   {
-    name: 'هبا دوارة',
-    position: 'مسؤولة السوشال ميديا',
+    name: 'Heba Dawara',
+    position: 'Social Media Manager',
     image: '/images/staff/HEBA1.webp'
   },
   {
-    name: 'أكرم أبو الفضل',
-    position: 'المدير المالي',
+    name: 'Akram Abu Al-Fadl',
+    position: 'Financial Manager',
     image: '/images/staff/AKRAM1.webp'
   },
   {
-    name: 'عصام الأعور',
-    position: 'معد برامج',
+    name: 'Issam Al-Aawar',
+    position: 'Program Producer',
     image: '/images/staff/ISSAM1.webp'
   },
   {
-    name: 'نورس أبو حسون',
-    position: 'دي جي',
+    name: 'Nawras Abu Hasoun',
+    position: 'DJ',
     image: '/images/staff/NAWRAS1.webp'
   }
 ])
