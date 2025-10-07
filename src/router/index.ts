@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Home from '@/pages/Home.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,13 +7,83 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: Home
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
-    },    
+      component: () => import('@/pages/About.vue')
+    },
+    {
+      path: '/programs',
+      name: 'programs',
+      component: () => import('@/pages/Programs/ProgramsList.vue')
+    },
+    {
+      path: '/programs/:slug',
+      name: 'program-detail',
+      component: () => import('@/pages/Programs/ProgramDetail.vue'),
+      props: true
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: () => import('@/pages/News/NewsList.vue')
+    },
+    {
+      path: '/news/:slug',
+      name: 'news-detail',
+      component: () => import('@/pages/News/NewsDetail.vue'),
+      props: true
+    },
+    {
+      path: '/events',
+      name: 'events',
+      component: () => import('@/pages/Events/EventsList.vue')
+    },
+    {
+      path: '/events/:slug',
+      name: 'event-detail',
+      component: () => import('@/pages/Events/EventDetail.vue'),
+      props: true
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: () => import('@/pages/Blog/BlogList.vue')
+    },
+    {
+      path: '/blog/:slug',
+      name: 'blog-post',
+      component: () => import('@/pages/Blog/BlogPost.vue'),
+      props: true
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('@/pages/Contact.vue')
+    },
+    {
+      path: '/how-to-listen',
+      name: 'how-to-listen',
+      component: () => import('@/pages/HowToListen.vue')
+    },
+    {
+      path: '/editorial-standards',
+      name: 'editorial-standards', 
+      component: () => import('@/pages/EditorialStandards.vue')
+    },
+    {
+      path: '/podcast',
+      name: 'podcast',
+      component: () => import('@/pages/Podcast/PodcastList.vue')
+    },
+    {
+      path: '/podcast/:slug',
+      name: 'podcast-episode',
+      component: () => import('@/pages/Podcast/PodcastEpisode.vue'),
+      props: true
+    }
   ]
 })
 

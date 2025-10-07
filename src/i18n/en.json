@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Radio",
+    "programs": "Programs",
+    "news": "News",
+    "events": "Events",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "howToListen": "How to Listen",
+    "editorialStandards": "Editorial Standards",
+    "podcast": "Podcast"
+  },
+  "hero": {
+    "title": "Rayan Radio",
+    "subtitle": "The Voice of Truth and Islam",
+    "description": "An Islamic radio station offering diverse religious, cultural, and social programs",
+    "listenLive": "Listen Live",
+    "explorePrograms": "Explore Programs"
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "A variety of religious and cultural programs",
+    "viewAll": "View All Programs",
+    "host": "Hosted by",
+    "schedule": "Schedule",
+    "episodes": "Episodes"
+  },
+  "news": {
+    "title": "Latest News",
+    "subtitle": "Stay updated with the latest news",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "by": "By"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Join our events and conferences",
+    "viewDetails": "View Details",
+    "register": "Register Now",
+    "date": "Date",
+    "location": "Location",
+    "online": "Online"
+  },
+  "testimonials": {
+    "title": "Listener Testimonials",
+    "subtitle": "What our listeners say about Rayan Radio"
+  },
+  "newsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "subtitle": "Get the latest news and programs",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "success": "Successfully subscribed!",
+    "error": "An error occurred, please try again"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to answer your questions",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop",
+    "volume": "Volume",
+    "live": "Live",
+    "offline": "Offline"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "noData": "No data available",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "language": "Language",
+    "arabic": "العربية",
+    "english": "English"
+  },
+  "footer": {
+    "about": "Rayan Radio is an Islamic radio station aimed at spreading Islamic values and meaningful culture",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "contact": "Contact Information",
+    "rights": "All rights reserved © 2025 Rayan Radio"
+  }
+}

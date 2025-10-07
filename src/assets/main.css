@@ -2,3 +2,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* RTL Support */
+[dir="rtl"] {
+    --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-4> :not([hidden])~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* Arabic font improvements */
+[lang="ar"],
+[dir="rtl"] {
+    font-family: 'Cairo', 'Noto Sans Arabic', Arial, sans-serif;
+}
+
+/* Custom radio button colors for Islamic theme */
+:root {
+    --islamic-green: #2d5a27;
+    --islamic-gold: #d4af37;
+    --islamic-blue: #1e3a8a;
+}
+
+/* DaisyUI theme customization for Islamic colors */
+[data-theme="light"] {
+    --primary: var(--islamic-green);
+    --primary-content: #ffffff;
+    --secondary: var(--islamic-gold);
+    --accent: var(--islamic-blue);
+}
