@@ -1,6 +1,6 @@
 <template>
   <!-- Hero Section -->
-  <section class="hero min-h-screen bg-gradient-to-br from-primary/10 via-base-100 to-secondary/10">
+  <section class="hero py-20 bg-gradient-to-br from-primary/10 via-base-100 to-secondary/10">
     <div class="hero-content text-center max-w-4xl">
       <div>
         <h1 class="text-5xl font-bold mb-6">{{ $t('about.heroTitle') }}</h1>

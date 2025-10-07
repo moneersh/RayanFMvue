@@ -1,6 +1,6 @@
 <template>
   <!-- Hero Section - President's Message -->
-  <section class="hero min-h-screen bg-gradient-to-br from-rayan-orange/20 via-rayan-light to-rayan-purple/20">
+  <section class="hero py-16 bg-gradient-to-br from-rayan-orange/20 via-rayan-light to-rayan-purple/20">
     <div class="hero-content text-center max-w-5xl">
       <div>
         <h1 class="text-4xl md:text-5xl font-bold mb-8">{{ $t('contact.presidentTitle') }}</h1>

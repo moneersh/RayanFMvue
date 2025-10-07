@@ -1,6 +1,6 @@
 <template>
   <!-- Hero Section -->
-  <section class="hero min-h-screen bg-gradient-to-br from-rayan-purple via-rayan-dark to-rayan-purple">
+  <section class="hero py-20 bg-gradient-to-br from-rayan-purple via-rayan-dark to-rayan-purple">
     <div class="hero-content text-center text-white">
       <div class="max-w-4xl">
         <h1 class="mb-5 text-6xl font-black bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">{{ $t('hero.title') }}</h1>
