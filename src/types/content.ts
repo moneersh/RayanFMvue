@@ -12,6 +12,9 @@ export interface Program {
   image: string
   isActive: boolean
   category: string
+  duration?: string
+  frequency?: string
+  tags?: string[]
   episodes?: Episode[]
 }
 

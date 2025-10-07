@@ -32,13 +32,17 @@ export const useProgramsStore = defineStore('programs', {
       this.loading = true
       this.error = null
       try {
-        // Import programs data from JSON file
-        const programsData = await import('@/content/programs/programs.json')
-        this.programs = programsData.default || programsData
+        // Fetch programs data from public JSON file
+        const response = await fetch('/RayanFMvue/data/programs.json')
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const programsData = await response.json()
+        this.programs = Array.isArray(programsData) ? programsData : []
       } catch (error) {
         this.error = 'خطأ في تحميل البرامج'
         console.error('Error fetching programs:', error)
-        // Fallback to empty array if import fails
+        // Fallback to empty array if fetch fails
         this.programs = []
       } finally {
         this.loading = false
