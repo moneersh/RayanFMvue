@@ -50,14 +50,7 @@
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "sendMessage": "Send Message",
-    "name": "Name",
-    "message": "Message",
-    "send": "Send",
-    "required": "Required",
-    "success": "Your message has been sent successfully",
-    "error": "An error occurred while sending the message",
-    "followUs": "Follow Us"
+    "addressValue": "As Suwayda, Syria"
   },
   "player": {
     "play": "Play",

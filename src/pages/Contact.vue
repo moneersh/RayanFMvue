@@ -45,235 +45,79 @@
           <p class="text-lg opacity-70">{{ $t('contact.subtitle') }}</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Phone -->
-          <div class="card bg-base-100 shadow-lg">
-            <div class="card-body text-center">
-              <div class="text-primary text-4xl mb-4">
-                <i class="fas fa-phone"></i>
-              </div>
-              <h3 class="card-title justify-center mb-2">{{ $t('contact.phone') }}</h3>
-              <p class="text-lg mb-3">+971507811815</p>
-              <div class="space-y-2">
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-base-300">
+            <div class="card-body text-center p-8">
+              <i class="fas fa-phone text-4xl text-primary mb-6"></i>
+              <h3 class="card-title justify-center mb-4 text-xl font-bold text-base-content">{{ $t('contact.phone') }}</h3>
+              <div class="space-y-4">
                 <a 
                   href="tel:+971507811815" 
-                  class="btn btn-outline btn-primary btn-sm"
+                  class="block text-lg font-semibold text-primary hover:text-primary-focus transition-colors duration-300 hover:underline"
                 >
-                  <i class="fas fa-phone mr-2"></i>
-                  Call Now
+                  +971507811815
                 </a>
                 <a 
                   href="https://wa.me/971507811815" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  class="btn btn-success btn-sm ml-2"
+                  class="block text-lg font-semibold text-green-600 hover:text-green-700 transition-colors duration-300 hover:underline"
                 >
                   <i class="fab fa-whatsapp mr-2"></i>
-                  WhatsApp
+                  {{ locale === 'en' ? 'WhatsApp' : 'واتساب' }}
                 </a>
               </div>
             </div>
           </div>
 
           <!-- Email -->
-          <div class="card bg-base-100 shadow-lg">
-            <div class="card-body text-center">
-              <div class="text-primary text-4xl mb-4">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <h3 class="card-title justify-center mb-2">{{ $t('contact.email') }}</h3>
-              <p class="text-lg">info@rayanfm.net</p>
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-base-300">
+            <div class="card-body text-center p-8">
+              <i class="fas fa-envelope text-4xl text-secondary mb-6"></i>
+              <h3 class="card-title justify-center mb-4 text-xl font-bold text-base-content">{{ $t('contact.email') }}</h3>
+              <a 
+                href="mailto:info@rayanfm.net"
+                class="text-lg font-semibold text-secondary hover:text-secondary-focus transition-colors duration-300 hover:underline break-all"
+              >
+                info@rayanfm.net
+              </a>
             </div>
           </div>
 
           <!-- Address -->
-          <div class="card bg-base-100 shadow-lg">
-            <div class="card-body text-center">
-              <div class="text-primary text-4xl mb-4">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <h3 class="card-title justify-center mb-2">{{ $t('contact.address') }}</h3>
-              <p class="text-lg">السويداء، سوريا</p>
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-base-300">
+            <div class="card-body text-center p-8">
+              <i class="fas fa-map-marker-alt text-4xl text-accent mb-6"></i>
+              <h3 class="card-title justify-center mb-4 text-xl font-bold text-base-content">{{ $t('contact.address') }}</h3>
+              <a 
+                :href="locale === 'en' ? 'https://en.wikipedia.org/wiki/Suwayda' : 'https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%AF%D8%A7%D8%A1'"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-lg font-semibold text-accent hover:text-accent-focus transition-colors duration-300 hover:underline"
+              >
+                {{ $t('contact.addressValue') }}
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="max-w-2xl mx-auto mt-16">
-          <div class="card bg-base-100 shadow-xl">
-            <div class="card-body">
-              <h3 class="card-title text-2xl mb-6 justify-center">{{ $t('contact.sendMessage') }}</h3>
-              
-              <form @submit.prevent="submitForm" class="space-y-6">
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">{{ $t('contact.name') }} *</span>
-                  </label>
-                  <input 
-                    v-model="form.name" 
-                    type="text" 
-                    class="input input-bordered" 
-                    :class="{ 'input-error': errors.name }"
-                    required 
-                  />
-                  <span v-if="errors.name" class="text-error text-sm mt-1">{{ errors.name }}</span>
-                </div>
 
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">{{ $t('contact.email') }} *</span>
-                  </label>
-                  <input 
-                    v-model="form.email" 
-                    type="email" 
-                    class="input input-bordered" 
-                    :class="{ 'input-error': errors.email }"
-                    required 
-                  />
-                  <span v-if="errors.email" class="text-error text-sm mt-1">{{ errors.email }}</span>
-                </div>
-
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">{{ $t('contact.message') }} *</span>
-                  </label>
-                  <textarea 
-                    v-model="form.message" 
-                    class="textarea textarea-bordered h-32" 
-                    :class="{ 'textarea-error': errors.message }"
-                    required
-                  ></textarea>
-                  <span v-if="errors.message" class="text-error text-sm mt-1">{{ errors.message }}</span>
-                </div>
-
-                <div class="form-control">
-                  <button 
-                    type="submit" 
-                    class="btn btn-primary" 
-                    :class="{ 'loading': isSubmitting }"
-                    :disabled="isSubmitting"
-                  >
-                    {{ isSubmitting ? '' : $t('contact.send') }}
-                  </button>
-                </div>
-              </form>
-
-              <!-- Success/Error Messages -->
-              <div v-if="successMessage" class="alert alert-success mt-4">
-                <i class="fas fa-check-circle"></i>
-                <span>{{ $t('contact.success') }}</span>
-              </div>
-
-              <div v-if="errorMessage" class="alert alert-error mt-4">
-                <i class="fas fa-exclamation-triangle"></i>
-                <span>{{ $t('contact.error') }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   </AppShell>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppShell from '@/layouts/AppShell.vue'
 import { useSeo } from '@/composables/useSeo'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 // SEO setup
 useSeo({
   title: t('contact.title'),
   description: t('contact.subtitle')
 })
-
-// Form state
-const form = reactive({
-  name: '',
-  email: '',
-  message: ''
-})
-
-const errors = reactive({
-  name: '',
-  email: '',
-  message: ''
-})
-
-const isSubmitting = ref(false)
-const successMessage = ref(false)
-const errorMessage = ref(false)
-
-// Form validation
-const validateForm = () => {
-  let isValid = true
-  
-  // Reset errors
-  errors.name = ''
-  errors.email = ''
-  errors.message = ''
-  
-  // Validate name
-  if (!form.name.trim()) {
-    errors.name = t('contact.required')
-    isValid = false
-  }
-  
-  // Validate email
-  if (!form.email.trim()) {
-    errors.email = t('contact.required')
-    isValid = false
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-    errors.email = 'Please enter a valid email address'
-    isValid = false
-  }
-  
-  // Validate message
-  if (!form.message.trim()) {
-    errors.message = t('contact.required')
-    isValid = false
-  }
-  
-  return isValid
-}
-
-// Form submission
-const submitForm = async () => {
-  if (!validateForm()) return
-  
-  isSubmitting.value = true
-  successMessage.value = false
-  errorMessage.value = false
-  
-  try {
-    // Simulate form submission (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    // Reset form
-    form.name = ''
-    form.email = ''
-    form.message = ''
-    
-    // Show success message
-    successMessage.value = true
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      successMessage.value = false
-    }, 5000)
-    
-  } catch (error) {
-    errorMessage.value = true
-    
-    // Hide error message after 5 seconds
-    setTimeout(() => {
-      errorMessage.value = false
-    }, 5000)
-  } finally {
-    isSubmitting.value = false
-  }
-}
 </script>
