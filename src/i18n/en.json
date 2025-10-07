@@ -76,19 +76,57 @@
     "english": "English"
   },
   "about": {
-    "title": "About Radio",
-    "ourVision": "Our Vision",
-    "ourMission": "Our Mission", 
-    "ourValues": "Our Values",
-    "visionText": "To be the leading voice in spreading Islamic values and meaningful culture through radio",
-    "missionText": "To provide distinguished radio content that combines authenticity and modernity, serving the Muslim community",
-    "values": {
-      "honesty": "Honesty and Integrity",
-      "quality": "Quality and Excellence",
-      "innovation": "Innovation and Development"
+    "title": "About Us",
+    "heroTitle": "About Rayan Radio",
+    "heroDescription1": "Rayan Radio serves as an exemplary model in establishing and promoting popular and cultural heritage, enhancing awareness of its values and importance in a world witnessing rapid changes. The radio contributes significantly to documenting and transferring traditional and popular knowledge to new generations, thereby enhancing belonging and deep understanding of cultural heritage.",
+    "heroDescription2": "Rayan Radio was established in 2009 and is considered the first of its kind in the Arab world to dedicate its activities to reviving heritage and popular traditions and spreading Nabati poetry. Through its diverse and rich programs, Rayan Radio contributes to preserving cultural identity and reinforcing traditional values among listeners, making it a fundamental platform for preserving and promoting Arab heritage.",
+    "statistics": {
+      "yearsOfWork": "Years of Work",
+      "listeners": "Listeners",
+      "interviewedGuests": "Interviewed Guests"
+    },
+    "aboutRadio": {
+      "title": "About Rayan Radio",
+      "description1": "Rayan Radio is the first private radio station that provides diverse content covering various community interests and focuses on heritage revival. Broadcasting from the heart of As-Suwayda city in southern Syria, it extends throughout the entire Syrian map. It provides listeners and followers with a radio service that relies on accuracy and objectivity. Established in 2009, since its foundation, the station has been considered the first of its kind to specialize in reviving heritage and popular traditions and spreading Nabati poetry.",
+      "description2": "At Rayan Radio, we are committed to adopting the latest mechanisms in the field of audio media to be a media platform that keeps pace with an era where competition has become intense. Therefore, we have committed to professionalism and neutrality in our monitoring, follow-ups, and coverage, and we have adhered to respecting the listener's mind by providing quality social, cultural, and artistic content."
+    },
+    "mechanisms": {
+      "title": "Mechanisms",
+      "item1": "Following the highest professional standards and attracting the best competencies.",
+      "item2": "Establishing values of tolerance, love, and belonging to the homeland, protecting and building it.",
+      "item3": "Dedicating the culture of enlightenment and reasoning, and staying away from demagoguery and fighting surrender and defeatism, especially among youth.",
+      "item4": "Using modern technology to keep pace with the times and deliver news to listeners with complete objectivity.",
+      "item5": "Broadcasting programs that address sensitive issues without prejudice with an open mind and heart, and providing opportunities for differences based on respecting and accepting others."
+    },
+    "goals": {
+      "title": "Institutional Goals",
+      "item1": "Highlighting, spreading, and preserving the rich Syrian heritage.",
+      "item2": "Addressing service issues and attempting to solve them in coordination with relevant authorities.",
+      "item3": "Promoting the culture of dialogue and tolerance in communities, especially among the youth generation.",
+      "item4": "Precise follow-up of the concerns and aspirations of Syrian listeners.",
+      "item5": "Translating the role of committed media in bringing about the desired change at social, cultural, and intellectual levels.",
+      "item6": "Providing distinctive and different objective treatment of local issues."
+    },
+    "story": {
+      "title": "Our Story Through the Years",
+      "year2009": "2009",
+      "milestone": "Radio Establishment",
+      "description": "Rayan Radio was established in 2009 with a clear goal of enhancing and spreading popular heritage among generations, and providing a radio platform that reflects the beauty of traditional arts and Arab culture. We started our journey with small but steady steps, and over time, our circle of influence and success has expanded."
+    },
+    "editorialStandards": {
+      "title": "Our Editorial Standards",
+      "description": "Rayan commits to professional standards that respect the follower's mind and adhere to truth and credibility in addressing topics and issues. These standards include:",
+      "accuracy": "Accuracy",
+      "neutrality": "Neutrality",
+      "credibility": "Credibility",
+      "objectivity": "Objectivity",
+      "privacy": "Privacy",
+      "transparency": "Transparency",
+      "integrity": "Integrity",
+      "responsibility": "Responsibility"
     },
     "meetOurTeam": "Meet Our Distinguished Team",
-    "teamIntro": "The distinguished team at Rayan Radio is pleased to welcome you with love and hospitality. We are an enthusiastic team committed to our mission of providing high-quality content to our valued audience. The team at Rayan Radio includes a group of professionals and specialists in their fields, and we work in cooperation and harmony to achieve our goals and vision. We believe in the importance of teamwork, exchanging ideas and cooperation, and we strive to build a positive and motivating work environment that contributes to achieving success and excellence."
+    "teamIntro": "The distinguished team at Rayan Radio is pleased to welcome you with all love and appreciation. We are an enthusiastic team committed to our mission of providing high-quality content to our dear audience. The team at Rayan Radio includes a group of professionals and specialists in their fields, and we work in cooperation and harmony to achieve our goals and vision. We believe in the importance of teamwork, exchanging ideas and cooperation, and we strive to build a positive and encouraging work environment that contributes to achieving success and excellence."
   },
   "programNames": {
     "sabahakMaRama": "Your Morning with Rama",
