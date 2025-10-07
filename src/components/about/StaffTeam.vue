@@ -50,8 +50,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-
-
+import { getImagePath } from '@/utils/assets'
 
 interface TeamMember {
   name: string
@@ -63,57 +62,57 @@ const teamMembers = computed<TeamMember[]>(() => [
   {
     name: 'Rama Abdul Kareem',
     position: 'Program Producer & Host',
-    image: '/images/staff/rama1.webp'
+    image: getImagePath('images/staff/rama1.webp')
   },
   {
     name: 'Mazen Abu Hamdan',
     position: 'Technical Manager',
-    image: '/images/staff/mazen1.webp'
+    image: getImagePath('images/staff/mazen1.webp')
   },
   {
     name: 'Rawad Hasoun',
     position: 'Program Producer & Director',
-    image: '/images/staff/rawad.webp'
+    image: getImagePath('images/staff/rawad.webp')
   },
   {
     name: 'Safaa Joudieh',
     position: 'Legal Affairs Officer',
-    image: '/images/staff/safaa1.webp'
+    image: getImagePath('images/staff/safaa1.webp')
   },
   {
     name: 'Manar Murshid',
     position: 'Program Producer & Host',
-    image: '/images/staff/MANAR1.webp'
+    image: getImagePath('images/staff/MANAR1.webp')
   },
   {
     name: 'Marah Al-Shaheen',
     position: 'Commentator & Program Host',
-    image: '/images/staff/marah.webp'
+    image: getImagePath('images/staff/marah.webp')
   },
   {
     name: 'Shireen Al-Aqbani',
     position: 'Commentator & Program Host',
-    image: '/images/staff/shireen1.webp'
+    image: getImagePath('images/staff/shireen1.webp')
   },
   {
     name: 'Heba Dawara',
     position: 'Social Media Manager',
-    image: '/images/staff/HEBA1.webp'
+    image: getImagePath('images/staff/HEBA1.webp')
   },
   {
     name: 'Akram Abu Al-Fadl',
     position: 'Financial Manager',
-    image: '/images/staff/AKRAM1.webp'
+    image: getImagePath('images/staff/AKRAM1.webp')
   },
   {
     name: 'Issam Al-Aawar',
     position: 'Program Producer',
-    image: '/images/staff/ISSAM1.webp'
+    image: getImagePath('images/staff/ISSAM1.webp')
   },
   {
     name: 'Nawras Abu Hasoun',
     position: 'DJ',
-    image: '/images/staff/NAWRAS1.webp'
+    image: getImagePath('images/staff/NAWRAS1.webp')
   }
 ])
 

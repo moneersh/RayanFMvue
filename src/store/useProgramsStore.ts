@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import type { Program, Episode } from '@/types/content'
+import { getImagePath } from '@/utils/assets'
 
 interface ProgramsState {
   programs: Program[]
@@ -79,7 +80,7 @@ export const useProgramsStore = defineStore('programs', {
             audioUrl: '/audio/episode-1.mp3',
             duration: 3600,
             publishedAt: new Date('2025-01-01'),
-            image: '/images/episodes/episode-1.jpg'
+            image: getImagePath('images/episodes/episode-1.jpg')
           }
         ]
       } catch (error) {

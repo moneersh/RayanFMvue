@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import type { SiteSettings } from '@/types/content'
+import { getImagePath } from '@/utils/assets'
 
 interface SiteState {
   settings: SiteSettings
@@ -15,12 +16,12 @@ export const useSiteStore = defineStore('site', {
       siteNameEn: '',
       description: 'الإذاعة السورية الأكثر انتشاراً في المنطقة الجنوبية',
       descriptionEn: 'The Most Popular Syrian Radio in the Southern Region',
-      logo: '/logo.webp',
+      logo: getImagePath('logo.webp'),
       favicon: '/favicon.ico',
       socialMedia: {
-        facebook: 'https://facebook.com/rayanradio',
+        facebook: 'https://www.facebook.com/RayanFMRadio',
         telegram: 'https://t.me/rayanradio',
-        youtube: 'https://youtube.com/rayanradio'
+        youtube: 'https://www.youtube.com/@RayanFMRadio'
       },
       contact: {
         email: 'info@rayanradio.com',

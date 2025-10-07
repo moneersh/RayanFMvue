@@ -2,7 +2,7 @@
   <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
     <figure class="w-full h-64 overflow-hidden">
       <img 
-        :src="program.image" 
+        :src="getImagePath(program.image)" 
         :alt="localizedTitle" 
         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         @error="handleImageError"
@@ -30,6 +30,7 @@
 import type { Program } from '@/types/content'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import { getImagePath } from '@/utils/assets'
 
 interface Props {
   program: Program
@@ -58,7 +59,7 @@ const localizedSchedule = computed(() => {
 const handleImageError = (event: Event) => {
   const img = event.target as HTMLImageElement
   // Fallback to a default program image
-  img.src = '/images/programs/default-program.svg'
+  img.src = getImagePath('images/programs/default-program.svg')
   console.warn(`Failed to load image for program`)
 }
 </script>

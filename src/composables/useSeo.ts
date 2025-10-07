@@ -1,6 +1,7 @@
 import { useHead } from '@unhead/vue'
 import { computed } from 'vue'
 import { useSiteStore } from '@/store/useSiteStore'
+import { getImagePath } from '@/utils/assets'
 
 interface SeoOptions {
   title?: string
@@ -24,7 +25,7 @@ export function useSeo(options: SeoOptions = {}) {
   )
 
   const seoImage = computed(() => 
-    options.image || `${window.location.origin}/images/og-default.jpg`
+    options.image || `${window.location.origin}${getImagePath('images/og-default.jpg')}`
   )
 
   const seoUrl = computed(() => 
