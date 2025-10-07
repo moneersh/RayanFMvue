@@ -4,10 +4,10 @@
     <section class="bg-gradient-to-br from-rayan-purple via-rayan-dark to-rayan-purple text-white py-20">
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">
-          {{ locale === 'ar' ? 'البرامج' : 'Our Programs' }}
+          {{ locale === 'ar' ? 'البرامج والفريق' : 'Programs & Crew' }}
         </h1>
         <p class="text-xl md:text-2xl text-rayan-light max-w-3xl mx-auto">
-          {{ locale === 'ar' ? 'مجموعة متنوعة من البرامج الثقافية والاجتماعية' : 'A diverse collection of cultural and social programs' }}
+          {{ locale === 'ar' ? 'مجموعة متنوعة من البرامج الثقافية والاجتماعية وتعرف على فريق العمل المميز' : 'A diverse collection of cultural and social programs and meet our amazing crew' }}
         </p>
       </div>
     </section>
@@ -103,6 +103,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Staff Team Section -->
+    <StaffTeam />
   </div>
 </template>
 
@@ -110,6 +113,7 @@
 import { computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ProgramCard from '@/components/cards/ProgramCard.vue'
+import StaffTeam from '@/components/about/StaffTeam.vue'
 import { useProgramsStore } from '@/store/useProgramsStore'
 import { usePlayerStore } from '@/store/usePlayerStore'
 import { useSeo } from '@/composables/useSeo'

@@ -182,7 +182,7 @@ const handleLogoError = () => {
 const navItems = [
   { path: '/', nameEn: 'Home', nameAr: 'الرئيسية' },
   { path: '/about', nameEn: 'About', nameAr: 'من نحن' },
-  { path: '/programs', nameEn: 'Programs', nameAr: 'البرامج' },
+  { path: '/programs', nameEn: 'Programs & Crews', nameAr: 'البرامج والفريق' },
   { path: '/contact', nameEn: 'Contact', nameAr: 'اتصل بنا' }
 ]
 

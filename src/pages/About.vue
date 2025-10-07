@@ -471,13 +471,10 @@
       </div>
     </section>
 
-  <!-- Staff Team Section -->
-  <StaffTeam />
 </template>
 
 <script setup lang="ts">
 import StatisticsSection from '@/components/about/StatisticsSection.vue'
-import StaffTeam from '@/components/about/StaffTeam.vue'
 import { useSeo } from '@/composables/useSeo'
 import { useI18n } from 'vue-i18n'
 
