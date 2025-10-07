@@ -2,21 +2,25 @@
   "nav": {
     "home": "Home",
     "about": "About Radio",
-    "programs": "Programs",
-    "news": "News",
+    "programs": "Programs", 
+    "news": "Events and Latest News",
     "events": "Events",
-    "blog": "Blog",
+    "blog": "Blog and News",
     "contact": "Contact Us",
-    "howToListen": "How to Listen",
+    "howToListen": "How to Listen to Radio",
     "editorialStandards": "Editorial Standards",
     "podcast": "Podcast"
   },
   "hero": {
     "title": "Rayan Radio",
-    "subtitle": "The Voice of Truth and Islam",
-    "description": "An Islamic radio station offering diverse religious, cultural, and social programs",
+    "subtitle": "The Most Popular Syrian Radio in the Southern Region",
+    "description": "From Jabal al-Arab to the plains of Hauran, the Sham desert, Quneitra and the Golan",
+    "welcome": "Welcome",
+    "aboutText": "Rayan Radio is the first private radio that provides diverse content covering various community interests and focuses on reviving heritage. It broadcasts from the heart of As-Suwayda city in southern Syria and extends across the entire Syrian map. It provides listeners with accurate and objective radio service. Founded in 2009, since its establishment it has been considered the first station of its kind that specialized in reviving heritage and folk heritage and spreading Nabati poetry.",
+    "missionText": "At Rayan Radio, we are keen to adopt the latest mechanisms in the field of audio media to be a media platform that keeps pace with an era where competition has become intense. Therefore, we have committed to professionalism and neutrality in our monitoring, follow-ups and coverage, and we have adhered to respecting the listener's mind by providing quality social, cultural and artistic content.",
     "listenLive": "Listen Live",
-    "explorePrograms": "Explore Programs"
+    "explorePrograms": "Explore Programs",
+    "learnMore": "Learn More"
   },
   "programs": {
     "title": "Our Programs",

@@ -37,40 +37,40 @@
 import { ref } from 'vue'
 import type { Testimonial } from '@/types/content'
 
-// Mock testimonials data
+// Real testimonials from the website
 const testimonials = ref<Testimonial[]>([
   {
     id: '1',
-    name: 'أحمد محمد',
-    nameEn: 'Ahmed Mohammed',
-    role: 'مستمع مخلص',
-    roleEn: 'Loyal Listener',
-    content: 'إذاعة الריّان تقدم محتوى رائع ومفيد، أستمع إليها يومياً',
-    contentEn: 'Rayan Radio provides excellent and useful content, I listen to it daily',
-    avatar: '/images/testimonials/user1.jpg',
+    name: 'أحمد',
+    nameEn: 'Ahmad',
+    role: 'دمشق',
+    roleEn: 'Damascus',
+    content: 'البودكاست الخاص بإذاعة الريان هو مصدر أساسي لي في تعزيز معرفتي بالتراث الشعبي السوري. أنا ممتن للمحتوى القيم والمتنوع الذي يقدمه البودكاست، والذي ساعدني في فهم عميق لتاريخ وثقافة بلدي.',
+    contentEn: 'Rayan Radio\'s podcast is a main source for me in enhancing my knowledge of Syrian folk heritage. I am grateful for the valuable and diverse content provided by the podcast, which helped me gain a deep understanding of my country\'s history and culture.',
+    avatar: '/images/testimonials/ahmad.jpg',
     rating: 5
   },
   {
     id: '2',
-    name: 'فاطمة علي',
-    nameEn: 'Fatima Ali',
-    role: 'أم وربة منزل',
-    roleEn: 'Mother and Housewife',
-    content: 'البرامج الدينية في الإذاعة تساعدني في تربية أطفالي تربية إسلامية صحيحة',
-    contentEn: 'The religious programs on the radio help me raise my children with proper Islamic upbringing',
-    avatar: '/images/testimonials/user2.jpg',
+    name: 'لينا',
+    nameEn: 'Lina',
+    role: 'دمشق',
+    roleEn: 'Damascus',
+    content: 'بفضل البودكاست، وجدت نفسي على مقربة من تراث بلدي ومعالمه الثقافية. يعتبر البودكاست رفيقاً ممتازاً في رحلة استكشاف التاريخ والتراث السوري، وأنصح به بشدة لكل من يهتم بالثقافة والتراث.',
+    contentEn: 'Thanks to the podcast, I found myself close to my country\'s heritage and cultural landmarks. The podcast is an excellent companion in the journey of exploring Syrian history and heritage, and I highly recommend it to anyone interested in culture and heritage.',
+    avatar: '/images/testimonials/lina.jpg',
     rating: 5
   },
   {
     id: '3',
-    name: 'عبد الله السعيد',
-    nameEn: 'Abdullah Al-Saeed',
-    role: 'طالب جامعي',
-    roleEn: 'University Student',
-    content: 'أحب البرامج الثقافية والتعليمية، تزيد من معرفتي وثقافتي',
-    contentEn: 'I love the cultural and educational programs, they increase my knowledge and culture',
-    avatar: '/images/testimonials/user3.jpg',
-    rating: 4
+    name: 'شادي',
+    nameEn: 'Shadi',
+    role: 'السويداء',
+    roleEn: 'As-Suwayda',
+    content: 'لا يمكنني تقديم الشكر الكافي لفريق إذاعة الريان على الجهود الرائعة التي يبذلونها في تقديم محتوى ذو جودة عالية ومتنوعة. البودكاست أضاف الكثير لمعرفتي بتراث بلدي وأسلوب الحياة السوري التقليدي.',
+    contentEn: 'I cannot thank the Rayan Radio team enough for the wonderful efforts they make in providing high-quality and diverse content. The podcast has added a lot to my knowledge of my country\'s heritage and traditional Syrian lifestyle.',
+    avatar: '/images/testimonials/shadi.jpg',
+    rating: 5
   }
 ])
 </script>

@@ -11,29 +11,27 @@ interface SiteState {
 export const useSiteStore = defineStore('site', {
   state: (): SiteState => ({
     settings: {
-      siteName: 'إذاعة الريّان',
+      siteName: 'إذاعة الريان',
       siteNameEn: 'Rayan Radio',
-      description: 'إذاعة إسلامية متنوعة تقدم برامج دينية وثقافية واجتماعية هادفة',
-      descriptionEn: 'An Islamic radio station offering diverse religious, cultural, and social programs',
+      description: 'الإذاعة السورية الأكثر انتشاراً في المنطقة الجنوبية',
+      descriptionEn: 'The Most Popular Syrian Radio in the Southern Region',
       logo: '/logos/rayan-logo.svg',
       favicon: '/favicon.ico',
       socialMedia: {
         facebook: 'https://facebook.com/rayanradio',
-        twitter: 'https://twitter.com/rayanradio',
-        instagram: 'https://instagram.com/rayanradio',
-        youtube: 'https://youtube.com/rayanradio',
-        telegram: 'https://t.me/rayanradio'
+        telegram: 'https://t.me/rayanradio',
+        youtube: 'https://youtube.com/rayanradio'
       },
       contact: {
         email: 'info@rayanradio.com',
-        phone: '+966501234567',
-        address: 'الرياض، المملكة العربية السعودية',
-        addressEn: 'Riyadh, Saudi Arabia'
+        phone: '+963-16-123456',
+        address: 'السويداء، سوريا',
+        addressEn: 'As-Suwayda, Syria'
       },
       radioStream: {
         liveUrl: 'https://stream.rayanradio.com/live',
         isLive: true,
-        currentShow: 'البرنامج الصباحي'
+        currentShow: 'صباحك مع راما'
       }
     },
     isRTL: true,
