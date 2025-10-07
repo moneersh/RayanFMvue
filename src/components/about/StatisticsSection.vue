@@ -2,9 +2,9 @@
   <section class="py-20 bg-gradient-to-br from-rayan-purple/10 via-rayan-orange/5 to-rayan-purple/10 relative overflow-hidden">
     <!-- Background decorative elements -->
     <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 left-20 w-32 h-32 bg-rayan-orange rounded-full blur-xl animate-pulse"></div>
-      <div class="absolute bottom-20 right-20 w-24 h-24 bg-rayan-purple rounded-full blur-xl animate-pulse"></div>
-      <div class="absolute top-1/2 left-1/3 w-40 h-40 bg-rayan-orange/30 rounded-full blur-2xl animate-bounce"></div>
+      <div class="absolute top-20 left-20 w-32 h-32 bg-rayan-orange rounded-full blur-xl animate-pulse" />
+      <div class="absolute bottom-20 right-20 w-24 h-24 bg-rayan-purple rounded-full blur-xl animate-pulse" />
+      <div class="absolute top-1/2 left-1/3 w-40 h-40 bg-rayan-orange/30 rounded-full blur-2xl animate-bounce" />
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
@@ -26,8 +26,12 @@
             <!-- Icon -->
             <div class="flex justify-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-rayan-orange to-rayan-purple rounded-full flex items-center justify-center shadow-lg group-hover:animate-pulse">
-                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                <svg
+                  class="w-10 h-10 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </div>
             </div>
@@ -58,8 +62,12 @@
             <!-- Icon -->
             <div class="flex justify-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-rayan-purple to-rayan-orange rounded-full flex items-center justify-center shadow-lg group-hover:animate-pulse">
-                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4.5c0-1.1.9-2 2-2s2 .9 2 2V18h8.5c.83 0 1.5.67 1.5 1.5S17.33 21 16.5 21h-13C2.67 21 2 20.33 2 19.5S2.67 18 3.5 18H4z"/>
+                <svg
+                  class="w-10 h-10 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4.5c0-1.1.9-2 2-2s2 .9 2 2V18h8.5c.83 0 1.5.67 1.5 1.5S17.33 21 16.5 21h-13C2.67 21 2 20.33 2 19.5S2.67 18 3.5 18H4z" />
                 </svg>
               </div>
             </div>
@@ -90,8 +98,12 @@
             <!-- Icon -->
             <div class="flex justify-center mb-6">
               <div class="w-20 h-20 bg-gradient-to-br from-rayan-orange to-rayan-purple rounded-full flex items-center justify-center shadow-lg group-hover:animate-pulse">
-                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                <svg
+                  class="w-10 h-10 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" />
                 </svg>
               </div>
             </div>
@@ -120,23 +132,39 @@
       <!-- Additional Stats Row -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16">
         <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-rayan-orange/10 hover:border-rayan-orange/30 transition-all duration-300">
-          <div class="text-3xl font-bold text-rayan-orange mb-2">{{ Math.round(animatedPrograms) }}</div>
-          <div class="text-sm font-medium text-rayan-dark">{{ locale === 'ar' ? 'برنامج متنوع' : 'Diverse Programs' }}</div>
+          <div class="text-3xl font-bold text-rayan-orange mb-2">
+            {{ Math.round(animatedPrograms) }}
+          </div>
+          <div class="text-sm font-medium text-rayan-dark">
+            {{ locale === 'ar' ? 'برنامج متنوع' : 'Diverse Programs' }}
+          </div>
         </div>
         
         <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-rayan-purple/10 hover:border-rayan-purple/30 transition-all duration-300">
-          <div class="text-3xl font-bold text-rayan-purple mb-2">24/7</div>
-          <div class="text-sm font-medium text-rayan-dark">{{ locale === 'ar' ? 'بث مستمر' : 'Live Broadcasting' }}</div>
+          <div class="text-3xl font-bold text-rayan-purple mb-2">
+            24/7
+          </div>
+          <div class="text-sm font-medium text-rayan-dark">
+            {{ locale === 'ar' ? 'بث مستمر' : 'Live Broadcasting' }}
+          </div>
         </div>
         
         <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-rayan-orange/10 hover:border-rayan-orange/30 transition-all duration-300">
-          <div class="text-3xl font-bold text-rayan-orange mb-2">{{ Math.round(animatedStaff) }}</div>
-          <div class="text-sm font-medium text-rayan-dark">{{ locale === 'ar' ? 'عضو فريق' : 'Team Members' }}</div>
+          <div class="text-3xl font-bold text-rayan-orange mb-2">
+            {{ Math.round(animatedStaff) }}
+          </div>
+          <div class="text-sm font-medium text-rayan-dark">
+            {{ locale === 'ar' ? 'عضو فريق' : 'Team Members' }}
+          </div>
         </div>
         
         <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-rayan-purple/10 hover:border-rayan-purple/30 transition-all duration-300">
-          <div class="text-3xl font-bold text-rayan-purple mb-2">90.2</div>
-          <div class="text-sm font-medium text-rayan-dark">{{ locale === 'ar' ? 'تردد إف إم' : 'FM Frequency' }}</div>
+          <div class="text-3xl font-bold text-rayan-purple mb-2">
+            90.2
+          </div>
+          <div class="text-sm font-medium text-rayan-dark">
+            {{ locale === 'ar' ? 'تردد إف إم' : 'FM Frequency' }}
+          </div>
         </div>
       </div>
     </div>
@@ -144,7 +172,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
@@ -164,7 +192,7 @@ const targetPrograms = 6
 const targetStaff = 11
 
 // Animation function
-const animateNumber = (target: number, current: any, duration: number = 2000, increment: number = 1) => {
+const animateNumber = (target: number, current: { value: number }, duration: number = 2000, increment: number = 1) => {
   const steps = duration / 16 // 60fps
   const stepSize = target / steps
   

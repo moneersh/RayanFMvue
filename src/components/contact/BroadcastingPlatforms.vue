@@ -1,8 +1,6 @@
 <template>
   <section class="py-16 bg-rayan-orange/10">
     <div class="container mx-auto px-4">
-      
-
       <!-- Broadcasting Platforms Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         <div 
@@ -21,11 +19,11 @@
                   :alt="locale === 'ar' ? platform.nameAr : platform.nameEn"
                   class=" object-contain rounded"
                   @error="handleImageError"
-                />
+                >
                 <!-- SVG Icon -->
                 <component 
-                  v-else 
                   :is="getIcon(platform.icon)" 
+                  v-else 
                   class="w-8 h-8 text-white" 
                 />
               </div>
@@ -42,24 +40,33 @@
             </p>
             
             <!-- Action Button/Links -->
-            <div v-if="platform.type === 'single'" class="space-y-2">
+            <div
+              v-if="platform.type === 'single'"
+              class="space-y-2"
+            >
               <a 
                 v-if="platform.url"
                 :href="platform.url" 
                 :target="platform.external ? '_blank' : '_self'"
                 :rel="platform.external ? 'noopener noreferrer' : ''"
-                @click="platform.action === 'play-stream' ? handleStreamPlay() : null"
                 class="btn btn-outline border-rayan-orange text-rayan-orange hover:bg-rayan-orange hover:text-white btn-sm w-full"
+                @click="platform.action === 'play-stream' ? handleStreamPlay() : null"
               >
                 {{ locale === 'ar' ? 'استمع الآن' : 'Listen Now' }}
               </a>
-              <div v-else class="text-sm text-rayan-purple/70">
+              <div
+                v-else
+                class="text-sm text-rayan-purple/70"
+              >
                 {{ platform.id === 'fm-frequency' ? (locale === 'ar' ? '90.2 إف إم' : '90.2 FM') : '' }}
               </div>
             </div>
             
             <!-- Multiple Links -->
-            <div v-else-if="platform.type === 'multiple'" class="space-y-2">
+            <div
+              v-else-if="platform.type === 'multiple'"
+              class="space-y-2"
+            >
               <a 
                 v-for="link in platform.links" 
                 :key="link.name"
@@ -73,7 +80,10 @@
             </div>
             
             <!-- Social Media Icons -->
-            <div v-else-if="platform.type === 'social'" class="flex justify-center space-x-2">
+            <div
+              v-else-if="platform.type === 'social'"
+              class="flex justify-center space-x-2"
+            >
               <a 
                 v-for="social in platform.socials" 
                 :key="social.name"
@@ -82,7 +92,10 @@
                 rel="noopener noreferrer"
                 :class="`btn btn-circle btn-outline ${social.color} btn-xs`"
               >
-                <component :is="getIcon(social.icon)" class="w-4 h-4" />
+                <component
+                  :is="getIcon(social.icon)"
+                  class="w-4 h-4"
+                />
               </a>
             </div>
           </div>
@@ -93,7 +106,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, h, onMounted } from 'vue'
+import { ref, h, onMounted, type VNode } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
@@ -131,7 +144,7 @@ interface JsonPlatform {
 
 // Icon mapping function
 const getIcon = (iconName: string) => {
-  const icons: Record<string, () => any> = {
+  const icons: Record<string, () => VNode> = {
     radio: () => h('svg', {
       fill: 'currentColor',
       viewBox: '0 0 24 24'
@@ -164,8 +177,7 @@ onMounted(async () => {
     }
     const data = await response.json()
     platforms.value = data.platforms
-  } catch (error) {
-    console.error('Failed to load broadcasting platforms data:', error)
+  } catch {
     // Fallback to empty array if loading fails
     platforms.value = []
   }

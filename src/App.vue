@@ -22,7 +22,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="app" class="bg-gradient-to-br from-rayan-light via-white to-rayan-gray">
+  <div
+    id="app"
+    class="bg-gradient-to-br from-rayan-light via-white to-rayan-gray"
+  >
     <AppHeader />
     <main class="min-h-screen">
       <RouterView />
