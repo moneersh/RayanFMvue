@@ -5,7 +5,7 @@
     :style="{ backgroundImage: `url('${currentBackground}')` }"
   >
     <!-- Background overlay -->
-    <div class="absolute inset-0 bg-black/50" />
+    <div class="absolute inset-0 bg-black/00" />
     <div class="hero-content text-center text-white relative z-10">
       <div class="max-w-4xl">
         <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">
@@ -17,11 +17,11 @@
             {{ $t('contact.presidentMessage') }}
           </p>
           
-          <p class="mb-8 text-lg text-rayan-gray">
+          <p class="mb-5 text-2xl font-semibold text-rayan-light">
             {{ $t('contact.presidentMessage2') }}
           </p>
           
-          <p class="mb-8 text-lg text-rayan-gray">
+          <p class="mb-5 text-2xl font-semibold text-rayan-light">
             {{ $t('contact.presidentMessage3') }}
           </p>
           

@@ -194,8 +194,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getAssetPath } from '../../utils/assets'
 // Logo URL using Vite's base configuration
-const logoUrl = ref('./logo.webp')
+const logoUrl = ref(getAssetPath('logo.webp'))
 
 // Try to use i18n if available, fallback gracefully
 let locale: { value: string }

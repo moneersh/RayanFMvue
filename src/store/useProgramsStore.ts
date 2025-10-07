@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import type { Program, Episode } from '../types/content'
-import { getImagePath } from '../utils/assets'
+import { getImagePath, getAssetPath } from '../utils/assets'
 
 interface ProgramsState {
   programs: Program[]
@@ -33,7 +33,7 @@ export const useProgramsStore = defineStore('programs', {
       this.error = null
       try {
         // Fetch programs data from public JSON file
-        const response = await fetch('/RayanFMvue/data/programs.json')
+        const response = await fetch(getAssetPath('data/programs.json'))
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }

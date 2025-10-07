@@ -73,6 +73,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getAssetPath } from '../../utils/assets'
 
 const { locale } = useI18n()
 
@@ -151,7 +152,7 @@ const teamMembers = computed(() => {
 // Load staff data from JSON
 onMounted(async () => {
   try {
-    const response = await fetch('/RayanFMvue/data/staff.json')
+    const response = await fetch(getAssetPath('data/staff.json'))
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }

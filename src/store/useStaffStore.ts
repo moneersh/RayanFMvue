@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { getAssetPath } from '../utils/assets'
 
 export interface StaffMember {
   id: string
@@ -75,7 +76,7 @@ export const useStaffStore = defineStore('staff', {
       this.loading = true
       this.error = null
       try {
-        const response = await fetch('/RayanFMvue/data/staff.json')
+        const response = await fetch(getAssetPath('data/staff.json'))
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }

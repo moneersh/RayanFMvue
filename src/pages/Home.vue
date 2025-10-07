@@ -5,7 +5,7 @@
     :style="{ backgroundImage: `url('${currentBackground}')` }"
   >
     <!-- Background overlay -->
-    <div class="absolute inset-0 bg-black/00" />
+    <div class="absolute inset-0" />
     <div class="hero-content text-center text-white relative z-10">
       <div class="max-w-4xl">
         <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">

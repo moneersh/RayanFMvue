@@ -108,6 +108,7 @@
 <script setup lang="ts">
 import { ref, h, onMounted, type VNode } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getAssetPath } from '../../utils/assets'
 
 const { locale } = useI18n()
 
@@ -171,7 +172,7 @@ const platforms = ref<JsonPlatform[]>([])
 // Load data from JSON on component mount  
 onMounted(async () => {
   try {
-    const response = await fetch('/data/BroadcastingPlatforms.json')
+    const response = await fetch(getAssetPath('data/BroadcastingPlatforms.json'))
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }

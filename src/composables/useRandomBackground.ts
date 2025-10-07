@@ -1,4 +1,5 @@
 import { ref, onMounted } from 'vue'
+import { getAssetPath } from '../utils/assets'
 
 // List of background images available
 const backgroundImages = [
@@ -14,7 +15,7 @@ export function useRandomBackground() {
   
   const getRandomBackground = () => {
     const randomIndex = Math.floor(Math.random() * backgroundImages.length)
-    return `/images/background/${backgroundImages[randomIndex]}`
+    return getAssetPath(`images/background/${backgroundImages[randomIndex]}`)
   }
   
   const setRandomBackground = () => {
@@ -37,5 +38,5 @@ export function useRandomBackground() {
 // Global utility function for getting random background
 export const getRandomBackgroundImage = () => {
   const randomIndex = Math.floor(Math.random() * backgroundImages.length)
-  return `/images/background/${backgroundImages[randomIndex]}`
+  return getAssetPath(`images/background/${backgroundImages[randomIndex]}`)
 }
