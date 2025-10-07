@@ -14,7 +14,7 @@ onMounted(() => {
   setLanguage('ar')
   
   // Initialize site theme to use Rayan FM theme
-  siteStore.setTheme('rayanfm')
+  siteStore.setTheme('light')
   
   // Set DaisyUI theme attribute
   document.documentElement.setAttribute('data-theme', 'rayanfm')

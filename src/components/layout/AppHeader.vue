@@ -11,7 +11,7 @@
               <!-- Logo Image with Brand Styling -->
               <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-lg ring-2 ring-rayan-orange/30 group-hover:ring-rayan-orange/50 transition-all duration-300">
                 <img 
-                  src="/RayanFMvue/logo.webp" 
+                  :src="logoUrl" 
                   alt="Rayan FM Logo"
                   class="w-full h-full object-cover"
                   @error="handleLogoError"
@@ -150,6 +150,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+// Logo URL using Vite's base configuration
+const logoUrl = ref('./logo.webp')
 
 // Try to use i18n if available, fallback gracefully
 let locale: any
