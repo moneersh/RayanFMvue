@@ -13,7 +13,7 @@ export const useSiteStore = defineStore('site', {
     },
     contact: {
       phone: '+971507811815',
-      email: 'info@rayanfm.ae',
+      email: 'info@rayanfm.net',
       address: 'UAE'
     }
   }),
