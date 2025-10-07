@@ -43,18 +43,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-// Import staff images
-import ramaImg from '@/assets/staff/rama1.webp'
-import mazenImg from '@/assets/staff/mazen1.webp'
-import rawadImg from '@/assets/staff/rawad.webp'
-import safaaImg from '@/assets/staff/safaa1.webp'
-import manarImg from '@/assets/staff/MANAR1.webp'
-import marahImg from '@/assets/staff/marah.webp'
-import shireenImg from '@/assets/staff/shireen1.webp'
-import hebaImg from '@/assets/staff/HEBA1.webp'
-import akramImg from '@/assets/staff/AKRAM1.webp'
-import issamImg from '@/assets/staff/ISSAM1.webp'
-import nawrasImg from '@/assets/staff/NAWRAS1.webp'
+
 
 interface TeamMember {
   name: string
@@ -66,57 +55,57 @@ const teamMembers = computed<TeamMember[]>(() => [
   {
     name: 'راما عبد الكريم',
     position: 'معدة ومقدمة برامج',
-    image: '/src/assets/staff/rama1.webp'
+    image: '/images/staff/rama1.webp'
   },
   {
     name: 'مازن أبوحمدان',
     position: 'إدارة هندسية',
-    image: '/src/assets/staff/mazen1.webp'
+    image: '/images/staff/mazen1.webp'
   },
   {
     name: 'رواد حسون',
     position: 'معد ومدير برامج',
-    image: '/src/assets/staff/rawad.webp'
+    image: '/images/staff/rawad.webp'
   },
   {
     name: 'صفاء جودية',
     position: 'مسؤولة الشؤون القانونية',
-    image: '/src/assets/staff/safaa1.webp'
+    image: '/images/staff/safaa1.webp'
   },
   {
     name: 'منار مرشد',
     position: 'معد ومقدم برامج',
-    image: '/src/assets/staff/MANAR1.webp'
+    image: '/images/staff/MANAR1.webp'
   },
   {
     name: 'مرح الشاهين',
     position: 'معلقة ومقدمة برامج',
-    image: '/src/assets/staff/marah.webp'
+    image: '/images/staff/marah.webp'
   },
   {
     name: 'شيرين العقباني',
     position: 'معلقة ومقدمة برامج',
-    image: '/src/assets/staff/shireen1.webp'
+    image: '/images/staff/shireen1.webp'
   },
   {
     name: 'هبا دوارة',
     position: 'مسؤولة السوشال ميديا',
-    image: '/src/assets/staff/HEBA1.webp'
+    image: '/images/staff/HEBA1.webp'
   },
   {
     name: 'أكرم أبو الفضل',
     position: 'المدير المالي',
-    image: '/src/assets/staff/AKRAM1.webp'
+    image: '/images/staff/AKRAM1.webp'
   },
   {
     name: 'عصام الأعور',
     position: 'معد برامج',
-    image: '/src/assets/staff/ISSAM1.webp'
+    image: '/images/staff/ISSAM1.webp'
   },
   {
     name: 'نورس أبو حسون',
     position: 'دي جي',
-    image: '/src/assets/staff/NAWRAS1.webp'
+    image: '/images/staff/NAWRAS1.webp'
   }
 ])
 
