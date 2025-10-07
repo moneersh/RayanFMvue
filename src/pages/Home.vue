@@ -71,26 +71,9 @@
 
 
 
-    <!-- Testimonials -->
-    <section class="py-16 bg-base-200">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">{{ $t('testimonials.title') }}</h2>
-          <p class="text-lg opacity-80">{{ $t('testimonials.subtitle') }}</p>
-        </div>
-        
-        <Testimonials />
-      </div>
-    </section>
 
-    <!-- Newsletter Signup -->
-    <section class="py-16 bg-primary text-primary-content">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4">{{ $t('newsletter.title') }}</h2>
-        <p class="text-lg mb-8">{{ $t('newsletter.subtitle') }}</p>
-        <NewsletterSignup />
-      </div>
-    </section>
+
+
   </AppShell>
 </template>
 
@@ -99,8 +82,8 @@ import { computed, onMounted } from 'vue'
 import AppShell from '@/layouts/AppShell.vue'
 import ProgramCard from '@/components/cards/ProgramCard.vue'
 
-import Testimonials from '@/components/sections/Testimonials.vue'
-import NewsletterSignup from '@/components/sections/NewsletterSignup.vue'
+
+
 import { useProgramsStore } from '@/store/useProgramsStore'
 import { usePlayerStore } from '@/store/usePlayerStore'
 import { useSeo } from '@/composables/useSeo'

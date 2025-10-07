@@ -37,34 +37,8 @@
     "details": "View Details"
   },
 
-  "testimonials": {
-    "title": "Listener Testimonials",
-    "subtitle": "What our listeners say about Rayan Radio",
-    "ratings": "Ratings",
-    "ahmad": {
-      "name": "Ahmad",
-      "location": "Damascus",
-      "text": "Rayan Radio's podcast is a main source for me in enhancing my knowledge of Syrian folk heritage. I am grateful for the valuable and diverse content provided by the podcast, which helped me gain a deep understanding of my country's history and culture."
-    },
-    "lina": {
-      "name": "Lina",
-      "location": "Damascus",
-      "text": "Thanks to the podcast, I found myself close to my country's heritage and cultural landmarks. The podcast is an excellent companion in the journey of exploring Syrian history and heritage, and I highly recommend it to anyone interested in culture and heritage."
-    },
-    "shadi": {
-      "name": "Shadi",
-      "location": "As-Suwayda",
-      "text": "I cannot thank the Rayan Radio team enough for the wonderful efforts they make in providing high-quality and diverse content. The podcast has added a lot to my knowledge of my country's heritage and traditional Syrian lifestyle."
-    }
-  },
-  "newsletter": {
-    "title": "Subscribe to Our Newsletter",
-    "subtitle": "Get the latest news and programs",
-    "emailPlaceholder": "Your email address",
-    "subscribe": "Subscribe",
-    "success": "Successfully subscribed!",
-    "error": "An error occurred, please try again"
-  },
+
+
   "contact": {
     "title": "Contact Us",
     "subtitle": "We're here to answer your questions",

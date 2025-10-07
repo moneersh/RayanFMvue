@@ -31,17 +31,7 @@ export interface Episode {
 
 
 
-export interface Testimonial {
-  id: string
-  name: string
-  nameEn?: string
-  role: string
-  roleEn?: string
-  content: string
-  contentEn?: string
-  avatar?: string
-  rating: number
-}
+
 
 export interface SiteSettings {
   siteName: string

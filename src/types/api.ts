@@ -14,11 +14,7 @@ export interface PaginatedResponse<T> {
   }
 }
 
-export interface NewsletterSubscription {
-  email: string
-  name?: string
-  preferences?: string[]
-}
+
 
 export interface ContactFormData {
   name: string
