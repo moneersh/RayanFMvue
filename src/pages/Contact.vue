@@ -1,31 +1,30 @@
 <template>
-  <AppShell>
-    <!-- Hero Section - President's Message -->
-    <section class="hero min-h-screen bg-gradient-to-br from-primary/20 via-base-100 to-secondary/20">
-      <div class="hero-content text-center max-w-5xl">
-        <div>
-          <h1 class="text-4xl md:text-5xl font-bold mb-8">{{ $t('contact.presidentTitle') }}</h1>
+  <!-- Hero Section - President's Message -->
+  <section class="hero min-h-screen bg-gradient-to-br from-primary/20 via-base-100 to-secondary/20">
+    <div class="hero-content text-center max-w-5xl">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-8">{{ $t('contact.presidentTitle') }}</h1>
+        
+        <div class="prose prose-lg max-w-4xl mx-auto text-justify leading-relaxed space-y-6">
+          <p class="text-lg">
+            {{ $t('contact.presidentMessage') }}
+          </p>
           
-          <div class="prose prose-lg max-w-4xl mx-auto text-justify leading-relaxed space-y-6">
-            <p class="text-lg">
-              {{ $t('contact.presidentMessage') }}
-            </p>
-            
-            <p class="text-lg">
-              {{ $t('contact.presidentMessage2') }}
-            </p>
-            
-            <p class="text-lg">
-              {{ $t('contact.presidentMessage3') }}
-            </p>
-            
-            <div class="text-center mt-8">
-              <p class="text-lg font-semibold italic">{{ $t('contact.presidentClosing') }}</p>
-            </div>
+          <p class="text-lg">
+            {{ $t('contact.presidentMessage2') }}
+          </p>
+          
+          <p class="text-lg">
+            {{ $t('contact.presidentMessage3') }}
+          </p>
+          
+          <div class="text-center mt-8">
+            <p class="text-lg font-semibold italic">{{ $t('contact.presidentClosing') }}</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Let's Connect Today Section -->
     <section class="py-16 bg-primary/10">
@@ -111,14 +110,12 @@
         </div>
 
 
-      </div>
-    </section>
-  </AppShell>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import AppShell from '@/layouts/AppShell.vue'
 import { useSeo } from '@/composables/useSeo'
 
 const { t, locale } = useI18n()

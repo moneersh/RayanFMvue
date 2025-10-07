@@ -2,6 +2,9 @@
 import { onMounted } from 'vue'
 import { useSiteStore } from '@/store/useSiteStore'
 import { useRtl } from '@/composables/useRtl'
+import AppHeader from '@/components/layout/AppHeader.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
+import PlayerBar from '@/components/podcast/PlayerBar.vue'
 
 const siteStore = useSiteStore()
 const { setLanguage } = useRtl()
@@ -17,7 +20,12 @@ onMounted(() => {
 
 <template>
   <div id="app">
-    <RouterView />
+    <AppHeader />
+    <main class="min-h-screen">
+      <RouterView />
+    </main>
+    <AppFooter />
+    <PlayerBar />
   </div>
 </template>
 

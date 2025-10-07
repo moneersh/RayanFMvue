@@ -1,19 +1,18 @@
 <template>
-  <AppShell>
-    <!-- Hero Section -->
-    <section class="hero min-h-screen bg-gradient-to-br from-primary/10 via-base-100 to-secondary/10">
-      <div class="hero-content text-center max-w-4xl">
-        <div>
-          <h1 class="text-5xl font-bold mb-6">{{ $t('about.heroTitle') }}</h1>
-          <p class="text-lg leading-relaxed mb-8">
-            {{ $t('about.heroDescription1') }}
-          </p>
-          <p class="text-lg leading-relaxed">
-            {{ $t('about.heroDescription2') }}
-          </p>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero min-h-screen bg-gradient-to-br from-primary/10 via-base-100 to-secondary/10">
+    <div class="hero-content text-center max-w-4xl">
+      <div>
+        <h1 class="text-5xl font-bold mb-6">{{ $t('about.heroTitle') }}</h1>
+        <p class="text-lg leading-relaxed mb-8">
+          {{ $t('about.heroDescription1') }}
+        </p>
+        <p class="text-lg leading-relaxed">
+          {{ $t('about.heroDescription2') }}
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Statistics Section -->
     <section class="py-16 bg-base-200">
@@ -173,13 +172,11 @@
       </div>
     </section>
 
-    <!-- Staff Team Section -->
-    <StaffTeam />
-  </AppShell>
+  <!-- Staff Team Section -->
+  <StaffTeam />
 </template>
 
 <script setup lang="ts">
-import AppShell from '@/layouts/AppShell.vue'
 import StaffTeam from '@/components/about/StaffTeam.vue'
 import { useSeo } from '@/composables/useSeo'
 import { useI18n } from 'vue-i18n'
