@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import type { SiteSettings } from '@/types/content'
-import { getImagePath } from '@/utils/assets'
+import type { SiteSettings } from '../types/content'
+import { getImagePath } from '../utils/assets'
 
 interface SiteState {
   settings: SiteSettings

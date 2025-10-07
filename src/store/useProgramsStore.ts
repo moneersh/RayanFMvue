@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import type { Program, Episode } from '@/types/content'
-import { getImagePath } from '@/utils/assets'
+import type { Program, Episode } from '../types/content'
+import { getImagePath } from '../utils/assets'
 
 interface ProgramsState {
   programs: Program[]

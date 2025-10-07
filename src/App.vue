@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useSiteStore } from '@/store/useSiteStore'
-import { useRtl } from '@/composables/useRtl'
-import AppHeader from '@/components/layout/AppHeader.vue'
-import AppFooter from '@/components/layout/AppFooter.vue'
-import PlayerBar from '@/components/podcast/PlayerBar.vue'
+// Update the import paths below if your folder structure is different.
+// For example, if your files are in 'src/store', 'src/composables', and 'src/components', use relative paths:
+import { useSiteStore } from './store/useSiteStore'
+import { useRtl } from './composables/useRtl'
+import AppHeader from './components/layout/AppHeader.vue'
+import AppFooter from './components/layout/AppFooter.vue'
+import PlayerBar from './components/podcast/PlayerBar.vue'
 
 const siteStore = useSiteStore()
 const { setLanguage } = useRtl()

@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { useSiteStore } from '@/store/useSiteStore'
+import { useSiteStore } from '../store/useSiteStore'
 import { useI18n } from 'vue-i18n'
 
 export function useRtl() {

@@ -1,7 +1,7 @@
 // Test script to verify background images functionality
 // You can run this in browser console to test the random background picker
 
-import { useRandomBackground } from '@/composables/useRandomBackground'
+import { useRandomBackground } from '../composables/useRandomBackground'
 
 // Test the random background functionality
 export function testRandomBackground() {

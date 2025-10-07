@@ -219,7 +219,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { usePlayerStore } from '@/store/usePlayerStore'
+import { usePlayerStore } from '../../store/usePlayerStore'
 
 const playerStore = usePlayerStore()
 const isVisible = ref(true)

@@ -1,7 +1,7 @@
 import { useHead } from '@unhead/vue'
 import { computed } from 'vue'
-import { useSiteStore } from '@/store/useSiteStore'
-import { getImagePath } from '@/utils/assets'
+import { useSiteStore } from '../store/useSiteStore'
+import { getImagePath } from '../utils/assets'
 
 interface SeoOptions {
   title?: string
