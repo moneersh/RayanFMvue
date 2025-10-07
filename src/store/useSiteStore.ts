@@ -29,7 +29,7 @@ export const useSiteStore = defineStore('site', {
         addressEn: 'As-Suwayda, Syria'
       },
       radioStream: {
-        liveUrl: 'https://stream.rayanradio.com/live',
+        liveUrl: 'https://broadcast.shoutstream.co.uk:8078/stream',
         isLive: true,
         currentShow: 'صباحك مع راما'
       }

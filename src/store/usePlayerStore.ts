@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useSiteStore } from './useSiteStore'
 
 interface PlayerState {
   isPlaying: boolean
@@ -21,7 +22,7 @@ export const usePlayerStore = defineStore('player', {
     isLive: false,
     currentTrack: null,
     volume: 0.8,
-    streamUrl: 'https://stream.rayanradio.com/live',
+    streamUrl: 'https://broadcast.shoutstream.co.uk:8078/stream',
     audioElement: null
   }),
 
@@ -38,6 +39,7 @@ export const usePlayerStore = defineStore('player', {
       if (!this.audioElement) {
         this.audioElement = new Audio()
         this.audioElement.volume = this.volume
+        this.audioElement.crossOrigin = 'anonymous'
         
         this.audioElement.addEventListener('play', () => {
           this.isPlaying = true
@@ -58,13 +60,29 @@ export const usePlayerStore = defineStore('player', {
             this.currentTrack.duration = this.audioElement.duration
           }
         })
+        
+        this.audioElement.addEventListener('error', (e) => {
+          console.error('Audio player error:', e)
+          this.isPlaying = false
+        })
+        
+        this.audioElement.addEventListener('loadstart', () => {
+          console.log('Loading stream...')
+        })
+        
+        this.audioElement.addEventListener('canplay', () => {
+          console.log('Stream ready to play')
+        })
       }
     },
 
     async playLiveStream() {
       this.initializePlayer()
+      const siteStore = useSiteStore()
       if (this.audioElement) {
-        this.audioElement.src = this.streamUrl
+        // Use the streaming URL from site store
+        this.audioElement.src = siteStore.settings.radioStream.liveUrl
+        this.streamUrl = siteStore.settings.radioStream.liveUrl
         this.isLive = true
         this.currentTrack = {
           title: 'البث المباشر - إذاعة الريّان',
@@ -74,6 +92,8 @@ export const usePlayerStore = defineStore('player', {
           await this.audioElement.play()
         } catch (error) {
           console.error('Error playing live stream:', error)
+          // Try to handle CORS or other streaming issues
+          throw new Error('Unable to play live stream. Please check your internet connection.')
         }
       }
     },
