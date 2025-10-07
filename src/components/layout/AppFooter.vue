@@ -143,17 +143,31 @@
             </router-link>
           </nav>
           
-          <!-- Location Info -->
-          <div class="mt-12 p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 hover:border-rayan-orange/50 transition-all duration-500 hover:shadow-2xl">
+          <!-- Broadcasting Location -->
+          <div class="mt-12 p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 hover:border-rayan-orange/50 transition-all duration-500 hover:shadow-2xl group">
             <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-rayan-orange to-rayan-purple rounded-xl flex items-center justify-center mr-4">
-                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              <div class="w-12 h-12 bg-gradient-to-br from-rayan-orange to-rayan-purple rounded-xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-all duration-500">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
               </div>
               <h4 class="text-2xl font-bold text-white">{{ locale === 'en' ? 'Broadcasting From' : 'نبث من' }}</h4>
             </div>
-            <p class="text-lg text-white/90 font-semibold">{{ locale === 'en' ? 'As Suwayda, Syria' : 'السويداء، سوريا' }}</p>
+            <a 
+              href="https://share.google/XATAK6syzX2yLxIml"
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex items-center justify-start gap-3 text-lg text-white/90 font-semibold hover:text-rayan-orange transition-colors duration-300 group-hover:scale-105"
+            >
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <span>{{ locale === 'en' ? 'As Suwayda, Syria' : 'السويداء، سوريا' }}</span>
+            </a>
+            <p class="text-sm text-white/70 mt-2 ml-8">
+              {{ locale === 'ar' ? 'انقر لعرض الموقع على الخريطة' : 'Click to view location on map' }}
+            </p>
           </div>
         </div>
       </div>
@@ -182,7 +196,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useSiteStore } from '@/store/useSiteStore'
+import { useSiteStore } from '../../store/useSiteStore'
 
 const { locale } = useI18n()
 const siteStore = useSiteStore()

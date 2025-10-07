@@ -168,9 +168,7 @@ import ProgramCard from '@/components/cards/ProgramCard.vue'
 import StaffTeam from '@/components/about/StaffTeam.vue'
 import { useProgramsStore } from '@/store/useProgramsStore'
 import { usePlayerStore } from '@/store/usePlayerStore'
-import { useSeo } from '@/composables/useSeo'
-import { useRandomBackground } from '@/composables/useRandomBackground'
-
+/* import { useSeo } from '@/composables/useSeo' */
 // Try to use i18n if available, fallback gracefully
 let locale: any
 let t: any
@@ -186,8 +184,8 @@ try {
 const programsStore = useProgramsStore()
 const playerStore = usePlayerStore()
 
-// Random background
-const { currentBackground } = useRandomBackground()
+// Fallback background image
+const currentBackground = '/images/default-background.jpg'
 
 const featuredPrograms = computed(() => programsStore.featuredPrograms)
 
@@ -195,11 +193,13 @@ const playLive = () => {
   playerStore.playLiveStream()
 }
 
+/*
 // SEO
 useSeo({
   title: t('pages.programs.metaTitle'),
   description: t('pages.programs.metaDescription')
 })
+*/
 
 onMounted(() => {
   programsStore.fetchPrograms()

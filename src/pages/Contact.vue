@@ -42,7 +42,7 @@
           <p class="text-lg opacity-70">{{ $t('contact.subtitle') }}</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Phone -->
             <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-base-300 flex flex-col justify-center items-center">
               <div class="card-body flex flex-col justify-center items-center">
@@ -83,25 +83,6 @@
                 class="text-lg font-semibold text-secondary hover:text-secondary-focus transition-colors duration-300 hover:underline break-all"
               >
                 info@rayanfm.net
-              </a>
-            </div>
-          </div>
-
-          <!-- Address -->
-          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-base-300">
-            <div class="card-body text-center p-8">
-              <div class="flex justify-center mb-6">
-                <svg class="w-16 h-16 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-              </div>
-              <a 
-                :href="locale === 'en' ? 'https://en.wikipedia.org/wiki/Suwayda' : 'https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%AF%D8%A7%D8%A1'"
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-lg font-semibold text-accent hover:text-accent-focus transition-colors duration-300 hover:underline"
-              >
-                {{ $t('contact.addressValue') }}
               </a>
             </div>
           </div>
