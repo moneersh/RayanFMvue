@@ -1,9 +1,14 @@
 <template>
   <!-- Hero Section -->
-  <section class="hero py-20 bg-gradient-to-br from-rayan-purple via-rayan-dark to-rayan-purple">
-    <div class="hero-content text-center text-white">
+  <section 
+    class="hero py-20 bg-cover bg-center bg-no-repeat relative"
+    :style="{ backgroundImage: `url('${currentBackground}')` }"
+  >
+    <!-- Background overlay -->
+    <div class="absolute inset-0 bg-black/00"></div>
+    <div class="hero-content text-center text-white relative z-10">
       <div class="max-w-4xl">
-        <h1 class="mb-5 text-6xl font-black bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">{{ $t('hero.title') }}</h1>
+        <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">{{ $t('hero.title') }}</h1>
         <p class="mb-5 text-2xl font-semibold text-rayan-light">{{ $t('hero.subtitle') }}</p>
         <p class="mb-8 text-lg text-rayan-gray">{{ $t('hero.description') }}</p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
@@ -166,9 +171,13 @@ import ProgramCard from '@/components/cards/ProgramCard.vue'
 import { useProgramsStore } from '@/store/useProgramsStore'
 import { usePlayerStore } from '@/store/usePlayerStore'
 import { useSeo } from '@/composables/useSeo'
+import { useRandomBackground } from '@/composables/useRandomBackground'
 
 const programsStore = useProgramsStore()
 const playerStore = usePlayerStore()
+
+// Random background
+const { currentBackground } = useRandomBackground()
 
 // SEO
 useSeo({

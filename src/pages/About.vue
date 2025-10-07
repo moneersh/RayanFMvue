@@ -1,13 +1,18 @@
 <template>
   <!-- Hero Section -->
-  <section class="hero py-20 bg-gradient-to-br from-primary/10 via-base-100 to-secondary/10">
-    <div class="hero-content text-center max-w-4xl">
-      <div>
-        <h1 class="text-5xl font-bold mb-6">{{ $t('about.heroTitle') }}</h1>
-        <p class="text-lg leading-relaxed mb-8">
+  <section 
+    class="hero py-20 bg-cover bg-center bg-no-repeat relative"
+    :style="{ backgroundImage: `url('${currentBackground}')` }"
+  >
+    <!-- Background overlay -->
+    <div class="absolute inset-0 bg-black/00"></div>
+    <div class="hero-content text-center text-white relative z-10">
+      <div class="max-w-4xl">
+        <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">{{ $t('about.heroTitle') }}</h1>
+        <p class="mb-5 text-2xl font-semibold text-rayan-light">
           {{ $t('about.heroDescription1') }}
         </p>
-        <p class="text-lg leading-relaxed">
+        <p class="mb-8 text-lg text-rayan-gray">
           {{ $t('about.heroDescription2') }}
         </p>
       </div>
@@ -477,8 +482,12 @@
 import StatisticsSection from '@/components/about/StatisticsSection.vue'
 import { useSeo } from '@/composables/useSeo'
 import { useI18n } from 'vue-i18n'
+import { useRandomBackground } from '@/composables/useRandomBackground'
 
 const { t } = useI18n()
+
+// Random background
+const { currentBackground } = useRandomBackground()
 
 useSeo({
   title: t('about.title'),

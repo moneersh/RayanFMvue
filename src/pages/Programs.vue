@@ -1,14 +1,66 @@
 <template>
   <div class="min-h-screen bg-rayan-light">
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-rayan-purple via-rayan-dark to-rayan-purple text-white py-20">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">
-          {{ locale === 'ar' ? 'البرامج والفريق' : 'Programs & Crew' }}
-        </h1>
-        <p class="text-xl md:text-2xl text-rayan-light max-w-3xl mx-auto">
-          {{ locale === 'ar' ? 'مجموعة متنوعة من البرامج الثقافية والاجتماعية وتعرف على فريق العمل المميز' : 'A diverse collection of cultural and social programs and meet our amazing crew' }}
-        </p>
+    <section 
+      class="hero py-20 bg-cover bg-center bg-no-repeat relative"
+      :style="{ backgroundImage: `url('${currentBackground}')` }"
+    >
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black/0"></div>
+      <div class="hero-content text-center text-white relative z-10">
+        <div class="max-w-4xl">
+          <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">
+            {{ locale === 'ar' ? 'البرامج والفريق' : 'Programs & Crew' }}
+          </h1>
+          <p class="mb-5 text-2xl font-semibold text-rayan-light">
+            {{ locale === 'ar' ? 'مجموعة متنوعة من البرامج الثقافية والاجتماعية وتعرف على فريق العمل المميز' : 'A diverse collection of cultural and social programs and meet our amazing crew' }}
+          </p>
+          <p class="mb-8 text-lg text-rayan-gray">
+            {{ locale === 'ar' ? 'استكشف عالم الإذاعة معنا واستمتع بأفضل المحتوى' : 'Explore the world of radio with us and enjoy the best content' }}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+            <!-- Enhanced Live Stream Button -->
+            <button 
+              @click="playLive" 
+              class="group relative bg-gradient-to-r from-rayan-orange via-rayan-orange to-rayan-purple text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-2xl transform hover:-translate-y-2 overflow-hidden"
+            >
+              <!-- Animated background -->
+              <div class="absolute inset-0 bg-gradient-to-r from-rayan-purple via-rayan-orange to-rayan-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Live indicator -->
+              <div class="absolute top-2 right-2 flex items-center">
+                <div class="w-3 h-3 bg-rayan-orange rounded-full animate-pulse mr-2"></div>
+                <span class="text-xs font-medium">{{ locale === 'ar' ? 'مباشر' : 'LIVE' }}</span>
+              </div>
+              
+              <!-- Button content -->
+              <div class="relative flex items-center justify-center">
+                <div class="text-3xl mr-3 group-hover:animate-bounce">🎧</div>
+                <div>
+                  <div class="text-xl font-bold">{{ locale === 'ar' ? 'البث المباشر' : 'Listen Live' }}</div>
+                  <div class="text-sm opacity-90">{{ locale === 'ar' ? 'اضغط للاستماع' : 'Click to Listen' }}</div>
+                </div>
+              </div>
+              
+              <!-- Ripple effect -->
+              <div class="absolute inset-0 rounded-2xl opacity-30 group-hover:animate-ping bg-white"></div>
+            </button>
+            
+            <!-- Explore Programs Button -->
+            <router-link 
+              to="/programs" 
+              class="group bg-white/20 hover:bg-white/30 text-white px-10 py-6 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-white/30 hover:border-white/50 backdrop-blur-sm"
+            >
+              <div class="flex items-center justify-center">
+                <div class="text-2xl mr-3 group-hover:animate-bounce">📻</div>
+                <div>
+                  <div class="font-bold">{{ locale === 'ar' ? 'عرض البرامج' : 'View Programs' }}</div>
+                  <div class="text-sm opacity-90">{{ locale === 'ar' ? 'استكشف المزيد' : 'Discover More' }}</div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -117,6 +169,7 @@ import StaffTeam from '@/components/about/StaffTeam.vue'
 import { useProgramsStore } from '@/store/useProgramsStore'
 import { usePlayerStore } from '@/store/usePlayerStore'
 import { useSeo } from '@/composables/useSeo'
+import { useRandomBackground } from '@/composables/useRandomBackground'
 
 // Try to use i18n if available, fallback gracefully
 let locale: any
@@ -132,6 +185,9 @@ try {
 
 const programsStore = useProgramsStore()
 const playerStore = usePlayerStore()
+
+// Random background
+const { currentBackground } = useRandomBackground()
 
 const featuredPrograms = computed(() => programsStore.featuredPrograms)
 

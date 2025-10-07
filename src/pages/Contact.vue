@@ -1,25 +1,30 @@
 <template>
   <!-- Hero Section - President's Message -->
-  <section class="hero py-16 bg-gradient-to-br from-rayan-orange/20 via-rayan-light to-rayan-purple/20">
-    <div class="hero-content text-center max-w-5xl">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-8">{{ $t('contact.presidentTitle') }}</h1>
+  <section 
+    class="hero py-20 bg-cover bg-center bg-no-repeat relative"
+    :style="{ backgroundImage: `url('${currentBackground}')` }"
+  >
+    <!-- Background overlay -->
+    <div class="absolute inset-0 bg-black/00"></div>
+    <div class="hero-content text-center text-white relative z-10">
+      <div class="max-w-4xl">
+        <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">{{ $t('contact.presidentTitle') }}</h1>
         
-        <div class="prose prose-lg max-w-4xl mx-auto text-justify leading-relaxed space-y-6">
-          <p class="text-lg">
+        <div class="prose prose-lg mx-auto text-center leading-relaxed space-y-6">
+          <p class="mb-5 text-2xl font-semibold text-rayan-light">
             {{ $t('contact.presidentMessage') }}
           </p>
           
-          <p class="text-lg">
+          <p class="mb-8 text-lg text-rayan-gray">
             {{ $t('contact.presidentMessage2') }}
           </p>
           
-          <p class="text-lg">
+          <p class="mb-8 text-lg text-rayan-gray">
             {{ $t('contact.presidentMessage3') }}
           </p>
           
           <div class="text-center mt-8">
-            <p class="text-lg font-semibold italic">{{ $t('contact.presidentClosing') }}</p>
+            <p class="text-lg font-semibold italic text-rayan-light">{{ $t('contact.presidentClosing') }}</p>
           </div>
         </div>
       </div>
@@ -110,8 +115,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import BroadcastingPlatforms from '@/components/contact/BroadcastingPlatforms.vue'
+import { useRandomBackground } from '@/composables/useRandomBackground'
 
 const { t, locale } = useI18n()
+
+// Random background
+const { currentBackground } = useRandomBackground()
 
 // Handle stream play action from BroadcastingPlatforms component
 const handlePlayStream = () => {
