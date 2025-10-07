@@ -176,10 +176,16 @@
     }
   },
   "footer": {
-    "about": "Rayan Radio is an Islamic radio station aimed at spreading Islamic values and meaningful culture",
+    "about": "Rayan Radio",
+    "description": "Rayan Radio serves as an exemplary model in establishing and promoting popular and cultural heritage, enhancing awareness of its values and importance. Established in 2009, it is considered the first of its kind in the Arab world to dedicate its activities to reviving heritage and popular traditions and spreading Nabati poetry.",
     "quickLinks": "Quick Links",
     "followUs": "Follow Us",
-    "contact": "Contact Information",
-    "rights": "All rights reserved © 2025 Rayan Radio"
+    "contact": "Contact Us",
+    "contactInfo": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "rights": "© 2025 Rayan Radio - All Rights Reserved",
+    "poweredBy": "Powered by"
   }
 }
