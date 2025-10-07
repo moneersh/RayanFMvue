@@ -22,6 +22,7 @@ export const useSiteStore = defineStore('site', {
         facebook: 'https://www.facebook.com/RayanFMRadio',
         youtube: 'https://www.youtube.com/@RayanFMRadio',
         instagram: 'https://www.instagram.com/rayanfm.90.2/',
+        telegram: 'https://t.me/rayanfm',
         whatsapp: 'https://wa.me/971507811815'
       },
       contact: {

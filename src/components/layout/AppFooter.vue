@@ -8,125 +8,7 @@
       <div class="absolute bottom-0 left-1/3 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
     </div>
     
-    <div class="relative container mx-auto px-6 py-24" :class="{ 'rtl-container': locale === 'ar' }">
-      <!-- Enhanced Navigation Section -->
-      <div class="mb-20">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-accent to-white bg-clip-text text-transparent mb-4">
-            {{ locale === 'en' ? 'Explore Our World' : 'استكشف عالمنا' }}
-          </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-accent to-secondary rounded-full mx-auto"></div>
-        </div>
-        
-        <!-- Responsive Navigation Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <!-- Home Nav Card -->
-          <router-link to="/" class="group">
-            <div class="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/10">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-cyan-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors duration-300">
-                  {{ $t('nav.home') }}
-                </h3>
-                <p class="text-white/70 text-sm leading-relaxed">
-                  {{ locale === 'en' ? 'Start your journey with us' : 'ابدأ رحلتك معنا' }}
-                </p>
-                <div class="mt-4 flex items-center text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {{ locale === 'en' ? 'Explore' : 'استكشف' }}
-                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </router-link>
-
-          <!-- About Nav Card -->
-          <router-link to="/about" class="group">
-            <div class="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/10">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors duration-300">
-                  {{ $t('nav.about') }}
-                </h3>
-                <p class="text-white/70 text-sm leading-relaxed">
-                  {{ locale === 'en' ? 'Discover our story and mission' : 'اكتشف قصتنا ورسالتنا' }}
-                </p>
-                <div class="mt-4 flex items-center text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {{ locale === 'en' ? 'Learn More' : 'اعرف المزيد' }}
-                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </router-link>
-
-          <!-- Programs Nav Card -->
-          <router-link to="/programs" class="group">
-            <div class="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/10">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-400/10 to-emerald-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors duration-300">
-                  {{ $t('nav.programs') }}
-                </h3>
-                <p class="text-white/70 text-sm leading-relaxed">
-                  {{ locale === 'en' ? 'Explore our amazing programs' : 'استكشف برامجنا المميزة' }}
-                </p>
-                <div class="mt-4 flex items-center text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {{ locale === 'en' ? 'View All' : 'عرض الكل' }}
-                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </router-link>
-
-          <!-- Contact Nav Card -->
-          <router-link to="/contact" class="group">
-            <div class="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/10">
-              <div class="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors duration-300">
-                  {{ $t('nav.contact') }}
-                </h3>
-                <p class="text-white/70 text-sm leading-relaxed">
-                  {{ locale === 'en' ? 'Get in touch with our team' : 'تواصل مع فريقنا' }}
-                </p>
-                <div class="mt-4 flex items-center text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {{ locale === 'en' ? 'Contact Us' : 'تواصل معنا' }}
-                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </router-link>
-        </div>
-      </div>
-
-      <!-- Main Footer Content -->
+    <div class="relative container mx-auto px-6 py-20" :class="{ 'rtl-container': locale === 'ar' }">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" :class="{ 'rtl-grid': locale === 'ar' }">
         <!-- About Section -->
         <div class="space-y-6">
@@ -143,8 +25,8 @@
             <h4 class="font-semibold text-lg text-accent">{{ $t('footer.followUs') }}</h4>
             <div class="flex gap-3 flex-wrap">
               <!-- Facebook -->
-              <a v-if="siteStore.socialMedia.facebook"
-                 :href="siteStore.socialMedia.facebook" 
+              <a v-if="siteStore.settings.socialMedia.facebook"
+                 :href="siteStore.settings.socialMedia.facebook" 
                  class="group relative bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl"
                  target="_blank"
                  rel="noopener noreferrer"
@@ -156,8 +38,8 @@
               </a>
               
               <!-- Instagram -->
-              <a v-if="siteStore.socialMedia.instagram"
-                 :href="siteStore.socialMedia.instagram" 
+              <a v-if="siteStore.settings.socialMedia.instagram"
+                 :href="siteStore.settings.socialMedia.instagram" 
                  class="group relative bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl"
                  target="_blank"
                  rel="noopener noreferrer"
@@ -169,8 +51,8 @@
               </a>
               
               <!-- YouTube -->
-              <a v-if="siteStore.socialMedia.youtube"
-                 :href="siteStore.socialMedia.youtube" 
+              <a v-if="siteStore.settings.socialMedia.youtube"
+                 :href="siteStore.settings.socialMedia.youtube" 
                  class="group relative bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl"
                  target="_blank"
                  rel="noopener noreferrer"
@@ -182,8 +64,8 @@
               </a>
 
               <!-- Telegram -->
-              <a v-if="siteStore.socialMedia.telegram"
-                 :href="siteStore.socialMedia.telegram" 
+              <a v-if="siteStore.settings.socialMedia.telegram"
+                 :href="siteStore.settings.socialMedia.telegram" 
                  class="group relative bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl"
                  target="_blank"
                  rel="noopener noreferrer"
@@ -195,8 +77,8 @@
               </a>
               
               <!-- WhatsApp -->
-              <a v-if="siteStore.socialMedia.whatsapp"
-                 :href="siteStore.socialMedia.whatsapp" 
+              <a v-if="siteStore.settings.socialMedia.whatsapp"
+                 :href="siteStore.settings.socialMedia.whatsapp" 
                  class="group relative bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl"
                  target="_blank"
                  rel="noopener noreferrer"
@@ -317,7 +199,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useSiteStore } from '@/stores/useSiteStore'
+import { useSiteStore } from '@/store/useSiteStore'
 
 const { locale } = useI18n()
 const siteStore = useSiteStore()

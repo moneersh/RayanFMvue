@@ -44,6 +44,7 @@ export interface SiteSettings {
     facebook?: string
     instagram?: string
     youtube?: string
+    telegram?: string
     whatsapp?: string
   }
   contact: {
