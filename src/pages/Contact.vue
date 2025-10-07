@@ -26,15 +26,8 @@
     </div>
   </section>
 
-    <!-- Let's Connect Today Section -->
-    <section class="py-16 bg-primary/10">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-6 text-primary">{{ $t('contact.connectToday') }}</h2>
-          <p class="text-lg max-w-3xl mx-auto leading-relaxed">{{ $t('contact.connectMessage') }}</p>
-        </div>
-      </div>
-    </section>
+    <!-- Broadcasting Platforms Section -->
+    <BroadcastingPlatforms @play-stream="handlePlayStream" />
 
     <!-- Contact Information Section -->
     <section class="py-16 bg-base-200">
@@ -116,13 +109,14 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useSeo } from '@/composables/useSeo'
+import BroadcastingPlatforms from '@/components/contact/BroadcastingPlatforms.vue'
 
 const { t, locale } = useI18n()
 
-// SEO setup
-useSeo({
-  title: t('contact.title'),
-  description: t('contact.subtitle')
-})
+// Handle stream play action from BroadcastingPlatforms component
+const handlePlayStream = () => {
+  // Here you can integrate with your player store or emit to parent
+  console.log('Stream play requested from Contact page')
+  // Example: playerStore.playLiveStream()
+}
 </script>
