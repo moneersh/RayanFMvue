@@ -29,6 +29,12 @@ const router = createRouter({
       component: () => import("../pages/Contact.vue"),
     },
     { path: "/Contact", redirect: "/contact" },
+    // Catch-all route for 404 pages
+    {
+      path: "/:pathMatch(.*)*",
+      name: "NotFound",
+      component: () => import("../pages/Home.vue"), // Redirect unknown routes to Home
+    },
   ],
 });
 
