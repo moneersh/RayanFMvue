@@ -34,8 +34,6 @@
     "details": "View Details"
   },
 
-
-
   "contact": {
     "title": "Contact Us",
     "subtitle": "We're here to answer your questions",
@@ -132,7 +130,7 @@
   },
   "programNames": {
     "sabahakMaRama": "Your Morning with Rama",
-    "sameenaSotak": "We Heard Your Voice", 
+    "sameenaSotak": "We Heard Your Voice",
     "anaqeedNabatiya": "Nabati Clusters",
     "nabahem": "Nabahem",
     "dahabAteeq": "Ancient Gold",
@@ -150,7 +148,7 @@
       "metaDescription": "Learn about Rayan Radio - our vision, mission, and distinguished team"
     },
     "programs": {
-      "metaTitle": "Programs - Rayan Radio", 
+      "metaTitle": "Programs - Rayan Radio",
       "metaDescription": "Browse the diverse range of programs at Rayan Radio"
     },
 
@@ -186,5 +184,11 @@
     "email": "Email",
     "address": "Address",
     "rights": "© {year} Rayan Radio - All Rights Reserved"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been moved. Let's get you back on track.",
+    "goHome": "Go to Home",
+    "goBack": "Go Back"
   }
 }

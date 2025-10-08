@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
-      component: () => import("../pages/Home.vue"), // Redirect unknown routes to Home
+      component: () => import("../pages/NotFound.vue"),
     },
   ],
 });
