@@ -10,7 +10,7 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && cp dist/index.html dist/404.html && gh-pages -d dist",
     "lint": "eslint src --ext .js,.ts --fix",
     "lint:check": "eslint src --ext .js,.ts"
   },

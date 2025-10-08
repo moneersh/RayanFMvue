@@ -35,7 +35,7 @@
                   alt="Rayan FM Logo"
                   class="w-full h-full object-cover"
                   @error="handleLogoError"
-                />
+                >
                 <!-- Fallback with same styling if logo fails to load -->
                 <div
                   v-if="logoError"
@@ -46,8 +46,7 @@
                   >
                     <span
                       class="text-white font-black text-lg lg:text-xl drop-shadow-lg"
-                      >R</span
-                    >
+                    >R</span>
                   </div>
                 </div>
                 <!-- Glass overlay effect -->
@@ -77,8 +76,7 @@
               >
                 <span
                   class="text-sm lg:text-base font-bold text-white/90 drop-shadow-md"
-                  >FM 90.2 MHz</span
-                >
+                >FM 90.2 MHz</span>
                 <div
                   class="w-2 h-2 bg-gradient-to-r from-rayan-orange to-rayan-purple rounded-full animate-pulse shadow-lg"
                 />

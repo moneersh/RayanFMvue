@@ -21,7 +21,7 @@ A comprehensive Islamic radio station website built with Vue 3, featuring full A
 
 ## 🗂️ Project Structure
 
-```
+```ini
 src/
 ├── components/          # Reusable components
 │   ├── cards/          # Program and news cards
@@ -45,25 +45,30 @@ src/
 ## 🚀 Development & Deployment
 
 ### System Requirements
-- Node.js 18+ 
+
+- Node.js 18+
 - npm
 
 ### Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### Start Development Server
+
 ```bash
 npm run dev
 ```
 
 ### Build for Production
+
 ```bash
 npm run build
 ```
 
 ### Deploy to GitHub Pages
+
 ```bash
 npm run deploy
 ```
@@ -83,18 +88,22 @@ npm run deploy
 ## 🎨 Design & Colors
 
 The project uses an Islamic color scheme:
+
 - **Islamic Green** (`#2d5a27`) - Primary color
-- **Gold** (`#d4af37`) - Secondary color  
+- **Gold** (`#d4af37`) - Secondary color
 - **Islamic Blue** (`#1e3a8a`) - Accent color
 
 ## 🔧 Configuration
 
 ### Content Customization
+
 Site settings can be modified in:
+
 - `src/store/useSiteStore.ts` - General settings
 - `src/i18n/ar.json` & `src/i18n/en.json` - Text content
 
 ### Adding New Programs
+
 - Add data to `src/content/programs/programs.json`
 - Or use external API in `src/store/useProgramsStore.ts`
 
@@ -105,6 +114,7 @@ Website available at: [https://moneersh.github.io/RayanFMvue/](https://moneersh.
 ## 🛠️ Technologies Used
 
 ### Main Dependencies
+
 - [Vue 3.3.4](https://vuejs.org/) - Progressive JavaScript framework
 - [Vue Router 4.2.2](https://router.vuejs.org/) - Official router for Vue.js
 - [Vue i18n 9](https://vue-i18n.intlify.dev/) - Internationalization plugin
@@ -114,6 +124,7 @@ Website available at: [https://moneersh.github.io/RayanFMvue/](https://moneersh.
 - [Axios 1.4.0](https://axios-http.com/) - Promise-based HTTP client
 
 ### Development Dependencies
+
 - [TypeScript ~5.0.4](https://www.typescriptlang.org/) - Typed superset of JavaScript
 - [Vite 4.3.9](https://vitejs.dev/) - Next generation frontend tooling
 - [Tailwind CSS 3.3.2](https://tailwindcss.com/) - Utility-first CSS framework
@@ -151,6 +162,12 @@ This project is licensed under the MIT License.
 - 🆔[TypeScript](https://www.typescriptlang.org/)
 
 ### Quick Start
+
+## 🔁 SPA Routing on GitHub Pages
+
+If you open a deep link like `/about` or `/programs` directly you may get a 404 on GitHub Pages because it serves static files only. The deploy script copies `index.html` to `404.html` so GitHub Pages serves the app shell for unknown routes and Vue Router (history mode) can render the correct page. Nothing else is required—just run `npm run deploy`.
+
+If you later migrate to Netlify/Vercel, replace this with their native redirect/rewrites (e.g. `_redirects` file).
 
 ```bash
 # Clone the repo
