@@ -1,0 +1,95 @@
+{
+  "platforms": [
+    {
+      "id": "radio-garden",
+      "nameEn": "Radio Garden",
+      "nameAr": "راديو جاردن",
+      "descriptionEn": "Listen live on Radio Garden worldwide - Available 24/7 from anywhere in the world",
+      "descriptionAr": "استمع مباشرة عبر راديو جاردن في جميع أنحاء العالم - متاح 24/7 من أي مكان في العالم",
+      "type": "single",
+      "icon": "/platforms/radioGarden.webp",
+      "iconType": "image",
+      "url": "https://radio.garden/listen/rayan-fm-90-2/Ot6m1nA3",
+      "external": true,
+      "priority": 1,
+      "status": "active",
+      "features": [
+        "Live streaming",
+        "Global access",
+        "No registration required",
+        "Mobile friendly"
+      ],
+      "featuresAr": [
+        "البث المباشر",
+        "وصول عالمي",
+        "لا يتطلب تسجيل",
+        "متوافق مع الهاتف"
+      ]
+    },
+    {
+      "id": "tunein",
+      "nameEn": "TuneIn Radio",
+      "nameAr": "تيون إن راديو",
+      "descriptionEn": "Listen on TuneIn - One of the world's largest radio streaming platforms",
+      "descriptionAr": "استمع عبر تيون إن - إحدى أكبر منصات بث الراديو في العالم",
+      "type": "single",
+      "icon": "/platforms/tunein.webp",
+      "iconType": "image",
+      "url": "https://tunein.com/radio/Rayan-FM-902-s123456/",
+      "external": true,
+      "priority": 2,
+      "status": "active",
+      "features": [
+        "Available on all devices",
+        "Offline listening",
+        "Alarm clock feature",
+        "Car integration"
+      ],
+      "featuresAr": [
+        "متاح على جميع الأجهزة",
+        "استماع غير متصل",
+        "ميزة المنبه",
+        "تكامل مع السيارة"
+      ]
+    },
+   
+  
+    {
+      "id": "fm-frequency",
+      "nameEn": "FM Radio",
+      "nameAr": "راديو إف إم",
+      "descriptionEn": "Traditional FM radio broadcasting in Southern Syria and surrounding regions",
+      "descriptionAr": "البث الإذاعي التقليدي في جنوب سوريا والمناطق المحيطة",
+      "type": "single",
+      "icon": "antenna",
+      "iconType": "svg",
+      "priority": 3,
+      "status": "active",
+      "frequency": "90.2 FM",
+      "coverage": [
+        "As-Suwayda Governorate",
+        "Daraa Governorate",
+        "Parts of Damascus Countryside",
+        "Quneitra Region"
+      ],
+      "coverageAr": [
+        "محافظة السويداء",
+        "محافظة درعا",
+        "أجزاء من ريف دمشق",
+        "منطقة القنيطرة"
+      ],
+      "features": [
+        "Crystal clear signal",
+        "Wide coverage area",
+        "24/7 broadcasting",
+        "Emergency broadcasts"
+      ],
+      "featuresAr": [
+        "إشارة واضحة",
+        "تغطية واسعة",
+        "بث على مدار الساعة",
+        "بث الطوارئ"
+      ]
+    }
+  ]
+}
