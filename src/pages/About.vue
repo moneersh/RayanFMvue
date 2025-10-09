@@ -1,6 +1,6 @@
 <template>
   <!-- Hero Section -->
-  <section 
+  <section
     class="hero py-20 bg-cover bg-center bg-no-repeat relative"
     :style="{ backgroundImage: `url('${currentBackground}')` }"
   >
@@ -8,14 +8,16 @@
     <div class="absolute inset-0 bg-black/00" />
     <div class="hero-content text-center text-white relative z-10">
       <div class="max-w-4xl">
-        <h1 class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent">
-          {{ $t('about.heroTitle') }}
+        <h1
+          class="mb-8 text-6xl font-black leading-loose bg-gradient-to-r from-rayan-orange to-white bg-clip-text text-transparent"
+        >
+          {{ $t("about.heroTitle") }}
         </h1>
         <p class="mb-5 text-2xl font-semibold text-rayan-light">
-          {{ $t('about.heroDescription1') }}
+          {{ $t("about.heroDescription1") }}
         </p>
         <p class="mb-5 text-2xl font-semibold text-rayan-light">
-          {{ $t('about.heroDescription2') }}
+          {{ $t("about.heroDescription2") }}
         </p>
       </div>
     </div>
@@ -27,28 +29,40 @@
   </div>
 
   <!-- Mechanisms Section -->
-  <section 
-    id="mechanisms" 
+  <section
+    id="mechanisms"
     class="py-16 bg-gradient-to-br from-base-300 via-base-200 to-base-100 relative overflow-hidden"
   >
     <!-- Background decorative elements -->
     <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl" />
-      <div class="absolute bottom-20 right-10 w-40 h-40 bg-secondary rounded-full blur-3xl" />
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent rounded-full blur-3xl" />
+      <div
+        class="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"
+      />
+      <div
+        class="absolute bottom-20 right-10 w-40 h-40 bg-secondary rounded-full blur-3xl"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent rounded-full blur-3xl"
+      />
     </div>
-      
+
     <div class="container mx-auto px-4 relative z-10">
       <div class="max-w-6xl mx-auto">
         <!-- Enhanced Header -->
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            {{ $t('about.mechanisms.title') }}
+          <h2
+            class="text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+          >
+            {{ $t("about.mechanisms.title") }}
           </h2>
           <div class="flex items-center justify-center mb-6">
-            <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
+            <div
+              class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"
+            />
             <div class="w-3 h-3 bg-accent rounded-full mx-2" />
-            <div class="w-16 h-1 bg-gradient-to-r from-secondary to-accent rounded-full" />
+            <div
+              class="w-16 h-1 bg-gradient-to-r from-secondary to-accent rounded-full"
+            />
           </div>
           <p class="text-lg text-base-content/70 max-w-2xl mx-auto" />
         </div>
@@ -56,11 +70,19 @@
         <!-- Mechanisms Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Mechanism 1 -->
-          <div class="group transform transition-all duration-500 hover:scale-105 hover:-rotate-1">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-primary/20 hover:border-primary/40 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div
+            class="group transform transition-all duration-500 hover:scale-105 hover:-rotate-1"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-primary/20 hover:border-primary/40 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
               <div class="card-body p-8 relative z-10">
-                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500">
+                <div
+                  class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500"
+                >
                   <svg
                     class="w-8 h-8 text-white"
                     fill="none"
@@ -76,8 +98,10 @@
                   </svg>
                 </div>
                 <div class="flex-1">
-                  <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300">
-                    {{ $t('about.mechanisms.item1') }}
+                  <p
+                    class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300"
+                  >
+                    {{ $t("about.mechanisms.item1") }}
                   </p>
                 </div>
               </div>
@@ -85,11 +109,19 @@
           </div>
 
           <!-- Mechanism 2 -->
-          <div class="group transform transition-all duration-500 hover:scale-105 hover:rotate-1">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-secondary/20 hover:border-secondary/40 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div
+            class="group transform transition-all duration-500 hover:scale-105 hover:rotate-1"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-secondary/20 hover:border-secondary/40 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
               <div class="card-body p-8 relative z-10">
-                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500">
+                <div
+                  class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500"
+                >
                   <svg
                     class="w-8 h-8 text-white"
                     fill="none"
@@ -105,8 +137,10 @@
                   </svg>
                 </div>
                 <div class="flex-1">
-                  <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300">
-                    {{ $t('about.mechanisms.item2') }}
+                  <p
+                    class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300"
+                  >
+                    {{ $t("about.mechanisms.item2") }}
                   </p>
                 </div>
               </div>
@@ -114,11 +148,19 @@
           </div>
 
           <!-- Mechanism 3 -->
-          <div class="group transform transition-all duration-500 hover:scale-105 hover:-rotate-1">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-accent/20 hover:border-accent/40 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div
+            class="group transform transition-all duration-500 hover:scale-105 hover:-rotate-1"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-accent/20 hover:border-accent/40 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
               <div class="card-body p-8 relative z-10">
-                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500">
+                <div
+                  class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500"
+                >
                   <svg
                     class="w-8 h-8 text-white"
                     fill="none"
@@ -134,8 +176,10 @@
                   </svg>
                 </div>
                 <div class="flex-1">
-                  <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300">
-                    {{ $t('about.mechanisms.item3') }}
+                  <p
+                    class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300"
+                  >
+                    {{ $t("about.mechanisms.item3") }}
                   </p>
                 </div>
               </div>
@@ -143,11 +187,19 @@
           </div>
 
           <!-- Mechanism 4 -->
-          <div class="group transform transition-all duration-500 hover:scale-105 hover:rotate-1">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-primary/20 hover:border-primary/40 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div
+            class="group transform transition-all duration-500 hover:scale-105 hover:rotate-1"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-primary/20 hover:border-primary/40 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
               <div class="card-body p-8 relative z-10">
-                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500">
+                <div
+                  class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-xl shadow-lg mb-6 group-hover:rotate-12 transition-transform duration-500"
+                >
                   <svg
                     class="w-8 h-8 text-white"
                     fill="none"
@@ -163,8 +215,10 @@
                   </svg>
                 </div>
                 <div class="flex-1">
-                  <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300">
-                    {{ $t('about.mechanisms.item4') }}
+                  <p
+                    class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300"
+                  >
+                    {{ $t("about.mechanisms.item4") }}
                   </p>
                 </div>
               </div>
@@ -172,12 +226,20 @@
           </div>
 
           <!-- Mechanism 5 - Spanning 2 columns -->
-          <div class="group transform transition-all duration-500 hover:scale-105 lg:col-span-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-secondary/20 hover:border-secondary/40 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div
+            class="group transform transition-all duration-500 hover:scale-105 lg:col-span-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/80 backdrop-blur-sm shadow-xl hover:shadow-2xl border border-secondary/20 hover:border-secondary/40 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex flex-col md:flex-row items-start gap-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl shadow-lg group-hover:rotate-12 transition-transform duration-500 flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl shadow-lg group-hover:rotate-12 transition-transform duration-500 flex-shrink-0"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -193,8 +255,10 @@
                     </svg>
                   </div>
                   <div class="flex-1">
-                    <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300">
-                      {{ $t('about.mechanisms.item5') }}
+                    <p
+                      class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-300"
+                    >
+                      {{ $t("about.mechanisms.item5") }}
                     </p>
                   </div>
                 </div>
@@ -208,27 +272,37 @@
   </section>
 
   <!-- Goals Section -->
-  <section 
-    id="goals" 
+  <section
+    id="goals"
     class="py-20 bg-gradient-to-br from-base-100 via-primary/5 to-secondary/5 relative overflow-hidden"
   >
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[size:40px_40px]" />
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[size:40px_40px]"
+      />
     </div>
-      
+
     <!-- Floating Elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-20 left-16 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse" />
-      <div class="absolute bottom-32 right-20 w-32 h-32 bg-secondary/10 rounded-full blur-2xl animate-pulse delay-1000" />
-      <div class="absolute top-1/2 left-8 w-16 h-16 bg-accent/10 rounded-full blur-lg animate-pulse delay-500" />
+      <div
+        class="absolute top-20 left-16 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse"
+      />
+      <div
+        class="absolute bottom-32 right-20 w-32 h-32 bg-secondary/10 rounded-full blur-2xl animate-pulse delay-1000"
+      />
+      <div
+        class="absolute top-1/2 left-8 w-16 h-16 bg-accent/10 rounded-full blur-lg animate-pulse delay-500"
+      />
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
       <div class="max-w-7xl mx-auto">
         <!-- Enhanced Header -->
         <div class="text-center mb-20">
-          <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-2xl mb-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+          <div
+            class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-2xl mb-8 transform rotate-3 hover:rotate-0 transition-transform duration-500"
+          >
             <svg
               class="w-10 h-10 text-white"
               fill="none"
@@ -243,27 +317,45 @@
               />
             </svg>
           </div>
-          <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            {{ $t('about.goals.title') }}
+          <h2
+            class="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+          >
+            {{ $t("about.goals.title") }}
           </h2>
           <div class="flex items-center justify-center mb-8">
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
+            <div
+              class="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"
+            />
             <div class="w-4 h-4 bg-accent rounded-full mx-3 animate-pulse" />
-            <div class="w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded-full" />
+            <div
+              class="w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded-full"
+            />
           </div>
-          <p class="text-xl text-base-content/70 max-w-3xl mx-auto leading-relaxed" />
+          <p
+            class="text-xl text-base-content/70 max-w-3xl mx-auto leading-relaxed"
+          />
         </div>
 
         <!-- Goals Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           <!-- Goal 1: Heritage -->
-          <div class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-primary/30 hover:border-primary/60 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+          <div
+            class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-primary/30 hover:border-primary/60 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex items-center mb-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -279,24 +371,38 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <div class="w-12 h-0.5 bg-primary/50 group-hover:bg-primary transition-colors duration-500" />
+                    <div
+                      class="w-12 h-0.5 bg-primary/50 group-hover:bg-primary transition-colors duration-500"
+                    />
                   </div>
                 </div>
-                <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500">
-                  {{ $t('about.goals.item1') }}
+                <p
+                  class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500"
+                >
+                  {{ $t("about.goals.item1") }}
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Goal 2: Service Issues -->
-          <div class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-secondary/30 hover:border-secondary/60 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+          <div
+            class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-secondary/30 hover:border-secondary/60 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex items-center mb-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -318,24 +424,38 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <div class="w-12 h-0.5 bg-secondary/50 group-hover:bg-secondary transition-colors duration-500" />
+                    <div
+                      class="w-12 h-0.5 bg-secondary/50 group-hover:bg-secondary transition-colors duration-500"
+                    />
                   </div>
                 </div>
-                <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500">
-                  {{ $t('about.goals.item2') }}
+                <p
+                  class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500"
+                >
+                  {{ $t("about.goals.item2") }}
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Goal 3: Dialogue Culture -->
-          <div class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-accent/30 hover:border-accent/60 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+          <div
+            class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-accent/30 hover:border-accent/60 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex items-center mb-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -351,24 +471,38 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <div class="w-12 h-0.5 bg-accent/50 group-hover:bg-accent transition-colors duration-500" />
+                    <div
+                      class="w-12 h-0.5 bg-accent/50 group-hover:bg-accent transition-colors duration-500"
+                    />
                   </div>
                 </div>
-                <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500">
-                  {{ $t('about.goals.item3') }}
+                <p
+                  class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500"
+                >
+                  {{ $t("about.goals.item3") }}
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Goal 4: Listener Focus -->
-          <div class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-primary/30 hover:border-primary/60 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+          <div
+            class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-primary/30 hover:border-primary/60 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex items-center mb-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -384,24 +518,38 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <div class="w-12 h-0.5 bg-primary/50 group-hover:bg-primary transition-colors duration-500" />
+                    <div
+                      class="w-12 h-0.5 bg-primary/50 group-hover:bg-primary transition-colors duration-500"
+                    />
                   </div>
                 </div>
-                <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500">
-                  {{ $t('about.goals.item4') }}
+                <p
+                  class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500"
+                >
+                  {{ $t("about.goals.item4") }}
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Goal 5: Media Role - Spanning 2 columns -->
-          <div class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2 lg:col-span-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-secondary/30 hover:border-secondary/60 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+          <div
+            class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2 lg:col-span-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-secondary/30 hover:border-secondary/60 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex flex-col md:flex-row items-start gap-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500 flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500 flex-shrink-0"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -417,9 +565,13 @@
                     </svg>
                   </div>
                   <div class="flex-1">
-                    <div class="w-16 h-0.5 bg-secondary/50 group-hover:bg-secondary transition-colors duration-500 mb-4" />
-                    <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500">
-                      {{ $t('about.goals.item5') }}
+                    <div
+                      class="w-16 h-0.5 bg-secondary/50 group-hover:bg-secondary transition-colors duration-500 mb-4"
+                    />
+                    <p
+                      class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500"
+                    >
+                      {{ $t("about.goals.item5") }}
                     </p>
                   </div>
                 </div>
@@ -428,13 +580,23 @@
           </div>
 
           <!-- Goal 6: Local Issues - Single column to balance the layout -->
-          <div class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2">
-            <div class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-accent/30 hover:border-accent/60 h-full relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+          <div
+            class="group transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+          >
+            <div
+              class="card bg-gradient-to-br from-base-100 to-base-100/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl border border-accent/30 hover:border-accent/60 h-full relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              />
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"
+              />
               <div class="card-body p-8 relative z-10">
                 <div class="flex items-center mb-6">
-                  <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl shadow-xl group-hover:rotate-12 transition-all duration-500"
+                  >
                     <svg
                       class="w-8 h-8 text-white"
                       fill="none"
@@ -450,11 +612,15 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <div class="w-12 h-0.5 bg-accent/50 group-hover:bg-accent transition-colors duration-500" />
+                    <div
+                      class="w-12 h-0.5 bg-accent/50 group-hover:bg-accent transition-colors duration-500"
+                    />
                   </div>
                 </div>
-                <p class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500">
-                  {{ $t('about.goals.item6') }}
+                <p
+                  class="text-base leading-relaxed text-base-content/90 group-hover:text-base-content transition-colors duration-500"
+                >
+                  {{ $t("about.goals.item6") }}
                 </p>
               </div>
             </div>
@@ -464,30 +630,42 @@
     </div>
   </section>
 
-  
-
   <!-- Editorial Standards Section -->
-  <section 
-    id="editorial-standards" 
+  <section
+    id="editorial-standards"
     class="py-16 bg-gradient-to-br from-base-200 via-base-100 to-base-200"
   >
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto text-center">
         <div class="mb-12">
-          <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            {{ $t('about.editorialStandards.title') }}
+          <h2
+            class="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+          >
+            {{ $t("about.editorialStandards.title") }}
           </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full" />
-          <p class="text-lg leading-relaxed text-base-content/80 max-w-3xl mx-auto">
-            {{ $t('about.editorialStandards.description') }}
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"
+          />
+          <p
+            class="text-lg leading-relaxed text-base-content/80 max-w-3xl mx-auto"
+          >
+            {{ $t("about.editorialStandards.description") }}
           </p>
         </div>
-          
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -502,17 +680,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
-                  {{ $t('about.editorialStandards.accuracy') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-primary transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.accuracy") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-secondary/20 hover:border-secondary/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-secondary/20 hover:border-secondary/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -527,17 +715,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-secondary transition-colors duration-300">
-                  {{ $t('about.editorialStandards.neutrality') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-secondary transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.neutrality") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-accent/20 hover:border-accent/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-accent/20 hover:border-accent/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -552,17 +750,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-accent transition-colors duration-300">
-                  {{ $t('about.editorialStandards.credibility') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-accent transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.credibility") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -583,17 +791,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
-                  {{ $t('about.editorialStandards.objectivity') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-primary transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.objectivity") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-secondary/20 hover:border-secondary/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-secondary/20 hover:border-secondary/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -608,17 +826,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-secondary transition-colors duration-300">
-                  {{ $t('about.editorialStandards.privacy') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-secondary transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.privacy") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-accent/20 hover:border-accent/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-accent/20 hover:border-accent/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -633,17 +861,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-accent transition-colors duration-300">
-                  {{ $t('about.editorialStandards.transparency') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-accent transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.transparency") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -658,17 +896,27 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
-                  {{ $t('about.editorialStandards.integrity') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-primary transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.integrity") }}
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="group transform transition-all duration-300 hover:scale-105">
-            <div class="card bg-base-100 shadow-lg hover:shadow-xl border border-secondary/20 hover:border-secondary/40 h-full">
-              <div class="card-body p-6 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+          <div
+            class="group transform transition-all duration-300 hover:scale-105"
+          >
+            <div
+              class="card bg-base-100 shadow-lg hover:shadow-xl border border-secondary/20 hover:border-secondary/40 h-full"
+            >
+              <div
+                class="card-body p-6 flex flex-col items-center justify-center text-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300"
+                >
                   <svg
                     class="w-6 h-6 text-white"
                     fill="none"
@@ -683,8 +931,10 @@
                     />
                   </svg>
                 </div>
-                <h3 class="font-semibold text-lg group-hover:text-secondary transition-colors duration-300">
-                  {{ $t('about.editorialStandards.responsibility') }}
+                <h3
+                  class="font-semibold text-lg group-hover:text-secondary transition-colors duration-300"
+                >
+                  {{ $t("about.editorialStandards.responsibility") }}
                 </h3>
               </div>
             </div>
@@ -698,18 +948,18 @@
 <script setup lang="ts">
 // Make sure the file exists at the specified path, or update the path below if needed
 // Update the import paths below if the files are located elsewhere
-import StatisticsSection from '../components/about/StatisticsSection.vue'
-import { useSeo } from '../composables/useSeo'
-import { useI18n } from 'vue-i18n'
-import { useRandomBackground } from '../composables/useRandomBackground'
+import StatisticsSection from "../components/about/StatisticsSection.vue";
+import { useSeo } from "../composables/useSeo";
+import { useI18n } from "vue-i18n";
+import { useRandomBackground } from "../composables/useRandomBackground";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 // Random background
-const { currentBackground } = useRandomBackground()
+const { currentBackground } = useRandomBackground();
 
 useSeo({
-  title: t('about.title'),
-  description: t('about.heroDescription1')
-})
+  title: t("about.title"),
+  description: t("about.heroDescription1"),
+});
 </script>
