@@ -28,13 +28,23 @@ check_ssl() {
 check_dns() {
     echo "🌐 Checking DNS configuration..."
     
-    # Check A records
-    echo "A records for rayanfm.net:"
-    dig +short rayanfm.net A || nslookup rayanfm.net
+    # Check if domain resolves using ping (works cross-platform)
+    echo "Testing DNS resolution for rayanfm.net:"
+    if ping -c 1 -W 3 rayanfm.net > /dev/null 2>&1; then
+        echo "✅ rayanfm.net resolves to an IP address"
+        # Try to get the IP using host command or curl
+        echo "IP address:" $(getent hosts rayanfm.net 2>/dev/null | awk '{print $1}' || echo "Could not determine IP")
+    else
+        echo "❌ rayanfm.net does not resolve"
+    fi
     
-    # Check CNAME for www
-    echo "CNAME record for www.rayanfm.net:"
-    dig +short www.rayanfm.net CNAME || nslookup www.rayanfm.net
+    # Check www subdomain
+    echo "Testing DNS resolution for www.rayanfm.net:"
+    if ping -c 1 -W 3 www.rayanfm.net > /dev/null 2>&1; then
+        echo "✅ www.rayanfm.net resolves to an IP address"
+    else
+        echo "❌ www.rayanfm.net does not resolve"
+    fi
 }
 
 # Function to test GitHub Pages
@@ -48,11 +58,20 @@ check_github_pages() {
         echo "❌ GitHub Pages original URL not accessible"
     fi
     
-    # Check if CNAME file exists in deployment
-    if curl -s --connect-timeout 10 https://rayanfm.net/CNAME 2>/dev/null | grep -q "rayanfm.net"; then
-        echo "✅ CNAME file properly deployed"
+    # Check if CNAME file exists locally
+    if [ -f "public/CNAME" ] && grep -q "rayanfm.net" public/CNAME; then
+        echo "✅ CNAME file exists and contains rayanfm.net"
     else
         echo "❌ CNAME file missing or incorrect"
+    fi
+    
+    # Check if CNAME is accessible via HTTP (if SSL works)
+    if curl -s --connect-timeout 5 https://rayanfm.net/CNAME 2>/dev/null | grep -q "rayanfm.net"; then
+        echo "✅ CNAME file properly deployed and accessible"
+    elif curl -s --connect-timeout 5 http://rayanfm.net/CNAME 2>/dev/null | grep -q "rayanfm.net"; then
+        echo "⚠️  CNAME accessible via HTTP but not HTTPS (SSL issue)"
+    else
+        echo "⚠️  CNAME not accessible via web (may be deployment or SSL issue)"
     fi
 }
 
