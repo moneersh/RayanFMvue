@@ -265,30 +265,7 @@
               </span>
             </router-link>
 
-            <router-link
-              to="/programs#team"
-              class="group flex items-center p-4 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-lg"
-            >
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-all duration-500 mr-4"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              </div>
-              <span
-                class="text-xl font-semibold text-white/90 group-hover:text-rayan-orange transition-colors duration-300"
-              >
-                {{ locale === "ar" ? "فريق العمل" : "Our Team" }}
-              </span>
-            </router-link>
-
+            
             <router-link
               to="/contact"
               class="group flex items-center p-4 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-lg"
@@ -340,133 +317,6 @@
               </span>
             </router-link>
           </nav>
-
-          <!-- Quick Access Section -->
-          <div class="mt-12">
-            <h4 class="font-bold text-2xl text-white mb-6 flex items-center">
-              <svg
-                class="w-6 h-6 mr-3 text-rayan-orange"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M13 3l3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z" />
-                <path
-                  d="M19 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6"
-                />
-              </svg>
-              {{ locale === "ar" ? "الوصول السريع" : "Quick Access" }}
-            </h4>
-            <div class="grid grid-cols-2 gap-3">
-              <a
-                href="/about#statistics"
-                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
-              >
-                <div class="text-xl mr-2">📊</div>
-                <span
-                  class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange"
-                >
-                  {{ locale === "ar" ? "الإحصائيات" : "Statistics" }}
-                </span>
-              </a>
-              <a
-                href="/about#goals"
-                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
-              >
-                <div class="text-xl mr-2">🎯</div>
-                <span
-                  class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange"
-                >
-                  {{ locale === "ar" ? "أهدافنا" : "Our Goals" }}
-                </span>
-              </a>
-              <a
-                href="/programs#programs"
-                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
-              >
-                <div class="text-xl mr-2">📻</div>
-                <span
-                  class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange"
-                >
-                  {{ locale === "ar" ? "البرامج" : "Programs" }}
-                </span>
-              </a>
-              <a
-                href="/programs#team"
-                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
-              >
-                <div class="text-xl mr-2">👥</div>
-                <span
-                  class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange"
-                >
-                  {{ locale === "ar" ? "الفريق" : "Team" }}
-                </span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Broadcasting Location -->
-          <div
-            class="mt-12 p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 hover:border-rayan-orange/50 transition-all duration-500 hover:shadow-2xl group"
-          >
-            <div class="flex items-center mb-4">
-              <div
-                class="w-12 h-12 bg-gradient-to-br from-rayan-orange to-rayan-purple rounded-xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-all duration-500"
-              >
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              </div>
-              <h4 class="text-2xl font-bold text-white">
-                {{ locale === "en" ? "Broadcasting From" : "نبث من" }}
-              </h4>
-            </div>
-            <a
-              href="https://share.google/XATAK6syzX2yLxIml"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-start gap-3 text-lg text-white/90 font-semibold hover:text-rayan-orange transition-colors duration-300 group-hover:scale-105"
-            >
-              <svg
-                class="w-5 h-5 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-                />
-              </svg>
-              <span>{{
-                locale === "en" ? "As Suwayda, Syria" : "السويداء، سوريا"
-              }}</span>
-            </a>
-            <p class="text-sm text-white/70 mt-2 ml-8">
-              {{
-                locale === "ar"
-                  ? "انقر لعرض الموقع على الخريطة"
-                  : "Click to view location on map"
-              }}
-            </p>
-          </div>
         </div>
       </div>
 
