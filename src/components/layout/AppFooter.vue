@@ -208,6 +208,43 @@
                 {{ locale === 'ar' ? 'البرامج والفريق' : 'Programs & Crews' }}
               </span>
             </router-link>
+            
+            <router-link
+              to="/contact"
+              class="group flex items-center p-4 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-lg"
+            >
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-all duration-500 mr-4">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </div>
+              <span class="text-xl font-semibold text-white/90 group-hover:text-rayan-orange transition-colors duration-300">
+                {{ $t('nav.contact') }}
+              </span>
+            </router-link>
+            
+            <router-link
+              to="/privacy-policy"
+              class="group flex items-center p-4 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-lg"
+            >
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-all duration-500 mr-4">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+              </div>
+              <span class="text-xl font-semibold text-white/90 group-hover:text-rayan-orange transition-colors duration-300">
+                {{ $t('privacy.title') }}
+              </span>
+            </router-link>
           </nav>
           
           <!-- Broadcasting Location -->

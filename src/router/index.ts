@@ -29,6 +29,13 @@ const router = createRouter({
       component: () => import("../pages/Contact.vue"),
     },
     { path: "/Contact", redirect: "/contact" },
+    {
+      path: "/privacy-policy",
+      name: "privacy-policy",
+      component: () => import("../pages/PrivacyPolicy.vue"),
+    },
+    { path: "/Privacy-Policy", redirect: "/privacy-policy" },
+    { path: "/PrivacyPolicy", redirect: "/privacy-policy" },
     // Catch-all route for 404 pages
     {
       path: "/:pathMatch(.*)*",

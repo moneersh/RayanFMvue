@@ -190,5 +190,69 @@
     "description": "The page you are looking for doesn't exist or has been moved. Let's get you back on track.",
     "goHome": "Go to Home",
     "goBack": "Go Back"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "We are committed to protecting your privacy and personal information",
+    "lastUpdated": "Last Updated",
+    "updateDate": "October 2025",
+    "introduction": {
+      "title": "1. Introduction",
+      "content1": "Rayan FM (\"we,\" \"our,\" \"us\") is committed to protecting the privacy of our listeners, website visitors, and app users.",
+      "content2": "This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our radio services, website, social media, and mobile applications."
+    },
+    "infoCollection": {
+      "title": "2. Information We Collect",
+      "intro": "We may collect the following information when you use our services:",
+      "personal": {
+        "title": "Personal Information",
+        "content": "Such as name, email address, or phone number when you contact us or subscribe to newsletters."
+      },
+      "technical": {
+        "title": "Technical Information",
+        "content": "Including IP address, browser type, device type, and general location for analytics purposes."
+      },
+      "interaction": {
+        "title": "Interaction Data",
+        "content": "Such as feedback, comments, or participation in surveys and contests."
+      }
+    },
+    "usage": {
+      "title": "3. How We Use Your Information",
+      "intro": "We use your data to:",
+      "point1": "Improve our radio programs and website content",
+      "point2": "Communicate with you about updates, new shows, or events",
+      "point3": "Analyze audience behavior to enhance listener experience",
+      "point4": "Maintain compliance with broadcasting and data protection laws"
+    },
+    "sharing": {
+      "title": "4. Data Sharing and Disclosure",
+      "guarantee": "We do NOT sell or rent your personal data.",
+      "intro": "We may share limited information only with:",
+      "providers": "Service providers who help operate our website or streaming platform (e.g., analytics, hosting).",
+      "legal": "Legal authorities when required by law or court order."
+    },
+    "cookies": {
+      "title": "5. Cookies and Analytics",
+      "content1": "Our website may use cookies and analytics tools to understand user behavior and improve performance.",
+      "content2": "You can control or delete cookies through your browser settings."
+    },
+    "rights": {
+      "title": "7. Your Rights",
+      "intro": "You have the right to:",
+      "access": "Request access to your personal data",
+      "correction": "Ask for correction or deletion of your information",
+      "withdraw": "Withdraw consent for communication or marketing at any time"
+    },
+    "contact": {
+      "title": "10. Contact Us",
+      "intro": "If you have any questions or privacy requests, please contact us at:",
+      "email": "Email",
+      "address": "Address",
+      "location": "Rayan FM Headquarters – As-Suwayda, Syria"
+    },
+    "footer": {
+      "commitment": "We respect your privacy and are committed to protecting your personal data."
+    }
   }
 }
