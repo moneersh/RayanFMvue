@@ -22,10 +22,15 @@
   </section>
 
   <!-- Enhanced Statistics Section -->
-  <StatisticsSection />
+  <div id="statistics">
+    <StatisticsSection />
+  </div>
 
   <!-- Mechanisms Section -->
-  <section class="py-16 bg-gradient-to-br from-base-300 via-base-200 to-base-100 relative overflow-hidden">
+  <section 
+    id="mechanisms" 
+    class="py-16 bg-gradient-to-br from-base-300 via-base-200 to-base-100 relative overflow-hidden"
+  >
     <!-- Background decorative elements -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl" />
@@ -203,7 +208,10 @@
   </section>
 
   <!-- Goals Section -->
-  <section class="py-20 bg-gradient-to-br from-base-100 via-primary/5 to-secondary/5 relative overflow-hidden">
+  <section 
+    id="goals" 
+    class="py-20 bg-gradient-to-br from-base-100 via-primary/5 to-secondary/5 relative overflow-hidden"
+  >
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[size:40px_40px]" />
@@ -459,7 +467,10 @@
   
 
   <!-- Editorial Standards Section -->
-  <section class="py-16 bg-gradient-to-br from-base-200 via-base-100 to-base-200">
+  <section 
+    id="editorial-standards" 
+    class="py-16 bg-gradient-to-br from-base-200 via-base-100 to-base-200"
+  >
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto text-center">
         <div class="mb-12">

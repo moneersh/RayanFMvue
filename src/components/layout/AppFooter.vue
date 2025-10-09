@@ -242,7 +242,7 @@
             </router-link>
 
             <router-link
-              to="/programs"
+              to="/programs#programs"
               class="group flex items-center p-4 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-lg"
             >
               <div
@@ -261,7 +261,31 @@
               <span
                 class="text-xl font-semibold text-white/90 group-hover:text-rayan-orange transition-colors duration-300"
               >
-                {{ locale === "ar" ? "البرامج والفريق" : "Programs & Crews" }}
+                {{ locale === "ar" ? "البرامج" : "Programs" }}
+              </span>
+            </router-link>
+            
+            <router-link
+              to="/programs#team"
+              class="group flex items-center p-4 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-lg"
+            >
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-all duration-500 mr-4"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+              </div>
+              <span
+                class="text-xl font-semibold text-white/90 group-hover:text-rayan-orange transition-colors duration-300"
+              >
+                {{ locale === "ar" ? "فريق العمل" : "Our Team" }}
               </span>
             </router-link>
 
@@ -316,6 +340,67 @@
               </span>
             </router-link>
           </nav>
+
+          <!-- Quick Access Section -->
+          <div class="mt-12">
+            <h4 class="font-bold text-2xl text-white mb-6 flex items-center">
+              <svg
+                class="w-6 h-6 mr-3 text-rayan-orange"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M13 3l3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z" />
+                <path d="M19 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6" />
+              </svg>
+              {{ locale === "ar" ? "الوصول السريع" : "Quick Access" }}
+            </h4>
+            <div class="grid grid-cols-2 gap-3">
+              <a
+                href="/about#statistics"
+                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                <div class="text-xl mr-2">
+                  📊
+                </div>
+                <span class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange">
+                  {{ locale === "ar" ? "الإحصائيات" : "Statistics" }}
+                </span>
+              </a>
+              <a
+                href="/about#goals"
+                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                <div class="text-xl mr-2">
+                  🎯
+                </div>
+                <span class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange">
+                  {{ locale === "ar" ? "أهدافنا" : "Our Goals" }}
+                </span>
+              </a>
+              <a
+                href="/programs#programs"
+                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                <div class="text-xl mr-2">
+                  📻
+                </div>
+                <span class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange">
+                  {{ locale === "ar" ? "البرامج" : "Programs" }}
+                </span>
+              </a>
+              <a
+                href="/programs#team"
+                class="group flex items-center p-3 bg-white/5 hover:bg-white/15 backdrop-blur-sm rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                <div class="text-xl mr-2">
+                  👥
+                </div>
+                <span class="text-sm font-semibold text-white/90 group-hover:text-rayan-orange">
+                  {{ locale === "ar" ? "الفريق" : "Team" }}
+                </span>
+              </a>
+            </div>
+          </div>
 
           <!-- Broadcasting Location -->
           <div
