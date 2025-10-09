@@ -73,7 +73,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getAssetPath } from '../../utils/assets'
+import { getAssetPath, getImagePath } from '../../utils/assets'
 
 const { locale } = useI18n()
 
@@ -106,13 +106,6 @@ interface StaffData {
 
 const staffData = ref<StaffData | null>(null)
 const loading = ref(true)
-
-// Helper function for image paths
-const getImagePath = (imagePath: string): string => {
-  const baseUrl = '/RayanFMvue/'
-  const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath
-  return `${baseUrl}${cleanPath}`
-}
 
 // Computed properties for localized content
 const teamTitle = computed(() => {
