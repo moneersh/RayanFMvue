@@ -1,33 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إذاعة الریّان - Rayan Radio</title>
-    
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      إذاعة الریّان - راديو التراث والشعر النبطي | Rayan Radio - Syrian Heritage
+      FM 90.2
+    </title>
+
     <!-- Arabic Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Meta tags for SEO -->
-    <meta name="description" content="إذاعة الریّان - إذاعة إسلامية متنوعة تقدم برامج دينية وثقافية واجتماعية هادفة">
-    <meta name="keywords" content="إذاعة, راديو, إسلام, برامج دينية, ثقافة, أخبار">
-    <meta name="author" content="إذاعة الریّان">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="إذاعة الریّان - Rayan Radio">
-    <meta property="og:description" content="إذاعة إسلامية متنوعة تقدم برامج دينية وثقافية واجتماعية هادفة">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://moneersh.github.io/RayanFMvue/">
-    <meta property="og:image" content="https://moneersh.github.io/RayanFMvue/images/og-image.jpg">
-    
+    <!-- Primary Meta tags (Arabic) -->
+    <meta
+      name="description"
+      content="إذاعة الريان - أول راديو خاص سوري متخصص في إحياء التراث والموروث الشعبي ونشر الشعر النبطي. من السويداء إلى كامل الخارطة السورية منذ 2009"
+    />
+    <meta
+      name="keywords"
+      content="إذاعة الريان, راديو سوري, تراث سوري, شعر نبطي, موروث شعبي, السويداء, جبل العرب, حوران, بادية الشام, إذاعة تراثية, برامج ثقافية, FM 90.2"
+    />
+    <meta name="author" content="إذاعة الریّان - Rayan Radio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Arabic" />
+    <meta name="geo.region" content="SY-SW" />
+    <meta name="geo.placename" content="As-Suwayda, Syria" />
+
+    <!-- English Meta tags -->
+    <meta
+      name="description-en"
+      content="Rayan FM - Syria's first private radio specializing in heritage revival, folk traditions, and Nabati poetry. Broadcasting from As-Suwayda across Syria since 2009"
+    />
+    <meta
+      name="keywords-en"
+      content="Rayan Radio, Syrian Radio, Syrian Heritage, Nabati Poetry, Folk Traditions, As-Suwayda, Jabal al-Arab, Hauran, Heritage Radio, Cultural Programs, FM 90.2"
+    />
+
+    <!-- Open Graph Meta Tags (Arabic) -->
+    <meta property="og:site_name" content="إذاعة الریّان - Rayan Radio" />
+    <meta
+      property="og:title"
+      content="إذاعة الریّان - راديو التراث والشعر النبطي السوري"
+    />
+    <meta
+      property="og:description"
+      content="أول راديو خاص سوري متخصص في إحياء التراث والموروث الشعبي ونشر الشعر النبطي. من السويداء إلى كامل الخارطة السورية منذ 2009"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moneersh.github.io/RayanFMvue/" />
+    <meta
+      property="og:image"
+      content="https://moneersh.github.io/RayanFMvue/images/og-image.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="شعار إذاعة الريان - راديو التراث السوري"
+    />
+    <meta property="og:locale" content="ar_SY" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Open Graph Meta Tags (English) -->
+    <meta
+      property="og:title:en"
+      content="Rayan Radio - Syrian Heritage & Nabati Poetry FM 90.2"
+    />
+    <meta
+      property="og:description:en"
+      content="Syria's first private radio specializing in heritage revival, folk traditions, and Nabati poetry. Broadcasting from As-Suwayda across Syria since 2009"
+    />
+
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="إذاعة الریّان - Rayan Radio">
-    <meta name="twitter:description" content="إذاعة إسلامية متنوعة تقدم برامج دينية وثقافية واجتماعية هادفة">
-    <meta name="twitter:image" content="https://moneersh.github.io/RayanFMvue/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@RayanRadio" />
+    <meta name="twitter:creator" content="@RayanRadio" />
+    <meta
+      name="twitter:title"
+      content="إذاعة الریّان - راديو التراث والشعر النبطي السوري"
+    />
+    <meta
+      name="twitter:description"
+      content="أول راديو خاص سوري متخصص في إحياء التراث والموروث الشعبي ونشر الشعر النبطي من السويداء"
+    />
+    <meta
+      name="twitter:image"
+      content="https://moneersh.github.io/RayanFMvue/images/og-image.jpg"
+    />
+    <meta name="twitter:image:alt" content="Rayan Radio - Syrian Heritage FM" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#F97316" />
+    <meta name="msapplication-TileColor" content="#F97316" />
+    <meta name="application-name" content="Rayan Radio" />
+    <meta name="apple-mobile-web-app-title" content="إذاعة الریّان" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://moneersh.github.io/RayanFMvue/" />
+
+    <!-- Alternate language versions -->
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://moneersh.github.io/RayanFMvue/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://moneersh.github.io/RayanFMvue/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://moneersh.github.io/RayanFMvue/"
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "RadioStation",
+        "name": {
+          "@language": "ar",
+          "@value": "إذاعة الریّان"
+        },
+        "alternateName": "Rayan Radio",
+        "description": {
+          "@language": "ar",
+          "@value": "أول راديو خاص سوري متخصص في إحياء التراث والموروث الشعبي ونشر الشعر النبطي"
+        },
+        "url": "https://moneersh.github.io/RayanFMvue/",
+        "logo": "https://moneersh.github.io/RayanFMvue/logo.webp",
+        "image": "https://moneersh.github.io/RayanFMvue/images/og-image.jpg",
+        "foundingDate": "2009",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "As-Suwayda",
+          "addressRegion": "As-Suwayda Governorate",
+          "addressCountry": "SY"
+        },
+        "broadcastFrequency": "90.2 MHz",
+        "genre": [
+          "Heritage",
+          "Folk Music",
+          "Nabati Poetry",
+          "Cultural Programs",
+          "Syrian Culture"
+        ],
+        "inLanguage": ["ar", "en"],
+        "broadcastAffiliateOf": {
+          "@type": "Organization",
+          "name": "Rayan Media Group"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Southern Syria",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "32.7",
+            "longitude": "36.6"
+          }
+        },
+        "potentialAction": {
+          "@type": "ListenAction",
+          "target": "https://moneersh.github.io/RayanFMvue/"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>

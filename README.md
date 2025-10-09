@@ -6,7 +6,7 @@
 
 <small>Vue 3 + TypeScript + Vite + Tailwind CSS + DaisyUI + i18n + RTL Support</small>
 
-A comprehensive Islamic radio station website built with Vue 3, featuring full Arabic language and RTL support. This platform provides live streaming, podcasts, and interactive content for the Islamic community.
+A comprehensive Syrian heritage radio station website built with Vue 3, featuring full Arabic language and RTL support. This platform provides live streaming, podcasts, and interactive content specializing in Syrian heritage, folk traditions, and Nabati poetry.
 
 ## 🎯 Features
 
@@ -142,7 +142,7 @@ This project is licensed under the MIT License.
 
 ---
 
-**Developed with ❤️ to serve the Islamic community**
+**Developed with ❤️ to serve Syrian heritage and cultural preservation**
 
 ## Features
 
