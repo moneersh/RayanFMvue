@@ -23,4 +23,15 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  server: {
+    hmr: {
+      overlay: true,
+    },
+    watch: {
+      usePolling: true,
+    },
+  },
+  css: {
+    devSourcemap: true,
+  },
 });
