@@ -109,7 +109,7 @@ Site settings can be modified in:
 
 ## 🌐 Live Demo
 
-Website available at: [https://moneersh.github.io/RayanFMvue/](https://moneersh.github.io/RayanFMvue/)
+Website available at: [https://rayanfm.net](https://rayanfm.net)
 
 ## 🛠️ Technologies Used
 

@@ -19,7 +19,7 @@ export function useSeo(options: SeoOptions = {}) {
   const { locale } = useI18n();
 
   const isArabic = computed(() => locale.value === "ar");
-  const baseUrl = "https://moneersh.github.io/RayanFMvue";
+  const baseUrl = "https://rayanfm.net";
 
   const seoTitle = computed(() => {
     const baseTitle = isArabic.value ? "إذاعة الریّان" : "Rayan Radio";
